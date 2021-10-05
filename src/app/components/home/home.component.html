@@ -1,0 +1,370 @@
+<div [class.page]="!device.isMobile()" [class.page-m]="device.isMobile()">
+  <div class="left-journals" *ngIf="!device.isMobile()">
+    <div class="journal cursor-pointer zoom view" (click)="selectJournal(6)">
+      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e6.jpg">
+      <div class="mask flex-center rgba-black-slight">
+      </div>
+    </div>
+    <div class="journal cursor-pointer zoom view" (click)="selectJournal(5)">
+      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e5.jpg">
+      <div class="mask flex-center rgba-black-slight">
+      </div>
+    </div>
+    <div class="journal cursor-pointer zoom view" (click)="selectJournal(4)">
+      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e4.jpg">
+      <div class="mask flex-center rgba-black-slight">
+      </div>
+    </div>
+    <div class="journal cursor-pointer zoom view" (click)="selectJournal(3)">
+      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e3.jpg">
+      <div class="mask flex-center rgba-black-slight">
+      </div>
+    </div>
+    <div class="journal cursor-pointer zoom view" (click)="selectJournal(2)">
+      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e2.jpg">
+      <div class="mask flex-center rgba-black-slight">
+      </div>
+    </div>
+    <div class="journal cursor-pointer zoom view" (click)="selectJournal(1)">
+      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e1.jpg">
+      <div class="mask flex-center rgba-black-slight">
+      </div>
+    </div>
+  </div>
+  <div class="right-journals" *ngIf="!device.isMobile()">
+    <div *ngIf="languageManager.language != 'kz'" class="journal cursor-pointer zoom view" (click)="selectJournal(12)">
+      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e12.jpg">
+      <div class="mask flex-center rgba-black-slight">
+      </div>
+    </div>
+    <div *ngIf="languageManager.language == 'kz'" class="journal cursor-pointer zoom view" (click)="selectJournal(12, 'kz')">
+      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e12-kz.jpg">
+      <div class="mask flex-center rgba-black-slight">
+      </div>
+    </div>
+    <div  *ngIf="languageManager.language != 'kz'"class="journal cursor-pointer zoom view" (click)="selectJournal(11)">
+      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e11.jpg">
+      <div class="mask flex-center rgba-black-slight">
+      </div>
+    </div>
+    <div *ngIf="languageManager.language == 'kz'" class="journal cursor-pointer zoom view" (click)="selectJournal(11, 'kz')">
+      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e11-kz.jpg">
+      <div class="mask flex-center rgba-black-slight">
+      </div>
+    </div>
+    <div class="journal cursor-pointer zoom view" (click)="selectJournal(10)">
+      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e10.jpg">
+      <div class="mask flex-center rgba-black-slight">
+      </div>
+    </div>
+    <div *ngIf="languageManager.language != 'kz'" class="journal cursor-pointer zoom view" (click)="selectJournal(9)">
+      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e9.jpg">
+      <div class="mask flex-center rgba-black-slight">
+      </div>
+    </div>
+    <div *ngIf="languageManager.language == 'kz'" class="journal cursor-pointer zoom view" (click)="selectJournal(9, 'kz')">
+      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e9k.jpg">
+      <div class="mask flex-center rgba-black-slight">
+      </div>
+    </div>
+    <div class="journal cursor-pointer zoom view" (click)="selectJournal(8)">
+      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e8.jpg">
+      <div class="mask flex-center rgba-black-slight">
+      </div>
+    </div>
+    <div class="journal cursor-pointer zoom view" (click)="selectJournal(7)">
+      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e7.jpg">
+      <div class="mask flex-center rgba-black-slight">
+      </div>
+    </div>
+  </div>
+  <div *ngIf="device.isMobile()">
+    <div class="row">
+      <div class="center-logo">
+        <img class="d-block" width="250" height="100" src="../../../assets/home/logo.jpg">
+      </div>
+      <img *ngIf="languageManager.language == 'kz'" (click)="selectJournal(12, 'kz')" class="d-block mt-2" height="340" width="250" src="../../../assets/home/publishes/e12-kz.jpg">
+      <img *ngIf="languageManager.language != 'kz'" (click)="selectJournal(12)" class="d-block mt-2" height="340" width="250" src="../../../assets/home/publishes/e12.jpg">
+    </div>
+    <div class="row">
+      <div class="pr">
+        <mdb-icon far icon="circle" class="cx cy pt-3vh cursor-pointer text-red" size="3x"></mdb-icon>
+        <div class="plus-text-m">
+          16+
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="h4 cx cy pt-3vh">
+        <div *ngFor="let language of getLanguages().slice(0, 6)">
+          <img class="mx-1 cursor-pointer" [src]="'assets/' + language + '.png'" height="48" (click)="setLang(language)"/>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="h4 cx cy pt-3vh">
+        <div *ngFor="let language of getLanguages().slice(6, 12)">
+          <img class="mx-1 cursor-pointer" [src]="'assets/' + language + '.png'" height="48" (click)="setLang(language)"/>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="h4 cx cy pt-3vh">
+        <div *ngFor="let language of getLanguages().slice(12, 16)">
+          <img class="mx-1 cursor-pointer" [src]="'assets/' + language + '.png'" height="48" (click)="setLang(language)"/>
+        </div>
+      </div>
+    </div>
+    <div class="row h4 cx cy my-2">
+      <div class="col-7">
+        <div class="row">
+          <img (click)="openPbp()" class="mx-1 cursor-pointer" [src]="'assets/pbp.png'" height="50"/>
+        </div>
+        <div class="row h6 text-red text-small" (click)="openPbp()">
+          Personal Browser Page
+        </div>
+      </div>
+      <div class="col-5 cy">
+        <div class="my-2">
+          <a href="https://play.google.com/store/apps/details?id=press.eurasian.the" target="_blank">
+            <img src="assets/googlePlayMobile.png">
+          </a>
+        </div>
+        <div class="my-2">
+          <a class="my-2" href="https://apps.apple.com/us/app/the-eurasian/id1559418805" target="_blank">
+            <img src="assets/appStoreMobile.png">
+          </a>
+        </div>
+        <div class="my-2">
+          <a class="my-2" href="https://wap-drru.hispace.hicloud.com/uowap/index.html#/detailApp/C104131097?source=qrCodeShare" target="_blank">
+            <img src="assets/appGalleryMobile.png">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row margin-auto" *ngIf="!device.isMobile()">
+    <div class="col-4 cx z-index-100">
+      <div>
+        <div class="cx cy pt-3vh mx-3 z-index-100">
+          <div *ngFor="let language of getLanguages().slice(0, 8)">
+            <img class="mx-1 cursor-pointer" [src]="'assets/' + language + '.png'" height="40" (click)="setLang(language)"/>
+          </div>
+        </div>
+        <div class="cx cy pt-10px mx-3 z-index-100">
+          <div *ngFor="let language of getLanguages().slice(8, 16)">
+            <img class="mx-1 cursor-pointer" [src]="'assets/' + language + '.png'" height="40" (click)="setLang(language)"/>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="center-logo">
+        <img *ngIf="!device.isMobile()" class="d-block" width="220" src="../../../assets/home/logo.jpg">
+        <img *ngIf="device.isMobile()" class="d-block" width="250" src="../../../assets/home/logo.jpg">
+      </div>
+    </div>
+    <div class="col-4 cx cy">
+      <a class="mx-1 app-gallery" href="https://wap-drru.hispace.hicloud.com/uowap/index.html#/detailApp/C104131097?source=qrCodeShare" target="_blank">
+        <img src="assets/appGalleryEurasian.png">
+      </a>
+      <div class="cursor-pointer" (click)="openPbp()">
+        <div class="row">
+          <div class="col no-gutters">
+            <div class="row h4 cx cy pt-3vh">
+              <img class="mx-1 cursor-pointer" [src]="'assets/pbp.png'" height="50"/>
+            </div>
+            <div class="row h6 text-red text-small">
+              Personal Browser Page
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="center-logo">
+        <a class="mx-1" href="https://play.google.com/store/apps/details?id=press.eurasian.the" target="_blank">
+          <img src="assets/googlePlayEurasian.png">
+        </a>
+        <a class="mx-1" href="https://apps.apple.com/us/app/the-eurasian/id1559418805" target="_blank">
+          <img src="assets/appStoreEurasian.png">
+        </a>
+      </div>
+      <div class="position-relative cx cy pt-3vh mx-3">
+        <mdb-icon far icon="circle" class="cx cy cursor-pointer text-red circle-icon" size="3x"></mdb-icon>
+        <div class="plus-text">
+          16+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="vrs-m" *ngIf="device.isMobile()">
+    <div class="vr" *ngFor="let vr of galleryImages; let ind = index">
+      <img (click)="openVR(vr.big, ind + 1)" height="180px" [src]="vr.small"/>
+    </div>
+  </div>
+  <div class="df cx" [class.currencies]="!device.isMobile()">
+    <div [class.currencies-and-weather-m]="device.isMobile()" [class.currencies-and-weather]="!device.isMobile()" class="mx-3">
+      <div [class.weather-widgets-m]="device.isMobile()" class="weather-widgets">
+        <div *ngFor="let weather of weathers" class="weather-widget">
+          <div class="weather-content">
+            <div class="weather-icon">
+              <img [src]="'https://openweathermap.org/img/wn/' + weather.weather[0].icon + '.png'"/>
+            </div>
+            <div class="weather-info">
+              <div class="weather-value">{{round(weather.tempMain.temp)}} °C</div>
+            </div>
+          </div>
+          <div class="widget-title">{{weather.name}}</div>
+          <div class="weather-property">{{weather.weather[0]?.description}}</div>
+          <div class="weather-property">{{lang.tr('Feels like')}}: {{round(weather.tempMain.feels_like)}} °C</div>
+          <div class="weather-property">{{lang.tr('Wind')}}: {{weather.wind.speed}} m/s</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="df cx overflow-auto mx-2" [class.currencies]="!device.isMobile()">
+    <div [class.currencies-and-weather-m]="device.isMobile()" [class.currencies-and-weather]="!device.isMobile()" class="mx-3">
+      <div class="currency-widgets">
+        <div class="currency-row">
+          <div class="currency-source"></div>
+          <div class="currency-property" *ngFor="let lang of currencyLanguages">{{lang}}</div>
+        </div>
+        <div *ngFor="let currency of currencies" class="currency-widget">
+          <div class="currency-row">
+            <div class="currency-source"><img width="25px" height="25px" [src]="'assets/' + getLangIcon(currency.source) + '.png'"/></div>
+            <div class="currency-property" *ngFor="let lang of currencyLanguages">{{getQuote(currency, lang)}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="list-group journals" *ngIf="device.isMobile()">
+    <div class="transparent" [class.left-arrow]="!device.isMobile()" [class.left-arrow-m]="device.isMobile()" #hScroll1ArrowLeft [hidden]="screenWidth > 1750">
+      <mdb-icon *ngIf="!device.isMobile()" fas icon="chevron-left" class="text-gray" size="3x" (click)="hScroll1.scrollLeft = hScroll1.scrollLeft - 100"></mdb-icon>
+      <mdb-icon *ngIf="device.isMobile()" fas icon="chevron-left" class="text-gray" size="3x" (click)="hScroll1.scrollLeft = hScroll1.scrollLeft - 100"></mdb-icon>
+    </div>
+    <div [class.journals-carousel]="screenWidth > 1700">
+      <ul class="list-group overflow-hidden list-group-horizontal" #hScroll1>
+        <li class="list-group-item horizontal" *ngFor="let publish of getPublishes()">
+          <div class="journal cursor-pointer zoom view" (click)="selectJournal(publish)">
+            <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e{{publish}}.jpg">
+            <div class="mask flex-center rgba-black-slight">
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="transparent" [class.right-arrow]="!device.isMobile()" #hScroll1ArrowRight [hidden]="screenWidth > 1750" [class.right-arrow-m]="device.isMobile()">
+      <mdb-icon *ngIf="!device.isMobile()" fas icon="chevron-right" class="text-gray" size="3x" (click)="hScroll1.scrollLeft = hScroll1.scrollLeft + 100"></mdb-icon>
+      <mdb-icon *ngIf="device.isMobile()" fas icon="chevron-right" class="text-gray" size="3x" (click)="hScroll1.scrollLeft = hScroll1.scrollLeft + 100"></mdb-icon>
+    </div>
+  </div>
+  <div class="news overflow" [class.news-m]="device.isMobile()">
+    <div *ngFor="let rssItem of rssNews">
+      <mdb-card class="my-2 mx-2">
+        <mdb-card-body>
+          <mdb-card-title>
+            <h4 class="url" (click)="openLink(rssItem.url)">{{rssItem.title}}</h4>
+          </mdb-card-title>
+          <mdb-card-text>{{rssItem.descr}}</mdb-card-text>
+          <div class="float-right rss-time">
+            {{rssItem.date}}
+          </div>
+        </mdb-card-body>
+      </mdb-card>
+    </div>
+  </div>
+
+  <div class="gallery">
+    <ngx-gallery #gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery"></ngx-gallery>
+  </div>
+
+  <div *ngIf="languageManager.language == 'ru'">
+    <div class="tvs-carousel" *ngIf="!device.isMobile()">
+      <div class="tvs list-group-item horizontal" *ngFor="let tv of tvs">
+        <a href="{{tv[1]}}" target="_blank" class="mx-1">
+          <div class="tv mx-1 cursor-pointer zoom view">
+            <img class="d-block w-100 pb-3" src="../../../assets/tvs/{{tv[0]}}">
+            <div class="mask flex-center"></div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="tvs-carousel-m" *ngIf="device.isMobile()">
+      <div class="tvs list-group-item horizontal" *ngFor="let tv of tvs1">
+        <a href="{{tv[1]}}" target="_blank" class="mx-1">
+          <div class="tv mx-1 cursor-pointer zoom view">
+            <img class="d-block w-100 pb-3" src="../../../assets/tvs/{{tv[0]}}">
+            <div class="mask flex-center"></div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="tvs-carousel-m" *ngIf="device.isMobile()">
+      <div class="tvs list-group-item horizontal" *ngFor="let tv of tvs2">
+        <a href="{{tv[1]}}" target="_blank" class="mx-1">
+          <div class="tv mx-1 cursor-pointer zoom view">
+            <img class="d-block w-100 pb-3" src="../../../assets/tvs/{{tv[0]}}">
+            <div class="mask flex-center"></div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="tvs-carousel-m" *ngIf="device.isMobile()">
+      <div class="tvs list-group-item horizontal" *ngFor="let tv of tvs3">
+        <a href="{{tv[1]}}" target="_blank" class="mx-1">
+          <div class="tv mx-1 cursor-pointer zoom view">
+            <img class="d-block w-100 pb-3" src="../../../assets/tvs/{{tv[0]}}">
+            <div class="mask flex-center"></div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="tvs-carousel-m" *ngIf="device.isMobile()">
+      <div class="tvs list-group-item horizontal" *ngFor="let tv of tvs4">
+        <a href="{{tv[1]}}" target="_blank" class="mx-1">
+          <div class="tv mx-1 cursor-pointer zoom view">
+            <img class="d-block w-100 pb-3" src="../../../assets/tvs/{{tv[0]}}">
+            <div class="mask flex-center"></div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="tvs-carousel-m" *ngIf="device.isMobile()">
+      <div class="tvs list-group-item horizontal" *ngFor="let tv of tvs5">
+        <a href="{{tv[1]}}" target="_blank" class="mx-1">
+          <div class="tv mx-1 cursor-pointer zoom view">
+            <img class="d-block w-100 pb-3" src="../../../assets/tvs/{{tv[0]}}">
+            <div class="mask flex-center"></div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+</div>
+
+<div [ngStyle]="vrStyle" *ngIf="isGalleryPreview()">
+  <div class="vr-preview-mask">
+    <div></div><div></div><div></div><div></div><div></div>
+    <div class="cursor-pointer" (click)="openQr('ru')"></div>
+    <div class="cursor-pointer" (click)="openQr('zh')"></div>
+    <div class="cursor-pointer" (click)="openQr('en')"></div>
+  </div>
+</div>
+
+
+<div mdbModal #imagePreview class="modal fade bottom" tabindex="-1" role="dialog" aria-hidden="true" [config]="{backdrop: 'static'}" (click)="imagePreview.hide()">
+  <div class="image-preview-modal">
+    <div class="image-preview">
+      <img *ngIf="imgSource != ''" [src]="imgSource" class="image"/>
+      <div class="image-preview-mask">
+        <div></div><div></div><div></div><div></div><div></div>
+        <div class="cursor-pointer" (click)="openQr('ru', vr)"></div>
+        <div class="cursor-pointer" (click)="openQr('zh', vr)"></div>
+        <div class="cursor-pointer" (click)="openQr('en', vr)"></div>
+      </div>
+    </div>
+  </div>
+</div>

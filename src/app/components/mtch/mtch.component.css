@@ -1,0 +1,31 @@
+.select-language{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0 auto;
+}
+.open-url{
+
+}
+.cx{
+  display: flex;
+  justify-content: center;
+}
+.cy{
+  display: flex;
+  align-items: center;
+}
+.title{
+  text-align: center;
+  margin: 0 auto;
+  font-size: 14px;
+  font-weight: 700;
+}
+.separator{
+  width: 40px;
+  background: black;
+  height: 1px;
+  margin: 0 auto;
+}
+.logo{
+
+}

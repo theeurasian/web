@@ -1,0 +1,530 @@
+.nav-title{
+  background-color: red;
+  padding: 0 3em 0 3em;
+}
+.ml-4em{
+  margin-left: 4em;
+}
+.mr-4em{
+  margin-right: 4em;
+}
+.text-red{
+  color: red;
+  font-family: 'Book Antiqua', serif;
+}
+.text-shadow{
+  text-shadow: 2px 2px black;
+  font-family: 'Book Antiqua', serif;
+}
+.center{
+  font-family: 'Book Antiqua', serif;
+  margin: 3em 5em 3em 5em;
+}
+.footer-height{
+  height: 10em;
+}
+.second-footer-mobile{
+  margin-top: -1em;
+  padding-bottom: 4em;
+}
+.full-width{
+  padding-left: 0;
+  padding-right: 0;
+}
+p, h4, h6{
+  font-family: 'Book Antiqua', serif;
+}
+.mobile-carousel-title{
+  padding-top: 10em;
+}
+.carousel-caption-desktop{
+  padding-bottom: 5em !important;
+}
+.carousel-caption-mobile{
+  padding-bottom: 1.5em !important;
+}
+.map-height-desktop{
+  height: 40em;
+}
+.map-height-mobile{
+  height: 20em;
+}
+.hand{
+  cursor: pointer;
+}
+.carousel-top{
+
+}
+.toRight{
+  left: 40% !important;
+  bottom: 5% !important;
+  top: 15% !important;
+  right: 5% !important;
+}
+.text-lg{
+  font-size: 1.8em !important;
+}
+.mobile-carousel{
+  height: 10em !important;
+
+}
+.min-width{
+  min-width: 1400px !important;
+}
+.carousel-desktop{
+  margin-top: -5em;
+  min-width: 1500px !important;
+  min-height: 600px !important;
+}
+.page{
+  width: 100%;
+  height: 100vh;
+  font-family: 'Book Antiqua';
+  src: url('/assets/book_antiqua.ttf') format('regular'),
+  url('/assets/book_antiqua.ttf') format('regular');
+  font-size: large;
+  min-width: 1650px !important;
+  position: relative;
+}
+.page-m{
+  width: 100%;
+  font-family: 'Book Antiqua';
+  src: url('/assets/book_antiqua.ttf') format('regular'),
+  url('/assets/book_antiqua.ttf') format('regular');
+  font-size: large;
+}
+.center-logo{
+  display: flex;
+  justify-content: center;
+  padding-top: 3vh;
+}
+.center-rss{
+  padding-top: 10px;
+  width: 30%;
+  margin: 0 auto;
+}
+.date-time{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1em;
+}
+.app-gallery{
+  padding-top: 3vh;
+}
+.weather{
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+.margin-auto{
+  margin: 0 auto;
+  width: 60%;
+}
+.weather-m{
+  display: flex;
+  justify-content: center;
+}
+.df{
+  display: flex;
+}
+.news{
+  height: 1100px;
+  overflow: auto;
+  width: 60%;
+  margin: 0 auto;
+}
+.rss-time{
+  font-size: 14px;
+}
+.publishes{
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 1em;
+  padding-bottom: 3em;
+}
+.cursor-pointer{
+  cursor: pointer;
+}
+.url{
+  color: #0078A8;
+  cursor: pointer;
+}
+.journal{
+  width: 190px;
+  height: 255px;
+}
+.weather-city{
+  width: 200px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.right-arrow{
+  cursor: pointer;
+  z-index: 1;
+  position: absolute;
+  padding-top: 140px;
+  right: 20px;
+}
+.left-arrow{
+  cursor: pointer;
+  z-index: 1;
+  position: absolute;
+  padding-top: 140px;
+  left: 20px;
+}
+.journals{
+  padding-top: 5px;
+}
+.journals-carousel{
+  display: flex;
+  justify-content: center;
+}
+.map-box{
+  padding-top: 2em;
+}
+.list-group-item{
+  padding: 0;
+  border: none;
+}
+.text-gray{
+  color: #cfcdcd !important;
+}
+.list-group{
+}
+.text-journal {
+  padding-top: 280px;
+  color: white;
+  font-weight: 700;
+  font-size: 24px;
+  /* stroke: black; */
+
+  text-shadow: 2px 2px 4px black, 1px 1px 2px white;
+}
+.date-time-m{
+  padding-top: 1em;
+  font-size: 24px;
+}
+.news-m{
+  width: 90% !important;
+}
+.right-arrow-m{
+  position: absolute;
+  right: 5%;
+  padding-top: 140px;
+  z-index: 1;
+}
+.left-arrow-m{
+  position: absolute;
+  left: 5%;
+  padding-top: 140px;
+  z-index: 1;
+}
+::ng-deep .col1{
+  display: none !important;
+}
+.col1{
+  display: none !important;
+}
+.table-currency{
+  width: 100%;
+  padding-top: 1em;
+}
+.table-header{
+  font-size: small;
+  background-color: #efeaea;
+  height: 36px;
+  font-weight: 700;
+}
+.z-index-100{
+  z-index: 100;
+}
+td{
+  font-size: small;
+}
+.text-green{
+  color: green;
+}
+.text-red{
+  color: red;
+}
+.currency-m{
+  padding-top: 1em;
+  width: 90%;
+  display: flex;
+  margin: 0 auto;
+  padding-bottom: 1em;
+}
+.tv{
+  /*height: 40px;*/
+}
+.tvs{
+  padding-top: 1em;
+  display: flex;
+  align-items: center;
+}
+.tvs-carousel{
+  display: flex;
+  justify-content: center;
+  min-width: 1300px;
+}
+.tvs-carousel-m{
+  display: flex;
+  justify-content: center;
+}
+
+.cx{
+  display: flex;
+  justify-content: center;
+}
+.cy{
+  align-items: center;
+}
+.pt-3vh{
+  padding-top: 3vh;
+}
+.left-journals{
+  position: absolute;
+  left: calc(6% + 50px);
+  top: 20px;
+}
+.right-journals{
+  position: absolute;
+  right: calc(6% + 50px);
+  top: 20px;
+}
+.pr-2letters{
+  padding-right: 20px;
+}
+.cx{
+  display: flex;
+  justify-content: center;
+}
+.cy{
+  align-items: center;
+}
+.pt-3vh{
+  padding-top: 3vh;
+}
+.pl{
+  display: flex;
+  justify-content: flex-start;
+}
+.pr{
+  display: flex;
+  justify-content: flex-end;
+}
+.position-relative{
+  position: relative;
+}
+.circle-icon{
+  transform: scale(0.85);
+}
+.pt-10px{
+  padding-top: 10px;
+}
+.plus-text{
+  position: absolute;
+  font-size: 20px;
+  top: calc(3vh + 18px);
+  left: calc(50% - 16px);
+  color: #f44336;
+  font-weight: 700;
+}
+.left-journals{
+  position: absolute;
+  left: 5%;
+  top: 20px;
+  z-index: 1;
+}
+.right-journals{
+  position: absolute;
+  right: 5%;
+  top: 20px;
+  z-index: 1;
+}
+.pr-2letters{
+  padding-right: 20px;
+}
+.plus-text-m{
+  position: absolute;
+  font-size: 24px;
+  left: 50%;
+  color: #f44336;
+  font-weight: 700;
+  transform: translate(-50%, 200%);
+}
+.journals{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.currencies{
+  padding-top: 10px;
+  margin: 0 auto;
+}
+.image-preview{
+  position: relative;
+  width: 60vh;
+}
+.currencies-and-weather-m{
+  width: 90%;
+}
+.qr{
+  width: 10%;
+  position: absolute;
+}
+.qr-1{
+  left: 35%;
+  bottom: 17%;
+}
+.qr-2{
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: 0;
+}
+.qr-3{
+  right: 0;
+  bottom: 0;
+}
+.image{
+  width: 100%;
+  height: 100%;
+}
+.image-preview-mask{
+  display: grid;
+  grid-template-rows: 63% 25%;
+  grid-template-columns: 10% 27% 27% 27%;
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.image-preview-modal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.image-preview-mask-e{
+  display: grid;
+  grid-template-rows: 55% 25%;
+  grid-template-columns: 10% 27% 27% 27%;
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.weather-widgets{
+  display: flex;
+}
+.weather-content{
+  display: flex;
+}
+.weather-info{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: small;
+}
+.widget-title{
+  font-size: small;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+.weather-widget {
+  width: 110px;
+  padding: 5px;
+  margin: 5px;
+  box-shadow: 0px 5px 10px 2px rgb(34 60 80 / 20%);
+  pointer-events: none;
+}
+.weather-widgets{
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  justify-content: center;
+}
+.weather-description{
+  font-size: x-small;
+}
+.weather-property{
+  font-size: x-small;
+  text-align: center;
+  line-height: 12px;
+}
+.weather-value{
+  font-weight: bold;
+  font-size: large;
+}
+.currency-row{
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  margin: 10px 0 10px 0;
+}
+.currency-property{
+  font-size: small;
+  display: flex;
+  justify-content: center;
+  color: black;
+  margin: 0 5px 0 5px;
+  padding: 5px;
+  width: 55px;
+}
+.currency-source{
+  margin-right: 10px;
+  width: 25px;
+}
+.weather-widgets-m{
+  grid-template-columns: repeat(3, 1fr);
+}
+.vrs{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.vr{
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+.vr-preview-mask{
+  display: grid;
+  grid-template-rows: 63% 25%;
+  grid-template-columns: 9.5% 27.5% 26% 26%;
+  width: 100%;
+  /* position: fixed; */
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+}
+.vr-preview-mask-ru{
+  position: fixed;
+  z-index: 10000;
+}
+.vrs-m{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.left-vr-block{
+  position: absolute;
+  left: 15.5%;
+  top: 7%;
+}
+.right-vr-block{
+  position: absolute;
+  right: 15.5%;
+  top: 7%;
+}
+.gallery{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+/deep/.ngx-gallery-arrow{
+  color: black !important;
+}
