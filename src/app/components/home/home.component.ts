@@ -28,8 +28,21 @@ export class HomeComponent implements OnInit, AfterViewInit {
   publishes = ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]).reverse();
   publishesKZ = ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, '11-kz', '12-kz']).reverse();
 
+
   rssNews: RssItem[] = this.news.rssNews;
   currencyLoaded = false;
+
+
+  aliases = [];
+  aliasName = 'mail';
+  alias = '';
+  url = '';
+
+  selected = '';
+
+
+  aliasLabel = 'Mail Alias (Google)';
+  aliasUrl = 'Mail Url (https://mail.google.com/mail/)';
 
   usdtd;
   cnytd;
@@ -51,12 +64,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
   hidden = true;
 
   tvs = [
-    [ 'ontvtime_ort.jpg', 'https://www.ontvtime.ru/general/ort-3.html' ],
+    [ 'ontvtime_ort.jpg', 'https://www.ontvtime.ru/live/1tv.html' ],
     [ 'ontvtime_russia12.jpg', 'https://www.ontvtime.ru/live/russia1-tv.html' ],
-    [ 'ontvtime_ntv11.jpg', 'https://www.ontvtime.ru/general/ntv-6.html' ],
+    [ 'ontvtime_ntv11.jpg', 'https://youtu.be/ownZUMKmM4c' ],
     [ 'russiak_ontvtime1.jpg', 'https://www.ontvtime.ru/live/russiak-2.html' ],
     [ 'ontvtime_tv3_6.jpg', 'https://www.ontvtime.ru/general/tv3.html' ],
-    [ 'russia24_ontvtime.jpg', 'https://www.ontvtime.ru/live/russia24.html' ],
+    [ 'russia24_ontvtime.jpg', 'https://youtu.be/8T9SFZDP60Q' ],
     [ 'ontvtime_tvc.jpg', 'https://www.ontvtime.ru/general/tvc.html' ],
     [ 'ontvtime_rentv.jpg', 'https://www.ontvtime.ru/general/rentv.html' ],
     [ 'ontvtime_tnt.jpg', 'https://www.ontvtime.ru/live/tnt.html' ],
@@ -65,9 +78,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
     [ 'ontvtime_5channel.jpg', 'https://www.ontvtime.ru/general/channel5.html' ],
     [ 'ontvtime_karusel1.jpg', 'https://www.ontvtime.ru/live/karusel-2.html' ],
     [ 'ontvtime_otr.png', 'https://www.ontvtime.ru/live/otr.html' ],
-    [ 'ontvtime_mir2.jpg', 'https://www.ontvtime.ru/live/mir.html' ],
+    [ 'ontvtime_mir2.jpg', 'https://youtu.be/IFmp_DwfKAo' ],
     [ 'ontvtime_domashniy5.jpg', 'https://www.ontvtime.ru/general/domashniy.html' ],
-    [ 'rbc_ontvtime.jpg', 'https://www.ontvtime.ru/live/rbc.html' ],
+    [ 'rbc_ontvtime.jpg', 'https://youtu.be/06jgCTFmLl4' ],
     [ 'che_ontvtime.jpg', 'https://www.ontvtime.ru/live/che.html' ],
     [ 'sts_love_ontvtime.jpg', 'https://www.ontvtime.ru/live/sts-love.html' ],
     [ 'spas_ontvtime.jpg', 'https://www.ontvtime.ru/live/spas.html' ],
@@ -79,14 +92,14 @@ export class HomeComponent implements OnInit, AfterViewInit {
     [ 'rt.jpg', 'https://www.rt.com/' ]
   ];
   tvs1 = [
-    [ 'ontvtime_ort.jpg', 'https://www.ontvtime.ru/general/ort-3.html' ],
+    [ 'ontvtime_ort.jpg', 'https://www.ontvtime.ru/live/1tv.html' ],
     [ 'ontvtime_russia12.jpg', 'https://www.ontvtime.ru/live/russia1-tv.html' ],
-    [ 'ontvtime_ntv11.jpg', 'https://www.ontvtime.ru/general/ntv-6.html' ],
+    [ 'ontvtime_ntv11.jpg', 'https://youtu.be/ownZUMKmM4c' ],
     [ 'russiak_ontvtime1.jpg', 'https://www.ontvtime.ru/live/russiak-2.html' ],
     [ 'ontvtime_tv3_6.jpg', 'https://www.ontvtime.ru/general/tv3.html' ]
   ];
   tvs2 = [
-    [ 'russia24_ontvtime.jpg', 'https://www.ontvtime.ru/live/russia24.html' ],
+    [ 'russia24_ontvtime.jpg', 'https://youtu.be/8T9SFZDP60Q' ],
     [ 'ontvtime_tvc.jpg', 'https://www.ontvtime.ru/general/tvc.html' ],
     [ 'ontvtime_rentv.jpg', 'https://www.ontvtime.ru/general/rentv.html' ],
     [ 'ontvtime_tnt.jpg', 'https://www.ontvtime.ru/live/tnt.html' ],
@@ -97,11 +110,11 @@ export class HomeComponent implements OnInit, AfterViewInit {
     [ 'ontvtime_5channel.jpg', 'https://www.ontvtime.ru/general/channel5.html' ],
     [ 'ontvtime_karusel1.jpg', 'https://www.ontvtime.ru/live/karusel-2.html' ],
     [ 'ontvtime_otr.png', 'https://www.ontvtime.ru/live/otr.html' ],
-    [ 'ontvtime_mir2.jpg', 'https://www.ontvtime.ru/live/mir.html' ]
+    [ 'ontvtime_mir2.jpg', 'https://youtu.be/IFmp_DwfKAo' ]
   ];
   tvs4 = [
     [ 'ontvtime_domashniy5.jpg', 'https://www.ontvtime.ru/general/domashniy.html' ],
-    [ 'rbc_ontvtime.jpg', 'https://www.ontvtime.ru/live/rbc.html' ],
+    [ 'rbc_ontvtime.jpg', 'https://youtu.be/06jgCTFmLl4' ],
     [ 'che_ontvtime.jpg', 'https://www.ontvtime.ru/live/che.html' ],
     [ 'sts_love_ontvtime.jpg', 'https://www.ontvtime.ru/live/sts-love.html' ],
     [ 'spas_ontvtime.jpg', 'https://www.ontvtime.ru/live/spas.html' ],
@@ -142,12 +155,21 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
   @ViewChild('thank_you') thank_you;
   galleryOptions: NgxGalleryOptions[] = [];
+  galleryOptionsMobile: NgxGalleryOptions[] = [];
   galleryImages: NgxGalleryImage[] = [];
   @ViewChild('gallery') gallery;
   ngOnInit(): void {
+    let aliases = localStorage.getItem('aliases');
+    if (aliases != null){
+      this.aliases = JSON.parse(aliases) as [];
+    }
     this.galleryOptions = [
       { },
       { image: false, width: '1400px', height: '480px', imageAutoPlay: true, thumbnailsArrows: true, imageAutoPlayInterval: 1000, thumbnailsPercent: 100},
+    ];
+    this.galleryOptionsMobile = [
+      { },
+      { image: false, width: '300px', height: '400px', thumbnailsColumns: 1, imageAutoPlay: true, thumbnailsArrows: true, imageAutoPlayInterval: 1000, thumbnailsPercent: 100, imageSwipe: true},
     ];
     if (this.languageManager.language == 'kz'){
       for (let x = 1; x <= 6; x++){
@@ -208,7 +230,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   selectJournal(number: number, lang = 'ru') {
-    window.open('https://eurasian.press/#/read?issue=' + number + '&lang=' + lang, '_blank');
+    window.open('https://eurasian.press/#/read?issue=' + number.toString().replace('-kz', '') + '&lang=' + (number.toString().includes('kz') ? 'kz' : lang), '_blank');
   }
   openLastJournal(){
     window.open('https://eurasian.press/#/last-issue', '_blank');
@@ -278,7 +300,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
         break;
       }
       case 'fr':{
-        window.open('https://theeurasian.fr', '_blank');
+        window.open('https://theurasian.fr', '_blank');
         break;
       }
       case 'it':{
@@ -454,5 +476,44 @@ export class HomeComponent implements OnInit, AfterViewInit {
     else{
       return this.publishesKZ;
     }
+  }
+
+
+  openMail(mail: string) {
+    switch (mail) {
+      case 'mail':{
+        window.open('https://e.mail.ru/inbox/', '_blank');
+        break;
+      }
+      case 'yandex':{
+        window.open('https://mail.yandex.com/', '_blank');
+        break;
+      }
+      case 'gmail':{
+        window.open('https://mail.google.com/mail/', '_blank');
+        break;
+      }
+      default:{
+        break;
+      }
+    }
+  }
+
+  addAlias(){
+    this.aliases.push({name: this.alias, url: this.url, aliasName: this.aliasName});
+    localStorage.setItem('aliases', JSON.stringify(this.aliases));
+  }
+  removeAlias(name: string, alias: any){
+    this.aliases.splice(this.aliases.indexOf(alias), 1);
+    localStorage.setItem('aliases', JSON.stringify(this.alias));
+  }
+  getAliases(name: string){
+    return this.aliases != null ? this.aliases.filter(x => x.aliasName == name) : [];
+  }
+  isSelected(input: string){
+    return this.selected == input;
+  }
+  resetSelects() {
+    this.selected = '';
   }
 }

@@ -1,0 +1,64 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Charter ITC';
+  src: url('/assets/charter_itc.ttf') format('regular'),
+  url('/assets/charter_itc.ttf') format('regular');
+}
+@font-face {
+  font-family: 'Book Antiqua';
+  src: url('/assets/book_antiqua.ttf') format('regular'),
+  url('/assets/book_antiqua.ttf') format('regular');
+}
+.carousel-caption {
+  font-size: 1.5em !important;
+}
+
+/*.pdfViewer .page{*/
+/*  transform: scale(0.7) translate(0, -20%);*/
+/*}*/
+
+.text-center{
+  font-family: 'Book Antiqua', serif;
+}
+.carousel{
+  margin-top: -5em;
+}
+.navBlack{
+  background-color: rgba(0,0,0, 0.4);
+}
+.navBlack-mobile{
+  background-color: rgba(0,0,0, 0.8);
+}
+label{
+  font-family: 'Book Antiqua', serif;
+}
+.page-footer{
+  min-width: 1300px;
+  width: 100%;
+}
+.navbar{
+  /*height: 10em;*/
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+::ng-deep .col1{
+  display: none !important;
+}
+.col1{
+  display: none !important;
+}
+pdf-viewer {
+  display: block;
+  height: 100vh;
+}
+::ng-deep pdf-viewer {
+  display: block;
+  height: 100vh;
+}
+.row{
+  margin: 0;
+}
+.text-small{
+  font-size: small;
+  text-align: center;
+}

@@ -1,0 +1,90 @@
+.pt-10{
+  padding-top: 10em;
+}
+.nav-title{
+  background-color: red;
+  padding: 0 3em 0 3em;
+}
+.ml-4em{
+  margin-left: 4em;
+}
+.mr-4em{
+  margin-right: 4em;
+}
+.text-red{
+  font-family: 'Book Antiqua', serif;
+  color: red;
+}
+.text-shadow{
+  text-shadow: 2px 2px black;
+}
+.center{
+  margin: 3em 5em 3em 5em;
+}
+.footer-height{
+  height: 8em;
+}
+.full-width{
+  padding-left: 0;
+  padding-right: 0;
+}
+.pt-text{
+  padding-top: 3em;
+}
+p{
+  font-family: 'Book Antiqua', serif;
+}
+h5{
+  font-family: 'Book Antiqua', serif;
+}
+.container-mobile{
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.cursor-pointer{
+  cursor: pointer;
+}
+.container-subscribe{
+  width: 25em;
+}
+.container-subscribe-m{
+  width: 40vh;
+}
+.qrCode{
+  width: 100%;
+  padding: 0 25% 0 25%;
+  height: auto;
+  min-width: 80%;
+}
+.subscription{
+  padding-left: 20%;
+  padding-right: 20%;
+  min-width: 80em;
+  width: 100%;
+}
+.subscription-m{
+  width: 40vh;
+}
+.payment-logo{
+  width: 100%;
+  padding: 0 20% 0 20%;
+}
+.col-padding{
+  font-family: 'Book Antiqua', serif;
+}
+.subscription-footer{
+  height: 10em;
+  background-color: rgba(33, 37, 37, 0.78);
+  margin-top: 50px;
+}
+.center-row{
+  height: 5em;
+}
+::ng-deep .row{
+  align-items: center;
+  justify-content: center;
+}
+.text-url{
+  color: #E21F2D;
+  text-decoration: underline;
+}

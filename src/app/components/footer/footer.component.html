@@ -8,7 +8,9 @@
     </div>
     <div class="row">
       <div class="text-center">© 2020 Copyright:
-        <a href="https://eurasian.press/"> eurasian.press YA-TSOI, OOO (D-U-N-S 537141585)</a>
+        <span (click)="openLink('/#/contacts')" class="text-url">eurasian.press</span>
+        YA-TSOI, OOO (D-U-N-S 537141585)
+        <span (click)="openLink('/assets/home/contacts/Свидетельство о регистрации СМИ.pdf')" class="text-url">{{lang.tr('Media Testimonies')}}</span>
       </div>
     </div>
   </div>
@@ -19,8 +21,10 @@
     <p>{{lang.tr('Editorial Office address in the Republic of Kazakhstan: 25 Esenberlina street, AIFC, Nur-Sultan, 010000, Republic of Kazakhstan; Telephone: +7 (7172) 38 14 21')}}</p>
   </div>
   <div class="row center-row">
-    <div class="text-center">© 2020 Copyrighst:
-      <a href="https://eurasian.press/"> eurasian.press YA-TSOI, OOO (D-U-N-S 537141585)</a>
+    <div (click)="openLink('/#/contacts')" class="text-center">© 2020 Copyright: eurasian.press YA-TSOI, OOO (D-U-N-S 537141585)
+    </div>
+    <div (click)="openLink('/assets/home/contacts/Свидетельство о регистрации СМИ.pdf')" class="text-center">
+      {{lang.tr('Media testimonies')}} eurasian.press
     </div>
   </div>
 </footer>

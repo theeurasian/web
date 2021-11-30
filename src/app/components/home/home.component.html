@@ -144,30 +144,162 @@
     </div>
   </div>
   <div class="row margin-auto" *ngIf="!device.isMobile()">
-    <div class="col-4 cx z-index-100">
+    <div class="col-3 cx z-index-100">
       <div>
-        <div class="cx cy pt-3vh mx-3 z-index-100">
+        <div class="cx cy pt-3vh z-index-100">
           <div *ngFor="let language of getLanguages().slice(0, 8)">
-            <img class="mx-1 cursor-pointer" [src]="'assets/' + language + '.png'" height="40" (click)="setLang(language)"/>
+            <img class="px-1 cursor-pointer" [src]="'assets/' + language + '.png'" height="40" (click)="setLang(language)"/>
           </div>
         </div>
-        <div class="cx cy pt-10px mx-3 z-index-100">
+        <div class="cx cy pt-10px z-index-100">
           <div *ngFor="let language of getLanguages().slice(8, 16)">
-            <img class="mx-1 cursor-pointer" [src]="'assets/' + language + '.png'" height="40" (click)="setLang(language)"/>
+            <img class="px-1 cursor-pointer" [src]="'assets/' + language + '.png'" height="40" (click)="setLang(language)"/>
           </div>
         </div>
       </div>
     </div>
-    <div class="col-4">
+    <div class="col-2 position-relative cx cy">
+
+
+      <img (mouseenter)="resetSelects();" class="pt-2vh cursor-pointer mx-1" src="assets/menu/pg.png">
+
+
+      <img (mouseenter)="resetSelects(); selected = 'conference'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/conference.png">
+      <div class="select-mail" [hidden]="!isSelected('conference')" (mouseleave)="resetSelects()">
+        <div class="pt-2vh"></div>
+        <div (click)="openLink('https://zoom.us/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/zoom.png"> {{lang.tr('Zoom')}}</div>
+        <div class="pt-2vh"></div>
+        <div (click)="openLink('https://duo.google.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/duo.png"> {{lang.tr('Google Duo')}}</div>
+        <div class="pt-2vh"></div>
+        <div (click)="openLink('https://www.skype.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/skype.png"> {{lang.tr('Skype')}}</div>
+        <div class="pt-2vh"></div>
+        <div (click)="openLink('https://meet.google.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/gmeet.png"> {{lang.tr('Google Meet')}}</div>
+        <div class="pt-2vh position-relative" *ngFor="let alias of getAliases('conference')">
+          <div (click)="openLink(alias.url)" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/cconference.png"> {{alias.name}}</div>
+          <div (click)="removeAlias('conference', alias)" class="remove-menu">x</div>
+        </div>
+        <div class="pt-2vh cursor-pointer">
+          <div (click)="alias = ''; url = ''; aliasName = 'conference'; aliasLabel = 'Video Meeting Alias (Zoom)';  aliasUrl = 'Video Meeting Url (https://zoom.us/)'; askForNew.show()" class="add-new-button cx cy">{{lang.tr('Add New')}} +</div>
+        </div>
+        <div class="pt-2vh cursor-pointer"></div>
+      </div>
+
+
+      <img (mouseenter)="resetSelects(); selected = 'horo'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/horo.png">
+      <div class="select-mail" [hidden]="!isSelected('horo')" (mouseleave)="resetSelects()">
+        <div class="pt-2vh"></div>
+        <div (click)="openLink('https://horo.mail.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/scorp.png"> {{lang.tr('Horoscope')}}</div>
+        <div class="pt-2vh"></div>
+        <div (click)="openLink('https://horo.mail.ru/sonnik/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/nights.png"> {{lang.tr('Dream Book')}}</div>
+        <div class="pt-2vh"></div>
+        <div (click)="openLink('https://horo.mail.ru/horoscope/business/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/business.png"> {{lang.tr('Business')}}</div>
+        <div class="pt-2vh cursor-pointer"></div>
+      </div>
+
+      <img (mouseenter)="resetSelects(); selected = 'search'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/search.png">
+      <div class="select-mail" [hidden]="!isSelected('search')" (mouseleave)="resetSelects()">
+        <img (click)="openLink('https://www.google.com/')" class="pt-2vh cursor-pointer" src="assets/menu/google.png">
+        <img (click)="openLink('https://yandex.ru/')" class="pt-2vh cursor-pointer" src="assets/menu/yandex.png">
+        <img (click)="openLink('https://baidu.com/')" class="pt-2vh cursor-pointer" src="assets/menu/baidu.png">
+        <div class="pt-2vh position-relative" *ngFor="let alias of getAliases('search')">
+          <div (click)="openLink(alias.url)" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/csearch.png"> {{alias.name}}</div>
+          <div (click)="removeAlias('search', alias)" class="remove-menu">x</div>
+        </div>
+        <div class="pt-2vh cursor-pointer">
+          <div (click)="alias = ''; url = ''; aliasName = 'search'; aliasLabel = 'Search Engine Alias (Google)';  aliasUrl = 'Search Engine Url (https://google.com/)'; askForNew.show()" class="add-new-button cx cy">{{lang.tr('Add New')}} +</div>
+        </div>
+        <div class="pt-2vh cursor-pointer"></div>
+      </div>
+
+    </div>
+    <div class="col-2" (mouseenter)="resetSelects()">
       <div class="center-logo">
         <img *ngIf="!device.isMobile()" class="d-block" width="220" src="../../../assets/home/logo.jpg">
         <img *ngIf="device.isMobile()" class="d-block" width="250" src="../../../assets/home/logo.jpg">
       </div>
     </div>
-    <div class="col-4 cx cy">
-      <a class="mx-1 app-gallery" href="https://wap-drru.hispace.hicloud.com/uowap/index.html#/detailApp/C104131097?source=qrCodeShare" target="_blank">
-        <img src="assets/appGalleryEurasian.png">
-      </a>
+    <div class="col-2 cx">
+
+
+      <img (mouseenter)="resetSelects(); selected = 'mail'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/at.png">
+      <div class="select-mail" [hidden]="!isSelected('mail')" (mouseleave)="resetSelects()">
+        <img (click)="openMail('mail')" class="pt-2vh cursor-pointer" src="assets/menu/mail.ru.png">
+        <img (click)="openMail('yandex')" class="pt-2vh cursor-pointer" src="assets/menu/ya.ru.png">
+        <img (click)="openMail('gmail')" class="pt-2vh cursor-pointer" src="assets/menu/gmail.ru.png">
+        <div class="pt-2vh position-relative" *ngFor="let alias of getAliases('mail')">
+          <div (click)="openLink(alias.url)" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/cmail.png"> {{alias.name}}</div>
+          <div (click)="removeAlias('mail', alias)" class="remove-menu">x</div>
+        </div>
+        <div class="pt-2vh cursor-pointer">
+          <div (click)="alias = ''; url = ''; aliasName = 'mail'; aliasLabel = 'Mail Alias (Google)';  aliasUrl = 'Mail Url (https://mail.google.com/mail/)'; askForNew.show()" class="add-new-button cx cy">{{lang.tr('Add New')}} +</div>
+        </div>
+        <div class="pt-2vh cursor-pointer">
+        </div>
+      </div>
+
+
+      <img (mouseenter)="resetSelects(); selected = 'social'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/social.png">
+      <div class="select-mail" [hidden]="!isSelected('social')" (mouseleave)="resetSelects()">
+        <div class="pt-2vh"></div>
+        <div (click)="openLink('https://www.instagram.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/instagram.png"> {{lang.tr('Instagram')}}</div>
+        <div class="pt-2vh"></div>
+        <div (click)="openLink('https://web.telegram.org/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/telegram.png"> {{lang.tr('Telegram')}}</div>
+        <div class="pt-2vh"></div>
+        <div (click)="openLink('https://vk.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/vk.png"> {{lang.tr('VK')}}</div>
+          <div class="pt-2vh"></div>
+        <div (click)="openLink('https://www.facebook.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/facebook.png"> {{lang.tr('FaceBook')}}</div>
+        <div class="pt-2vh cursor-pointer"></div>
+      </div>
+
+
+
+      <img (mouseenter)="resetSelects(); selected = 'market'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/market.png">
+      <div class="select-mail" [hidden]="!isSelected('market')" (mouseleave)="resetSelects()">
+        <div class="pt-2vh"></div>
+        <div (click)="openLink('https://www.ozon.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/ozon.png"> {{lang.tr('Ozon')}}</div>
+        <div class="pt-2vh"></div>
+        <div (click)="openLink('https://www.joom.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/joom.png"> {{lang.tr('Joom')}}</div>
+        <div class="pt-2vh"></div>
+        <div (click)="openLink('https://www.wildberries.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/wb.png"> {{lang.tr('WildBerries')}}</div>
+        <div class="pt-2vh"></div>
+        <div (click)="openLink('https://market.yandex.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 pl-4 cursor-pointer" src="assets/menu/yandex-market.png"> {{lang.tr('Yandex Market')}}</div>
+        <div class="pt-2vh"></div>
+        <div (click)="openLink('https://sbermarket.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/sbermarket.png"> {{lang.tr('Sber Market')}}</div>
+        <div class="pt-2vh position-relative" *ngFor="let alias of getAliases('market')">
+          <div (click)="openLink(alias.url)" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/cmarket.png"> {{alias.name}}</div>
+          <div (click)="removeAlias('mail', alias)" class="remove-menu">x</div>
+        </div>
+        <div class="pt-2vh cursor-pointer">
+          <div (click)="alias = ''; url = ''; aliasName = 'mail'; aliasLabel = 'Market Alias (Yandex Market)';  aliasUrl = 'Market Url (https://market.yandex.ru/)'; askForNew.show()" class="add-new-button cx cy">{{lang.tr('Add New')}} +</div>
+        </div>
+        <div class="pt-2vh cursor-pointer">
+        </div>
+      </div>
+
+
+      <img (mouseenter)="resetSelects(); selected = 'translate'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/translate.png">
+      <div class="select-mail" [hidden]="!isSelected('translate')" (mouseleave)="resetSelects()">
+        <div class="pt-2vh"></div>
+        <div (click)="openLink('https://translate.google.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 pl-3 cursor-pointer" src="assets/menu/google-translate.png"> {{lang.tr('Google Translate')}}</div>
+        <div class="pt-2vh"></div>
+        <div (click)="openLink('https://translate.yandex.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 pl-3 cursor-pointer" src="assets/menu/yandex-translate.png"> {{lang.tr('Yandex Translate')}}</div>
+        <div class="pt-2vh"></div>
+        <div (click)="openLink('https://www.multitran.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/multitran.png"> {{lang.tr('Multitran')}}</div>
+        <div class="pt-2vh cursor-pointer"></div>
+      </div>
+
+      <img (mouseenter)="resetSelects(); selected = 'messages'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/chat.png">
+      <div class="select-mail" [hidden]="!isSelected('messages')" (mouseleave)="resetSelects()">
+        <div class="pt-2vh"></div>
+        <div (click)="openLink('https://web.whatsapp.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 pl-3 cursor-pointer" src="assets/menu/whatsapp.png"> {{lang.tr('WhatsApp')}}</div>
+        <div class="pt-2vh"></div>
+        <div (click)="openLink('https://www.wechat.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 pl-3 cursor-pointer" src="assets/menu/wechat.png"> {{lang.tr('WeChat')}}</div>
+        <div class="pt-2vh"></div>
+        <div (click)="openLink('https://www.icq.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/icq.png"> {{lang.tr('ICQ')}}</div>
+        <div class="pt-2vh cursor-pointer"></div>
+      </div>
+    </div>
+    <div class="col-3 cx cy" (mouseenter)="resetSelects()">
       <div class="cursor-pointer" (click)="openPbp()">
         <div class="row">
           <div class="col no-gutters">
@@ -180,19 +312,16 @@
           </div>
         </div>
       </div>
+      <a class="app-gallery" href="https://wap-drru.hispace.hicloud.com/uowap/index.html#/detailApp/C104131097?source=qrCodeShare" target="_blank">
+        <img src="assets/appGalleryEurasian.png">
+      </a>
       <div class="center-logo">
-        <a class="mx-1" href="https://play.google.com/store/apps/details?id=press.eurasian.the" target="_blank">
+        <a class="px-1" href="https://play.google.com/store/apps/details?id=press.eurasian.the" target="_blank">
           <img src="assets/googlePlayEurasian.png">
         </a>
-        <a class="mx-1" href="https://apps.apple.com/us/app/the-eurasian/id1559418805" target="_blank">
+        <a class="px-1" href="https://apps.apple.com/us/app/the-eurasian/id1559418805" target="_blank">
           <img src="assets/appStoreEurasian.png">
         </a>
-      </div>
-      <div class="position-relative cx cy pt-3vh mx-3">
-        <mdb-icon far icon="circle" class="cx cy cursor-pointer text-red circle-icon" size="3x"></mdb-icon>
-        <div class="plus-text">
-          16+
-        </div>
       </div>
     </div>
   </div>
@@ -201,7 +330,7 @@
       <img (click)="openVR(vr.big, ind + 1)" height="180px" [src]="vr.small"/>
     </div>
   </div>
-  <div class="df cx" [class.currencies]="!device.isMobile()">
+  <div (mouseenter)="resetSelects()" class="df cx" [class.currencies]="!device.isMobile()">
     <div [class.currencies-and-weather-m]="device.isMobile()" [class.currencies-and-weather]="!device.isMobile()" class="mx-3">
       <div [class.weather-widgets-m]="device.isMobile()" class="weather-widgets">
         <div *ngFor="let weather of weathers" class="weather-widget">
@@ -275,9 +404,12 @@
     </div>
   </div>
 
-  <div class="gallery">
+  <div class="gallery" *ngIf="!device.isMobile()">
     <ngx-gallery #gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery"></ngx-gallery>
   </div>
+<!--  <div class="gallery-mobile" *ngIf="device.isMobile()">-->
+<!--    <ngx-gallery #gallery [options]="galleryOptionsMobile" [images]="galleryImages" class="ngx-gallery"></ngx-gallery>-->
+<!--  </div>-->
 
   <div *ngIf="languageManager.language == 'ru'">
     <div class="tvs-carousel" *ngIf="!device.isMobile()">
@@ -364,6 +496,31 @@
         <div class="cursor-pointer" (click)="openQr('ru', vr)"></div>
         <div class="cursor-pointer" (click)="openQr('zh', vr)"></div>
         <div class="cursor-pointer" (click)="openQr('en', vr)"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div mdbModal #askForNew class="modal fade bottom" tabindex="-1" role="dialog" aria-hidden="true" [config]="{backdrop: 'static'}">
+  <div class="ask-modal">
+    <div class="ask-for-mail-modal">
+      <div class="modal-exit">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="askForNew.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="ask-inputs">
+        <div class="md-form cx">
+          <input [(ngModel)]="alias" type="email" class="form-control" id="mailAlias" mdbInput>
+          <label for="mailAlias">{{aliasLabel}}</label>
+        </div>
+        <div class="md-form cx">
+          <input [(ngModel)]="url" type="email" class="form-control" id="mailUrl" mdbInput>
+          <label for="mailUrl">{{aliasUrl}}</label>
+        </div>
+        <div class="cx">
+          <div [class.disabled-button]="alias.trim() == '' || url.trim() == ''" (click)="addAlias(); askForNew.hide()" class="ask-for-mail-modal-button cx cy cursor-pointer text-white">OK</div>
+        </div>
       </div>
     </div>
   </div>

@@ -84,3 +84,8 @@ h5{
   align-items: center;
   justify-content: center;
 }
+.text-url{
+  color: #E21F2D;
+  text-decoration: underline;
+  cursor: pointer;
+}

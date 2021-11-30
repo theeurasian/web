@@ -37,6 +37,7 @@ import { GCnComponent } from './components/g-cn/g-cn.component';
 import {IndevNoredirectComponent} from './components/indev-noredirect/indev-noredirect.component';
 import {NgxGalleryModule} from '@kolkov/ngx-gallery';
 import {NgxImageZoomModule} from 'ngx-image-zoom';
+import {CertComponent} from './components/cert/cert.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent } ,
@@ -50,6 +51,8 @@ const appRoutes: Routes = [
   { path: 'g-en', component: GEnComponent },
   { path: 'g-cn', component: GCnComponent },
   { path: 'indev-noredirect', component: IndevNoredirectComponent },
+  { path: 'contacts', component: ContactsComponent },
+  { path: 'cert', component: CertComponent },
 ];
 
 
@@ -71,34 +74,35 @@ const appRoutes: Routes = [
     NdchComponent,
     GEnComponent,
     GCnComponent,
-    IndevNoredirectComponent
+    IndevNoredirectComponent,
+    CertComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    MDBBootstrapModule.forRoot(),
-    RouterModule.forRoot(
-      appRoutes,
-      {useHash: true}
-    ),
-    BrowserModule,
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    PdfViewerModule,
-    DeviceDetectorModule.forRoot(),
-    HttpClientModule,
-    BrowserAnimationsModule,
-    MatFormFieldModule,
-    MatButtonModule,
-    MatInputModule,
-    MatProgressSpinnerModule,
-    MatProgressBarModule,
-    AngularResizedEventModule,
-    LazyLoadImageModule,
-    NgxGalleryModule,
-    NgxImageZoomModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        MDBBootstrapModule.forRoot(),
+        RouterModule.forRoot(
+            appRoutes,
+            {useHash: true}
+        ),
+        BrowserModule,
+        CommonModule,
+        FormsModule,
+        ReactiveFormsModule,
+        PdfViewerModule,
+        DeviceDetectorModule.forRoot(),
+        HttpClientModule,
+        BrowserAnimationsModule,
+        MatFormFieldModule,
+        MatButtonModule,
+        MatInputModule,
+        MatProgressSpinnerModule,
+        MatProgressBarModule,
+        AngularResizedEventModule,
+        LazyLoadImageModule,
+        NgxGalleryModule,
+        NgxImageZoomModule,
+    ],
   providers: [
     AppearOnClickDirective,
     RotateOnClickDirective,

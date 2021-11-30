@@ -1,0 +1,32 @@
+<img src="//counter.rambler.ru/top100.cnt?pid=7089123"/>
+<div class="container pt-10 d-flex justify-content-center" *ngIf="!device.isMobile()">
+  <div class="row">
+    <div class="col-5">
+      <h1 class="text-red text-center pt-text">THE EURASIAN</h1>
+      <h4 class="pt-4">
+        «The Eurasian» ценит индивидуальность и талант каждого автора. Мы тесно сотрудничаем с журналистами и авторами на каждом этапе, от задумки и черновика до редактирования и публикации. Издание The Eurasian помогает авторам публиковать качественные, интересные и захватывающие материалы, которые имеют успех среди наших читателей.
+      </h4>
+    </div>
+    <div class="col-2"></div>
+    <div class="col-5 d-flex justify-content-center align-items-center">
+      <img class="d-block w-100" src="../../assets/home/cert.png" (click)="cert.show()">
+    </div>
+  </div>
+</div>
+<div class="container container-mobile" *ngIf="device.isMobile()">
+  <h1 class="text-red text-center pt-text">THE EURASIAN</h1>
+  <h4 class="pt-4">
+    «The Eurasian» ценит индивидуальность и талант каждого автора. Мы тесно сотрудничаем с журналистами и авторами на каждом этапе, от задумки и черновика до редактирования и публикации. Издание The Eurasian помогает авторам публиковать качественные, интересные и захватывающие материалы, которые имеют успех среди наших читателей.
+  </h4>
+  <div class="d-flex justify-content-center align-items-center">
+    <img class="d-block w-100" src="../../../assets/home/cert.png" (click)="cert.show()">
+  </div>
+</div>
+<app-footer></app-footer>
+<div mdbModal #cert class="modal fade bottom" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-md modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <img class="pb-3" src="/assets/home/cert.png">
+    </div>
+  </div>
+</div>
