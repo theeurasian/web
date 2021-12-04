@@ -66,10 +66,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
   tvs = [
     [ 'ontvtime_ort.jpg', 'https://www.ontvtime.ru/live/1tv.html' ],
     [ 'ontvtime_russia12.jpg', 'https://www.ontvtime.ru/live/russia1-tv.html' ],
-    [ 'ontvtime_ntv11.jpg', 'https://youtu.be/ownZUMKmM4c' ],
+    [ 'ontvtime_ntv11.jpg', 'https://www.ontvtime.ru/general/ntv-6.html' ],
     [ 'russiak_ontvtime1.jpg', 'https://www.ontvtime.ru/live/russiak-2.html' ],
     [ 'ontvtime_tv3_6.jpg', 'https://www.ontvtime.ru/general/tv3.html' ],
-    [ 'russia24_ontvtime.jpg', 'https://youtu.be/8T9SFZDP60Q' ],
+    [ 'russia24_ontvtime.jpg', 'https://www.ontvtime.ru/live/russia24.html' ],
     [ 'ontvtime_tvc.jpg', 'https://www.ontvtime.ru/general/tvc.html' ],
     [ 'ontvtime_rentv.jpg', 'https://www.ontvtime.ru/general/rentv.html' ],
     [ 'ontvtime_tnt.jpg', 'https://www.ontvtime.ru/live/tnt.html' ],
@@ -78,9 +78,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
     [ 'ontvtime_5channel.jpg', 'https://www.ontvtime.ru/general/channel5.html' ],
     [ 'ontvtime_karusel1.jpg', 'https://www.ontvtime.ru/live/karusel-2.html' ],
     [ 'ontvtime_otr.png', 'https://www.ontvtime.ru/live/otr.html' ],
-    [ 'ontvtime_mir2.jpg', 'https://youtu.be/IFmp_DwfKAo' ],
+    [ 'ontvtime_mir2.jpg', 'https://www.ontvtime.ru/live/mir.html' ],
     [ 'ontvtime_domashniy5.jpg', 'https://www.ontvtime.ru/general/domashniy.html' ],
-    [ 'rbc_ontvtime.jpg', 'https://youtu.be/06jgCTFmLl4' ],
+    [ 'rbc_ontvtime.jpg', 'https://www.ontvtime.ru/live/rbc.html' ],
     [ 'che_ontvtime.jpg', 'https://www.ontvtime.ru/live/che.html' ],
     [ 'sts_love_ontvtime.jpg', 'https://www.ontvtime.ru/live/sts-love.html' ],
     [ 'spas_ontvtime.jpg', 'https://www.ontvtime.ru/live/spas.html' ],
@@ -94,12 +94,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
   tvs1 = [
     [ 'ontvtime_ort.jpg', 'https://www.ontvtime.ru/live/1tv.html' ],
     [ 'ontvtime_russia12.jpg', 'https://www.ontvtime.ru/live/russia1-tv.html' ],
-    [ 'ontvtime_ntv11.jpg', 'https://youtu.be/ownZUMKmM4c' ],
+    [ 'ontvtime_ntv11.jpg', 'https://www.ontvtime.ru/general/ntv-6.html' ],
     [ 'russiak_ontvtime1.jpg', 'https://www.ontvtime.ru/live/russiak-2.html' ],
     [ 'ontvtime_tv3_6.jpg', 'https://www.ontvtime.ru/general/tv3.html' ]
   ];
   tvs2 = [
-    [ 'russia24_ontvtime.jpg', 'https://youtu.be/8T9SFZDP60Q' ],
+    [ 'russia24_ontvtime.jpg', 'https://www.ontvtime.ru/live/russia24.html' ],
     [ 'ontvtime_tvc.jpg', 'https://www.ontvtime.ru/general/tvc.html' ],
     [ 'ontvtime_rentv.jpg', 'https://www.ontvtime.ru/general/rentv.html' ],
     [ 'ontvtime_tnt.jpg', 'https://www.ontvtime.ru/live/tnt.html' ],
@@ -110,11 +110,11 @@ export class HomeComponent implements OnInit, AfterViewInit {
     [ 'ontvtime_5channel.jpg', 'https://www.ontvtime.ru/general/channel5.html' ],
     [ 'ontvtime_karusel1.jpg', 'https://www.ontvtime.ru/live/karusel-2.html' ],
     [ 'ontvtime_otr.png', 'https://www.ontvtime.ru/live/otr.html' ],
-    [ 'ontvtime_mir2.jpg', 'https://youtu.be/IFmp_DwfKAo' ]
+    [ 'ontvtime_mir2.jpg', 'https://www.ontvtime.ru/live/mir.html' ]
   ];
   tvs4 = [
     [ 'ontvtime_domashniy5.jpg', 'https://www.ontvtime.ru/general/domashniy.html' ],
-    [ 'rbc_ontvtime.jpg', 'https://youtu.be/06jgCTFmLl4' ],
+    [ 'rbc_ontvtime.jpg', 'https://www.ontvtime.ru/live/rbc.html' ],
     [ 'che_ontvtime.jpg', 'https://www.ontvtime.ru/live/che.html' ],
     [ 'sts_love_ontvtime.jpg', 'https://www.ontvtime.ru/live/sts-love.html' ],
     [ 'spas_ontvtime.jpg', 'https://www.ontvtime.ru/live/spas.html' ],
