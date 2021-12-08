@@ -98,7 +98,7 @@ export class LangService {
           case 'Phone +7 (7172) 38 14 21': return 'Тел. +7 (7172) 38 14 21';
           case 'In the Republic of Kazakhstan:': return 'В Республике Казахстан:';
           case 'FOUNDERS:': return 'УЧРЕДИТЕЛИ:';
-          case 'LLC "CCC", 123007. Moscow, 2nd Horoshevsky prospect, 9, building 2, office 103': return 'ТОО «ССС», 123007. г. Москва, 2-й Хорошевский пр-д, д.9, к. 2, оф.103';
+          case 'LLC "CCC", 123007. Moscow, 2nd Horoshevsky prospect, 9, building 2, office 103': return 'ТОО «ООО», 123007. г. Москва, 2-й Хорошевский пр-д, д.9, к. 2, оф.103';
           case 'JSC "Financial Academy", 010000, Republic of Kazakhstan, Nur-Sultan, st. Esenberlina, 25': return 'АО «Финансовая Академия», 010000, Республика Казахстан, г. Нур-Султан, ул. Есенберлина, д. 25';
           case 'Media Testimonies': return 'Свидетельства СМИ';
 
