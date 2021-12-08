@@ -98,7 +98,7 @@ export class LangService {
           case 'Phone +7 (7172) 38 14 21': return 'Тел. +7 (7172) 38 14 21';
           case 'In the Republic of Kazakhstan:': return 'В Республике Казахстан:';
           case 'FOUNDERS:': return 'УЧРЕДИТЕЛИ:';
-          case 'LLC, 123007. Moscow, 2nd Horoshevsky prospect, 9, building 2, office 103': return 'ТОО «ООО», 123007. г. Москва, 2-й Хорошевский пр-д, д.9, к. 2, оф.103';
+          case 'LLC "SSN", 123007. Moscow, 2nd Horoshevsky prospect, 9, building 2, office 103': return 'ООО «ССС», 123007. г. Москва, 2-й Хорошевский пр-д, д.9, к. 2, оф.103';
           case 'JSC "Financial Academy", 010000, Republic of Kazakhstan, Nur-Sultan, st. Esenberlina, 25': return 'АО «Финансовая Академия», 010000, Республика Казахстан, г. Нур-Султан, ул. Есенберлина, д. 25';
           case 'Media Testimonies': return 'Свидетельства СМИ';
 
@@ -131,7 +131,7 @@ export class LangService {
           case 'Phone +7 (7172) 38 14 21': return 'Teléfono +7 (7172) 38 14 21';
           case 'In the Republic of Kazakhstan:': return 'En la República de Kazajstán:';
           case 'FOUNDERS:': return 'FUNDADORES:';
-          case 'LLC, 123007. Moscow, 2nd Horoshevsky prospect, 9, building 2, office 103': return 'LLC, 123007. Moscú, segundo prospecto Horoshevsky, 9, edificio 2, oficina 103';
+          case 'LLC "SSN", 123007. Moscow, 2nd Horoshevsky prospect, 9, building 2, office 103': return 'LLC "SSN", 123007. Moscú, segundo prospecto Horoshevsky, 9, edificio 2, oficina 103';
           case 'JSC "Financial Academy", 010000, Republic of Kazakhstan, Nur-Sultan, st. Esenberlina, 25': return 'JSC "Financial Academy", 010000, República de Kazajstán, Nur-Sultan, st. Esenberlina, 25 años';
           case 'Media Testimonies': return 'Testimonios en los medios';
 
@@ -164,7 +164,7 @@ export class LangService {
           case 'Phone +7 (7172) 38 14 21': return 'Téléphone +7 (7172) 38 14 21';
           case 'In the Republic of Kazakhstan:': return 'En République du Kazakhstan :';
           case 'FOUNDERS:': return 'FONDATEURS :';
-          case 'LLC, 123007. Moscow, 2nd Horoshevsky prospect, 9, building 2, office 103': return 'LLC, 123007. Moscou, 2e perspective Horoshevsky, 9, bâtiment 2, bureau 103';
+          case 'LLC "SSN", 123007. Moscow, 2nd Horoshevsky prospect, 9, building 2, office 103': return 'LLC "SSN", 123007. Moscou, 2e perspective Horoshevsky, 9, bâtiment 2, bureau 103';
           case 'JSC "Financial Academy", 010000, Republic of Kazakhstan, Nur-Sultan, st. Esenberlina, 25': return 'JSC "Académie financière", 010000, République du Kazakhstan, Nur-Sultan, st. Esenberlina, 25 ans';
           case 'Media Testimonies': return 'Témoignages des médias';
 
@@ -197,7 +197,7 @@ export class LangService {
           case 'Phone +7 (7172) 38 14 21': return 'फोन +7 (7172) 38 14 21';
           case 'In the Republic of Kazakhstan:': return 'कजाकिस्तान गणराज्य में:';
           case 'FOUNDERS:': return 'संस्थापक:';
-          case 'LLC, 123007. Moscow, 2nd Horoshevsky prospect, 9, building 2, office 103': return 'एलएलसी "सीसीसी", 123007। मॉस्को, दूसरा होरोशेव्स्की संभावना, 9, भवन 2, कार्यालय 103';
+          case 'LLC "SSN", 123007. Moscow, 2nd Horoshevsky prospect, 9, building 2, office 103': return 'एलएलसी "सीसीसी", 123007। मॉस्को, दूसरा होरोशेव्स्की संभावना, 9, भवन 2, कार्यालय 103';
           case 'JSC "Financial Academy", 010000, Republic of Kazakhstan, Nur-Sultan, st. Esenberlina, 25': return 'जेएससी "वित्तीय अकादमी", 010000, कजाकिस्तान गणराज्य, नूर-सुल्तान, सेंट। एसेनबरलीना, २५';
           case 'Media Testimonies': return 'मीडिया गवाही';
 
@@ -230,7 +230,7 @@ export class LangService {
           case 'Phone +7 (7172) 38 14 21': return '';
           case 'In the Republic of Kazakhstan:': return '';
           case 'FOUNDERS:': return '';
-          case 'LLC, 123007. Moscow, 2nd Horoshevsky prospect, 9, building 2, office 103': return '';
+          case 'LLC "SSN", 123007. Moscow, 2nd Horoshevsky prospect, 9, building 2, office 103': return '';
           case 'JSC "Financial Academy", 010000, Republic of Kazakhstan, Nur-Sultan, st. Esenberlina, 25': return '';
           case 'Media Testimonies': return '';
 
@@ -263,7 +263,7 @@ export class LangService {
           case 'Phone +7 (7172) 38 14 21': return 'Telepon +7 (7172) 38 14 21';
           case 'In the Republic of Kazakhstan:': return 'Di Republik Kazakstan:';
           case 'FOUNDERS:': return 'PENDIRI:';
-          case 'LLC, 123007. Moscow, 2nd Horoshevsky prospect, 9, building 2, office 103': return 'LLC, 123007. Moskow, prospek Horoshevsky ke-2, 9, gedung 2, kantor 103';
+          case 'LLC "SSN", 123007. Moscow, 2nd Horoshevsky prospect, 9, building 2, office 103': return 'LLC "SSN", 123007. Moskow, prospek Horoshevsky ke-2, 9, gedung 2, kantor 103';
           case 'JSC "Financial Academy", 010000, Republic of Kazakhstan, Nur-Sultan, st. Esenberlina, 25': return 'JSC "Akademi Keuangan", 010000, Republik Kazakhstan, Nur-Sultan, st. Esenberlina, 25';
           case 'Media Testimonies': return 'Kesaksian Media';
           case 'Add New': return 'Tambah baru';
@@ -295,7 +295,7 @@ export class LangService {
           case 'Phone +7 (7172) 38 14 21': return 'Telefono +7 (7172) 38 14 21';
           case 'In the Republic of Kazakhstan:': return 'Nella Repubblica del Kazakistan:';
           case 'FOUNDERS:': return 'FONDATORI:';
-          case 'LLC, 123007. Moscow, 2nd Horoshevsky prospect, 9, building 2, office 103': return 'LLC, 123007. Mosca, 2a prospettiva Horoshevsky, 9, edificio 2, ufficio 103';
+          case 'LLC "SSN", 123007. Moscow, 2nd Horoshevsky prospect, 9, building 2, office 103': return 'LLC "SSN", 123007. Mosca, 2a prospettiva Horoshevsky, 9, edificio 2, ufficio 103';
           case 'JSC "Financial Academy", 010000, Republic of Kazakhstan, Nur-Sultan, st. Esenberlina, 25': return 'JSC "Accademia finanziaria", 010000, Repubblica del Kazakistan, Nur-Sultan, st. Esenberlina, 25';
           case 'Media Testimonies': return 'Testimonianze dei media';
 
@@ -328,7 +328,7 @@ export class LangService {
           case 'Phone +7 (7172) 38 14 21': return 'هاتف +7 (7172) 38 14 21';
           case 'In the Republic of Kazakhstan:': return 'في جمهورية كازاخستان:';
           case 'FOUNDERS:': return 'المؤسسون:';
-          case 'LLC, 123007. Moscow, 2nd Horoshevsky prospect, 9, building 2, office 103': return 'LLC ، 123007. موسكو ، احتمال هوروشيفسكي الثاني ، 9 ، المبنى 2 ، مكتب 103';
+          case 'LLC "SSN", 123007. Moscow, 2nd Horoshevsky prospect, 9, building 2, office 103': return 'LLC ، 123007. موسكو ، احتمال هوروشيفسكي الثاني ، 9 ، المبنى 2 ، مكتب 103';
           case 'JSC "Financial Academy", 010000, Republic of Kazakhstan, Nur-Sultan, st. Esenberlina, 25': return 'JSC "Financial Academy" ، 010000 ، جمهورية كازاخستان ، نور سلطان ، شارع. Esenberlina ، 25';
           case 'Media Testimonies': return 'شهادات وسائل الإعلام';
           case 'Add New': return 'اضف جديد';
@@ -360,7 +360,7 @@ export class LangService {
           case 'Phone +7 (7172) 38 14 21': return 'Телефон +7 (7172) 38 14 21';
           case 'In the Republic of Kazakhstan:': return 'Қазақстан Республикасында:';
           case 'FOUNDERS:': return 'ҚҰРУШЫЛАР:';
-          case 'LLC, 123007. Moscow, 2nd Horoshevsky prospect, 9, building 2, office 103': return 'ООО, 123007. Мәскеу, 2-ші Хорошевский даңғылы, 9, 2 корпус, 103 кеңсе';
+          case 'LLC "SSN", 123007. Moscow, 2nd Horoshevsky prospect, 9, building 2, office 103': return 'ООО, 123007. Мәскеу, 2-ші Хорошевский даңғылы, 9, 2 корпус, 103 кеңсе';
           case 'JSC "Financial Academy", 010000, Republic of Kazakhstan, Nur-Sultan, st. Esenberlina, 25': return '«Қаржы академиясы» АҚ, 010000, Қазақстан Республикасы, Нұр-Сұлтан қ., көш. Есенберлина, 25 жаста';
           case 'Media Testimonies': return 'БАҚ айғақтары';
           case 'Add New': return 'Жаңа қосу';
@@ -392,7 +392,7 @@ export class LangService {
           case 'Phone +7 (7172) 38 14 21': return '전화 +7 (7172) 38 14 21';
           case 'In the Republic of Kazakhstan:': return '카자흐스탄 공화국:';
           case 'FOUNDERS:': return '설립자:';
-          case 'LLC, 123007. Moscow, 2nd Horoshevsky prospect, 9, building 2, office 103': return 'LLC, 123007. 모스크바, 두 번째 Horoshevsky 전망, 9, 건물 2, 사무실 103';
+          case 'LLC "SSN", 123007. Moscow, 2nd Horoshevsky prospect, 9, building 2, office 103': return 'LLC "SSN", 123007. 모스크바, 두 번째 Horoshevsky 전망, 9, 건물 2, 사무실 103';
           case 'JSC "Financial Academy", 010000, Republic of Kazakhstan, Nur-Sultan, st. Esenberlina, 25': return 'JSC "금융 아카데미", 010000, 카자흐스탄 공화국, 누르술탄, st. 에센베를리나, 25';
           case 'Media Testimonies': return '언론 증언';
           case 'Add New': return '새로운 걸 더하다';
@@ -424,7 +424,7 @@ export class LangService {
           case 'Phone +7 (7172) 38 14 21': return 'Утас +7 (7172) 38 14 21';
           case 'In the Republic of Kazakhstan:': return 'Бүгд Найрамдах Казахстан улсад:';
           case 'FOUNDERS:': return 'Үүсгэн байгуулагчид:';
-          case 'LLC, 123007. Moscow, 2nd Horoshevsky prospect, 9, building 2, office 103': return 'ХХК, 123007. Москва, Хорошевскийн 2-р проспект, 9, 2-р байр, оффис 103';
+          case 'LLC "SSN", 123007. Moscow, 2nd Horoshevsky prospect, 9, building 2, office 103': return 'ХХК, 123007. Москва, Хорошевскийн 2-р проспект, 9, 2-р байр, оффис 103';
           case 'JSC "Financial Academy", 010000, Republic of Kazakhstan, Nur-Sultan, st. Esenberlina, 25': return '"Санхүүгийн академи" ХК, 010000, Бүгд Найрамдах Казахстан, Нур-Султан, ст. Есенберлина, 25 настай';
           case 'Media Testimonies': return 'Хэвлэл мэдээллийн гэрчлэл';
           case 'Add New': return 'Шинээр нэмэх';
@@ -456,7 +456,7 @@ export class LangService {
           case 'Phone +7 (7172) 38 14 21': return 'Điện thoại +7 (7172) 38 14 21';
           case 'In the Republic of Kazakhstan:': return 'Tại Cộng hòa Kazakhstan:';
           case 'FOUNDERS:': return 'NGƯỜI ĐỒNG SÁNG LẬP:';
-          case 'LLC, 123007. Moscow, 2nd Horoshevsky prospect, 9, building 2, office 103': return 'LLC, 123007. Matxcova, khách hàng tiềm năng Horoshevsky thứ 2, 9, tòa nhà 2, văn phòng 103';
+          case 'LLC "SSN", 123007. Moscow, 2nd Horoshevsky prospect, 9, building 2, office 103': return 'LLC "SSN", 123007. Matxcova, khách hàng tiềm năng Horoshevsky thứ 2, 9, tòa nhà 2, văn phòng 103';
           case 'JSC "Financial Academy", 010000, Republic of Kazakhstan, Nur-Sultan, st. Esenberlina, 25': return 'Công ty cổ phần "Học viện Tài chính", 010000, Cộng hòa Kazakhstan, Nur-Sultan, st. Esenberlina, 25 tuổi';
           case 'Media Testimonies': return 'Lời chứng của phương tiện truyền thông';
           case 'Add New': return 'Thêm mới';
@@ -488,7 +488,7 @@ export class LangService {
           case 'Phone +7 (7172) 38 14 21': return '电话 +7 (7172) 38 14 21';
           case 'In the Republic of Kazakhstan:': return '在哈萨克斯坦共和国：';
           case 'FOUNDERS:': return '创始人：';
-          case 'LLC, 123007. Moscow, 2nd Horoshevsky prospect, 9, building 2, office 103': return 'LLC, 123007. 莫斯科, 2nd Horoshevsky 远景地, 9, 2 号楼, 办公室 103';
+          case 'LLC "SSN", 123007. Moscow, 2nd Horoshevsky prospect, 9, building 2, office 103': return 'LLC "SSN", 123007. 莫斯科, 2nd Horoshevsky 远景地, 9, 2 号楼, 办公室 103';
           case 'JSC "Financial Academy", 010000, Republic of Kazakhstan, Nur-Sultan, st. Esenberlina, 25': return 'JSC“金融学院”，010000，哈萨克斯坦共和国，努尔苏丹，圣。 埃森贝利娜，25';
           case 'Media Testimonies': return '媒体见证';
           case 'Add New': return '添新';
@@ -520,7 +520,7 @@ export class LangService {
           case 'Phone +7 (7172) 38 14 21': return '电话 +7 (7172) 38 14 21';
           case 'In the Republic of Kazakhstan:': return '在哈萨克斯坦共和国：';
           case 'FOUNDERS:': return '创始人：';
-          case 'LLC, 123007. Moscow, 2nd Horoshevsky prospect, 9, building 2, office 103': return 'LLC, 123007. 莫斯科, 2nd Horoshevsky 前景, 9, 2 号楼, 办公室 103';
+          case 'LLC "SSN", 123007. Moscow, 2nd Horoshevsky prospect, 9, building 2, office 103': return 'LLC "SSN", 123007. 莫斯科, 2nd Horoshevsky 前景, 9, 2 号楼, 办公室 103';
           case 'JSC "Financial Academy", 010000, Republic of Kazakhstan, Nur-Sultan, st. Esenberlina, 25': return 'JSC“金融学院”，010000，哈萨克斯坦共和国，努尔苏丹，圣。 埃森贝利娜，25';
           case 'Media Testimonies': return '媒体见证';
           case 'Add New': return 'نیا شامل کریں';
@@ -552,7 +552,7 @@ export class LangService {
           case 'Phone +7 (7172) 38 14 21': return 'Telefon +7 (7172) 38 14 21';
           case 'In the Republic of Kazakhstan:': return 'In der Republik Kasachstan:';
           case 'FOUNDERS:': return 'GRÜNDER:';
-          case 'LLC, 123007. Moscow, 2nd Horoshevsky prospect, 9, building 2, office 103': return 'LLC, 123007. Moskau, 2. Horoshevsky Prospekt, 9, Gebäude 2, Büro 103';
+          case 'LLC "SSN", 123007. Moscow, 2nd Horoshevsky prospect, 9, building 2, office 103': return 'LLC "SSN", 123007. Moskau, 2. Horoshevsky Prospekt, 9, Gebäude 2, Büro 103';
           case 'JSC "Financial Academy", 010000, Republic of Kazakhstan, Nur-Sultan, st. Esenberlina, 25': return 'JSC "Finanzakademie", 010000, Republik Kasachstan, Nur-Sultan, st. Esenberlina, 25';
           case 'Media Testimonies': return 'Medienberichte';
           case 'Add New': return 'Neue hinzufügen';
