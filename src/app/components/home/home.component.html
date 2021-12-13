@@ -211,9 +211,21 @@
         <div class="pt-2vh cursor-pointer"></div>
       </div>
 
+      <img (mouseenter)="resetSelects(); selected = 'video'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/video.png">
+      <div class="select-mail" [hidden]="!isSelected('video')" (mouseleave)="resetSelects()">
+        <div class="pt-2vh"></div>
+        <div (click)="openLink('https://www.tiktok.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/tiktok.png"> {{lang.tr('TikTok')}}</div>
+        <div class="pt-2vh cursor-pointer"></div>
+        <div (click)="openLink('https://www.youtube.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 pl-3 cursor-pointer" src="assets/menu/youtube.png"> {{lang.tr('YouTube')}}</div>
+        <div class="pt-2vh"></div>
+        <div (click)="openLink('https://xn--41a.tv/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/yatv.png"> {{lang.tr('Я.TV')}}</div>
+        <div class="pt-2vh"></div>
+      </div>
+
+
     </div>
     <div class="col-2" (mouseenter)="resetSelects()">
-      <div class="center-logo">
+      <div class="center-logo cursor-pointer" (click)="videoPreview.show(); previewSrc.play()">
         <img *ngIf="!device.isMobile()" class="d-block" width="220" src="../../../assets/home/logo.jpg">
         <img *ngIf="device.isMobile()" class="d-block" width="250" src="../../../assets/home/logo.jpg">
       </div>
@@ -298,6 +310,7 @@
         <div (click)="openLink('https://www.icq.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/icq.png"> {{lang.tr('ICQ')}}</div>
         <div class="pt-2vh cursor-pointer"></div>
       </div>
+
     </div>
     <div class="col-3 cx cy" (mouseenter)="resetSelects()">
       <div class="cursor-pointer" (click)="openPbp()">
@@ -330,7 +343,7 @@
       <img (click)="openVR(vr.big, ind + 1)" height="180px" [src]="vr.small"/>
     </div>
   </div>
-  <div (mouseenter)="resetSelects()" class="df cx" [class.currencies]="!device.isMobile()">
+  <div class="df cx" [class.currencies]="!device.isMobile()">
     <div [class.currencies-and-weather-m]="device.isMobile()" [class.currencies-and-weather]="!device.isMobile()" class="mx-3">
       <div [class.weather-widgets-m]="device.isMobile()" class="weather-widgets">
         <div *ngFor="let weather of weathers" class="weather-widget">
@@ -486,6 +499,13 @@
   </div>
 </div>
 
+<div mdbModal #videoPreview class="modal fade bottom" tabindex="-1" role="dialog" aria-hidden="true" [config]="{backdrop: 'static'}" (click)="videoPreview.hide()">
+  <div class="image-preview-modal">
+    <div class="video-preview">
+      <video #previewSrc controls class="image" src="assets/preview.mp4"></video>
+    </div>
+  </div>
+</div>
 
 <div mdbModal #imagePreview class="modal fade bottom" tabindex="-1" role="dialog" aria-hidden="true" [config]="{backdrop: 'static'}" (click)="imagePreview.hide()">
   <div class="image-preview-modal">

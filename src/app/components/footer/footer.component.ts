@@ -18,4 +18,17 @@ export class FooterComponent implements OnInit {
   openLink(s: string) {
     window.open(s, '_blank');
   }
+
+  openSMI() {
+    if (this.lang.language == 'ru'){
+      this.openLink('/assets/home/contacts/Свидетельство RU.pdf');
+    }
+    else if (this.lang.language == 'kz'){
+      this.openLink('/assets/home/contacts/Свидетельство KZ.pdf');
+    }
+    else{
+      this.openLink('/assets/home/contacts/Свидетельство RU.pdf');
+      this.openLink('/assets/home/contacts/Свидетельство KZ.pdf');
+    }
+  }
 }

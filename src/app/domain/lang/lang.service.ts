@@ -7,7 +7,7 @@ import {WSCmd} from '../websocket/structure/wscmd';
 export class LangService {
   language = 'eu';
   constructor() {
-    // this.language = 'ru';
+    // this.language = 'kz';
     console.log(location.href);
     if (location.href.includes('theurasian.eu')){
       this.language = 'eu';
@@ -103,6 +103,7 @@ export class LangService {
           case 'Media Testimonies': return 'Свидетельства СМИ';
 
           case 'Add New': return 'Добавить';
+          case 'Media Kit': return 'Медиакит';
           default: return input;
         }
       }
@@ -136,6 +137,8 @@ export class LangService {
           case 'Media Testimonies': return 'Testimonios en los medios';
 
           case 'Add New': return 'Agregar nueva';
+          case 'Media Kit': return 'Kit de medios';
+
           default: return input;
         }
       }
@@ -169,6 +172,8 @@ export class LangService {
           case 'Media Testimonies': return 'Témoignages des médias';
 
           case 'Add New': return 'Ajouter un nouveau';
+          case 'Media Kit': return 'Dossier de presse';
+
           default: return input;
         }
       }
@@ -202,6 +207,8 @@ export class LangService {
           case 'Media Testimonies': return 'मीडिया गवाही';
 
           case 'Add New': return 'नया जोड़ो';
+          case 'Media Kit': return 'मीडिया किट';
+
           default: return input;
         }
       }
@@ -235,6 +242,8 @@ export class LangService {
           case 'Media Testimonies': return '';
 
           case 'Add New': return 'جدید اضافه کن';
+          case 'Media Kit': return 'کیت رسانه';
+
           default: return input;
         }
       }
@@ -267,6 +276,8 @@ export class LangService {
           case 'JSC "Financial Academy", 010000, Republic of Kazakhstan, Nur-Sultan, st. Esenberlina, 25': return 'JSC "Akademi Keuangan", 010000, Republik Kazakhstan, Nur-Sultan, st. Esenberlina, 25';
           case 'Media Testimonies': return 'Kesaksian Media';
           case 'Add New': return 'Tambah baru';
+          case 'Media Kit': return 'Perangkat Media';
+
           default: return input;
         }
       }
@@ -300,6 +311,8 @@ export class LangService {
           case 'Media Testimonies': return 'Testimonianze dei media';
 
           case 'Add New': return 'Aggiungere nuova';
+          case 'Media Kit': return 'Media kit';
+
           default: return input;
         }
       }
@@ -332,6 +345,8 @@ export class LangService {
           case 'JSC "Financial Academy", 010000, Republic of Kazakhstan, Nur-Sultan, st. Esenberlina, 25': return 'JSC "Financial Academy" ، 010000 ، جمهورية كازاخستان ، نور سلطان ، شارع. Esenberlina ، 25';
           case 'Media Testimonies': return 'شهادات وسائل الإعلام';
           case 'Add New': return 'اضف جديد';
+          case 'Media Kit': return 'طقم الوسائط';
+
           default: return input;
         }
       }
@@ -364,6 +379,8 @@ export class LangService {
           case 'JSC "Financial Academy", 010000, Republic of Kazakhstan, Nur-Sultan, st. Esenberlina, 25': return '«Қаржы академиясы» АҚ, 010000, Қазақстан Республикасы, Нұр-Сұлтан қ., көш. Есенберлина, 25 жаста';
           case 'Media Testimonies': return 'БАҚ айғақтары';
           case 'Add New': return 'Жаңа қосу';
+          case 'Media Kit': return 'Медиа жинағы';
+
           default: return input;
         }
       }
@@ -396,6 +413,8 @@ export class LangService {
           case 'JSC "Financial Academy", 010000, Republic of Kazakhstan, Nur-Sultan, st. Esenberlina, 25': return 'JSC "금융 아카데미", 010000, 카자흐스탄 공화국, 누르술탄, st. 에센베를리나, 25';
           case 'Media Testimonies': return '언론 증언';
           case 'Add New': return '새로운 걸 더하다';
+          case 'Media Kit': return '미디어 키트';
+
           default: return input;
         }
       }
@@ -428,6 +447,8 @@ export class LangService {
           case 'JSC "Financial Academy", 010000, Republic of Kazakhstan, Nur-Sultan, st. Esenberlina, 25': return '"Санхүүгийн академи" ХК, 010000, Бүгд Найрамдах Казахстан, Нур-Султан, ст. Есенберлина, 25 настай';
           case 'Media Testimonies': return 'Хэвлэл мэдээллийн гэрчлэл';
           case 'Add New': return 'Шинээр нэмэх';
+          case 'Media Kit': return 'Хэвлэл мэдээллийн хэрэгсэл';
+
           default: return input;
         }
       }
@@ -460,6 +481,8 @@ export class LangService {
           case 'JSC "Financial Academy", 010000, Republic of Kazakhstan, Nur-Sultan, st. Esenberlina, 25': return 'Công ty cổ phần "Học viện Tài chính", 010000, Cộng hòa Kazakhstan, Nur-Sultan, st. Esenberlina, 25 tuổi';
           case 'Media Testimonies': return 'Lời chứng của phương tiện truyền thông';
           case 'Add New': return 'Thêm mới';
+          case 'Media Kit': return 'Bộ phương tiện';
+
           default: return input;
         }
       }
@@ -492,6 +515,8 @@ export class LangService {
           case 'JSC "Financial Academy", 010000, Republic of Kazakhstan, Nur-Sultan, st. Esenberlina, 25': return 'JSC“金融学院”，010000，哈萨克斯坦共和国，努尔苏丹，圣。 埃森贝利娜，25';
           case 'Media Testimonies': return '媒体见证';
           case 'Add New': return '添新';
+          case 'Media Kit': return '媒体工具包';
+
           default: return input;
         }
       }
@@ -524,6 +549,8 @@ export class LangService {
           case 'JSC "Financial Academy", 010000, Republic of Kazakhstan, Nur-Sultan, st. Esenberlina, 25': return 'JSC“金融学院”，010000，哈萨克斯坦共和国，努尔苏丹，圣。 埃森贝利娜，25';
           case 'Media Testimonies': return '媒体见证';
           case 'Add New': return 'نیا شامل کریں';
+          case 'Media Kit': return 'میڈیا کٹ';
+
           default: return input;
         }
       }
@@ -556,6 +583,8 @@ export class LangService {
           case 'JSC "Financial Academy", 010000, Republic of Kazakhstan, Nur-Sultan, st. Esenberlina, 25': return 'JSC "Finanzakademie", 010000, Republik Kasachstan, Nur-Sultan, st. Esenberlina, 25';
           case 'Media Testimonies': return 'Medienberichte';
           case 'Add New': return 'Neue hinzufügen';
+          case 'Media Kit': return 'Werbemöglichkeiten';
+
           default: return input;
         }
       }

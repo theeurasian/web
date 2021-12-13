@@ -374,6 +374,10 @@ td{
   position: relative;
   width: 60vh;
 }
+.video-preview{
+  position: relative;
+  width: 100vh;
+}
 .currencies-and-weather-m{
   width: 90%;
 }
