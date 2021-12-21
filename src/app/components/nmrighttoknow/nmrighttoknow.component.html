@@ -1,0 +1,64 @@
+<div class="logo cx cy my-2" (click)="openLogo()">
+  <img src="assets/home/logo.jpg" height="100"/>
+</div>
+<div class="title my-2 mt-2">
+  Никита Михалков. Право знать! 13.11.2021
+</div>
+<div class="separator"></div>
+<div class="title my-2">
+  尼基塔·米哈尔科夫 知情权！ 11/13/2021
+</div>
+<div class="separator"></div>
+<div class="title my-2">
+  Nikita Mikhalkov. Right to know! 11/13/2021
+</div>
+<div class="select-language">
+  <div class="open-url" (click)="open('https://я.tv/#/watch?video=nm_rtknow&lang=ru')">
+    <div class="cx">
+      <ngx-qrcode
+        [value]="'https://я.tv/#/watch?video=nm_rtknow&lang=ru'"
+        cssClass="aclass">
+      </ngx-qrcode>
+    </div>
+    <div class="cx">
+      <div class="cx pt-2 mx-2">
+        ССЫЛКА
+      </div>
+      <div class="cx pt-1">
+        <img src="assets/url.png" height="20"/>
+      </div>
+    </div>
+  </div>
+  <div class="open-url" (click)="open('https://я.tv/#/watch?video=nm_rtknow&lang=zh')">
+    <div class="cx">
+      <ngx-qrcode
+        [value]="'https://я.tv/#/watch?video=nm_rtknow&lang=zh'"
+        cssClass="aclass">
+      </ngx-qrcode>
+    </div>
+    <div class="cx">
+      <div class="cx pt-2 mx-2">
+        关联
+      </div>
+      <div class="cx pt-1">
+        <img src="assets/url.png" height="20"/>
+      </div>
+    </div>
+  </div>
+  <div class="open-url" (click)="open('https://я.tv/#/watch?video=nm_rtknow&lang=en')">
+    <div class="cx">
+      <ngx-qrcode
+        [value]="'https://я.tv/#/watch?video=nm_rtknow&lang=en'"
+        cssClass="aclass">
+      </ngx-qrcode>
+    </div>
+    <div class="cx">
+      <div class="cx pt-2 mx-2">
+        LINK
+      </div>
+      <div class="cx pt-1">
+        <img src="assets/url.png" height="20"/>
+      </div>
+    </div>
+  </div>
+</div>

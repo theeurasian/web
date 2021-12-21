@@ -83,7 +83,7 @@ p, h4, h6{
   src: url('/assets/book_antiqua.ttf') format('regular'),
   url('/assets/book_antiqua.ttf') format('regular');
   font-size: large;
-  min-width: 1650px !important;
+  min-width: 1800px !important;
   position: relative;
 }
 .page-header{
@@ -122,7 +122,7 @@ p, h4, h6{
 }
 .margin-auto{
   margin: 0 auto;
-  width: 90%;
+  width: 98%;
 }
 .margin-auto-no-width{
   margin: 0 auto;
@@ -343,12 +343,12 @@ td{
 }
 .left-journals{
   position: absolute;
-  left: 8%;
+  left: 4%;
   z-index: 1;
 }
 .right-journals{
   position: absolute;
-  right: 8%;
+  right: 4%;
   z-index: 1;
 }
 .pr-2letters{

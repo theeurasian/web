@@ -158,7 +158,7 @@
         </div>
       </div>
     </div>
-    <div class="col-2 position-relative cx cy">
+    <div class="col-2 position-relative cx cy z-index-100">
 
 
       <img (mouseenter)="resetSelects();" class="pt-2vh cursor-pointer mx-1" src="assets/menu/pg.png">
@@ -196,6 +196,41 @@
         <div class="pt-2vh cursor-pointer"></div>
       </div>
 
+      <img (mouseenter)="resetSelects(); selected = 'video'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/video.png">
+      <div class="select-mail" [hidden]="!isSelected('video')" (mouseleave)="resetSelects()">
+        <div class="pt-2vh"></div>
+        <div (click)="openLink('https://www.tiktok.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/tiktok.png"> {{lang.tr('TikTok')}}</div>
+        <div class="pt-2vh cursor-pointer"></div>
+        <div (click)="openLink('https://www.youtube.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 pl-3 cursor-pointer" src="assets/menu/youtube.png"> {{lang.tr('YouTube')}}</div>
+        <div class="pt-2vh"></div>
+        <div (click)="openLink('https://xn--41a.tv/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/yatv.png"> {{lang.tr('Я.TV')}}</div>
+        <div class="pt-2vh"></div>
+      </div>
+
+      <img (mouseenter)="resetSelects(); selected = 'afisha'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/afisha.png">
+      <div class="select-mail" [hidden]="!isSelected('afisha')" (mouseleave)="resetSelects()">
+        <div class="pt-2vh"></div>
+        <div (click)="openLink('https://afisha.yandex.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 pl-3 cursor-pointer" src="assets/menu/yandex-afisha.png"> {{lang.tr('Yandex Afisha')}}</div>
+       <div class="pt-2vh"></div>
+        <div (click)="openLink('https://www.kassir.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/kassir.png"> {{lang.tr('Kassir.Ru')}}</div>
+        <div class="pt-2vh"></div>
+        <div (click)="openLink('https://kassa.rambler.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 pl-3 cursor-pointer" src="assets/menu/rambler-kassa.png"> {{lang.tr('Rambler Kassa')}}</div>
+        <div class="pt-2vh"></div>
+      </div>
+
+      <img (mouseenter)="resetSelects(); selected = 'afisha-cinema'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/afisha-cinema.png">
+      <div class="select-mail" [hidden]="!isSelected('afisha-cinema')" (mouseleave)="resetSelects()">
+        <div class="pt-2vh cursor-pointer"></div>
+        <div (click)="openLink('https://www.kinopoisk.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/kinopoisk.png"> {{lang.tr('Kinopoisk')}}</div>
+        <div class="pt-2vh cursor-pointer"></div>
+        <div (click)="openLink('https://okko.tv/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/okko.png"> {{lang.tr('OKKO')}}</div>
+        <div class="pt-2vh cursor-pointer"></div>
+        <div (click)="openLink('https://www.ivi.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/ivi.png"> {{lang.tr('IVI.RU')}}</div>
+        <div class="pt-2vh"></div>
+        <div (click)="openLink('https://www.netflix.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/netflix.png"> {{lang.tr('NETFLIX')}}</div>
+        <div class="pt-2vh"></div>
+      </div>
+
       <img (mouseenter)="resetSelects(); selected = 'search'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/search.png">
       <div class="select-mail" [hidden]="!isSelected('search')" (mouseleave)="resetSelects()">
         <img (click)="openLink('https://www.google.com/')" class="pt-2vh cursor-pointer" src="assets/menu/google.png">
@@ -211,26 +246,14 @@
         <div class="pt-2vh cursor-pointer"></div>
       </div>
 
-      <img (mouseenter)="resetSelects(); selected = 'video'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/video.png">
-      <div class="select-mail" [hidden]="!isSelected('video')" (mouseleave)="resetSelects()">
-        <div class="pt-2vh"></div>
-        <div (click)="openLink('https://www.tiktok.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/tiktok.png"> {{lang.tr('TikTok')}}</div>
-        <div class="pt-2vh cursor-pointer"></div>
-        <div (click)="openLink('https://www.youtube.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 pl-3 cursor-pointer" src="assets/menu/youtube.png"> {{lang.tr('YouTube')}}</div>
-        <div class="pt-2vh"></div>
-        <div (click)="openLink('https://xn--41a.tv/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/yatv.png"> {{lang.tr('Я.TV')}}</div>
-        <div class="pt-2vh"></div>
-      </div>
-
-
     </div>
-    <div class="col-2" (mouseenter)="resetSelects()">
-      <div class="center-logo cursor-pointer" (click)="videoPreview.show(); previewSrc.play()">
+    <div class="col-2">
+      <div class="center-logo cursor-pointer" (mouseenter)="resetSelects()" (click)="videoPreview.show(); previewSrc.play()">
         <img *ngIf="!device.isMobile()" class="d-block" width="220" src="../../../assets/home/logo.jpg">
         <img *ngIf="device.isMobile()" class="d-block" width="250" src="../../../assets/home/logo.jpg">
       </div>
     </div>
-    <div class="col-2 cx">
+    <div class="col-2 cx z-index-100">
 
 
       <img (mouseenter)="resetSelects(); selected = 'mail'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/at.png">
@@ -247,6 +270,17 @@
         </div>
         <div class="pt-2vh cursor-pointer">
         </div>
+      </div>
+
+      <img (mouseenter)="resetSelects(); selected = 'office'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/office.png">
+      <div class="select-mail" [hidden]="!isSelected('office')" (mouseleave)="resetSelects()">
+        <div class="pt-2vh"></div>
+        <div (click)="openLink('https://www.office.com/launch/word')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/word.png"> {{lang.tr('Word')}}</div>
+        <div class="pt-2vh"></div>
+        <div (click)="openLink('https://www.office.com/launch/excel')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/excel.png"> {{lang.tr('Excel')}}</div>
+        <div class="pt-2vh"></div>
+        <div (click)="openLink('https://www.office.com/launch/powerpoint')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/powerpoint.png"> {{lang.tr('PowerPoint')}}</div>
+        <div class="pt-2vh cursor-pointer"></div>
       </div>
 
 
@@ -310,6 +344,8 @@
         <div (click)="openLink('https://www.icq.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/icq.png"> {{lang.tr('ICQ')}}</div>
         <div class="pt-2vh cursor-pointer"></div>
       </div>
+
+
 
     </div>
     <div class="col-3 cx cy" (mouseenter)="resetSelects()">
@@ -502,7 +538,7 @@
 <div mdbModal #videoPreview class="modal fade bottom" tabindex="-1" role="dialog" aria-hidden="true" [config]="{backdrop: 'static'}" (click)="videoPreview.hide()">
   <div class="image-preview-modal">
     <div class="video-preview">
-      <video #previewSrc controls class="image" src="assets/preview.mp4"></video>
+      <video #previewSrc controls class="image" [src]="videoPreviewSrc"></video>
     </div>
   </div>
 </div>

@@ -38,6 +38,11 @@ import {IndevNoredirectComponent} from './components/indev-noredirect/indev-nore
 import {NgxGalleryModule} from '@kolkov/ngx-gallery';
 import {NgxImageZoomModule} from 'ngx-image-zoom';
 import {CertComponent} from './components/cert/cert.component';
+import { BcalledexamComponent } from './components/bcalledexam/bcalledexam.component';
+import { NmrighttoknowComponent } from './components/nmrighttoknow/nmrighttoknow.component';
+import {NgxQRCodeModule} from '@techiediaries/ngx-qrcode';
+import { SdvttoyearsComponent } from './components/sdvttoyears/sdvttoyears.component';
+import { TemirtransservComponent } from './components/temirtransserv/temirtransserv.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent } ,
@@ -53,6 +58,10 @@ const appRoutes: Routes = [
   { path: 'indev-noredirect', component: IndevNoredirectComponent },
   { path: 'contacts', component: ContactsComponent },
   { path: 'cert', component: CertComponent },
+  { path: 'bcalledexam', component: BcalledexamComponent },
+  { path: 'nmrighttoknow', component: NmrighttoknowComponent },
+  { path: 'sdvttoyears', component: SdvttoyearsComponent },
+  { path: 'temirtransserv', component: TemirtransservComponent },
 ];
 
 
@@ -75,34 +84,39 @@ const appRoutes: Routes = [
     GEnComponent,
     GCnComponent,
     IndevNoredirectComponent,
-    CertComponent
+    CertComponent,
+    BcalledexamComponent,
+    NmrighttoknowComponent,
+    SdvttoyearsComponent,
+    TemirtransservComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        MDBBootstrapModule.forRoot(),
-        RouterModule.forRoot(
-            appRoutes,
-            {useHash: true}
-        ),
-        BrowserModule,
-        CommonModule,
-        FormsModule,
-        ReactiveFormsModule,
-        PdfViewerModule,
-        DeviceDetectorModule.forRoot(),
-        HttpClientModule,
-        BrowserAnimationsModule,
-        MatFormFieldModule,
-        MatButtonModule,
-        MatInputModule,
-        MatProgressSpinnerModule,
-        MatProgressBarModule,
-        AngularResizedEventModule,
-        LazyLoadImageModule,
-        NgxGalleryModule,
-        NgxImageZoomModule,
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    MDBBootstrapModule.forRoot(),
+    RouterModule.forRoot(
+      appRoutes,
+      {useHash: true}
+    ),
+    BrowserModule,
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    PdfViewerModule,
+    DeviceDetectorModule.forRoot(),
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    MatInputModule,
+    MatProgressSpinnerModule,
+    MatProgressBarModule,
+    AngularResizedEventModule,
+    LazyLoadImageModule,
+    NgxGalleryModule,
+    NgxImageZoomModule,
+    NgxQRCodeModule,
+  ],
   providers: [
     AppearOnClickDirective,
     RotateOnClickDirective,

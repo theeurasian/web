@@ -27,8 +27,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   date = '';
   publishes = ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]).reverse();
   publishesKZ = ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, '11-kz', '12-kz']).reverse();
-
-
+  videoPreviewSrc = '';
   rssNews: RssItem[] = this.news.rssNews;
   currencyLoaded = false;
 
@@ -212,6 +211,16 @@ export class HomeComponent implements OnInit, AfterViewInit {
           }
         }
       });
+
+    if (this.lang.language == 'ru'){
+      this.videoPreviewSrc = '/assets/preview_ru.mp4';
+    }
+    else if (this.lang.language == 'cn'){
+      this.videoPreviewSrc = '/assets/preview_cn.mp4';
+    }
+    else{
+      this.videoPreviewSrc = '/assets/preview_en.mp4';
+    }
   }
   setRssNews(){
     this.rssNews.splice(0, this.rssNews.length);

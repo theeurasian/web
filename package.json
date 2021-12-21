@@ -24,6 +24,7 @@
     "@crystalui/angular-lightbox": "^1.0.6",
     "@fortawesome/fontawesome-free": "^5.12.1",
     "@kolkov/ngx-gallery": "^1.2.3",
+    "@techiediaries/ngx-qrcode": "^9.1.0",
     "@types/chart.js": "^2.9.15",
     "@types/scriptjs": "0.0.2",
     "angular-bootstrap-md": "^8.10.1",

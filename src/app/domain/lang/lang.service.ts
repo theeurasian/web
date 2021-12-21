@@ -100,7 +100,7 @@ export class LangService {
           case 'FOUNDERS:': return 'УЧРЕДИТЕЛИ:';
           case 'LLC "SSN", 123007. Moscow, 2nd Horoshevsky prospect, 9, building 2, office 103': return 'ООО «ССС», 123007. г. Москва, 2-й Хорошевский пр-д, д.9, к. 2, оф.103';
           case 'JSC "Financial Academy", 010000, Republic of Kazakhstan, Nur-Sultan, st. Esenberlina, 25': return 'АО «Финансовая Академия», 010000, Республика Казахстан, г. Нур-Султан, ул. Есенберлина, д. 25';
-          case 'Media Testimonies': return 'Свидетельства СМИ';
+          case 'Media Testimonies': return 'Свидетельство СМИ';
 
           case 'Add New': return 'Добавить';
           case 'Media Kit': return 'Медиакит';

@@ -21,14 +21,13 @@ export class FooterComponent implements OnInit {
 
   openSMI() {
     if (this.lang.language == 'ru'){
-      this.openLink('/assets/home/contacts/Свидетельство RU.pdf');
+      this.openLink('/assets/home/contacts/Свидетельство СМИ RU.pdf');
     }
     else if (this.lang.language == 'kz'){
-      this.openLink('/assets/home/contacts/Свидетельство KZ.pdf');
+      this.openLink('/assets/home/contacts/Свидетельство СМИ KZ.pdf');
     }
     else{
-      this.openLink('/assets/home/contacts/Свидетельство RU.pdf');
-      this.openLink('/assets/home/contacts/Свидетельство KZ.pdf');
+      this.openLink('/assets/home/contacts/Свидетельство СМИ RU-KZ.pdf');
     }
   }
 }
