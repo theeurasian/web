@@ -30,7 +30,8 @@ export class PdfReaderComponent implements OnInit {
     [2, 3, 15, 21, 44, 94, 102, 113, 117],
     [2, 3, 11, 18, 37, 44, 49, 59, 67, 74, 82, 102],
     [1, 2, 3, 4, 6, 8, 10, 11, 32, 42, 46, 75, 83, 103, 110, 111, 115, 125, 134, 135],
-    [1, 2, 3, 4, 5, 7, 8, 10, 11, 12, 13, 14, 15, 16, 18, 21, 22, 35, 83, 91, 96, 101, 109, 129, 136, 162]
+    [1, 2, 3, 4, 5, 7, 8, 10, 11, 12, 13, 14, 15, 16, 18, 21, 22, 35, 83, 91, 96, 101, 109, 129, 136, 162],
+    [1, 2, 3, 7, 8, 17, 18, 19, 29, 48, 51, 55, 73, 93, 98]
   ];
   qrsKz = [
     [],
@@ -44,7 +45,8 @@ export class PdfReaderComponent implements OnInit {
     [],
     [],
     [3, 4, 26, 28, 35, 41, 45, 74, 82, 102, 109, 110, 114, 124, 132, 133],
-    [1, 2, 3, 7, 8, 19, 67, 80, 85, 93, 113, 120]
+    [1, 2, 3, 7, 8, 19, 67, 80, 85, 93, 113, 120],
+    [1, 2, 12, 28, 47, 48, 49, 67, 75, 87, 92]
   ]
   images = [];
   publishes = [
@@ -59,12 +61,14 @@ export class PdfReaderComponent implements OnInit {
     [9, 129],
     [10, 111],
     [11, 135],
-    [12, 163]
+    [12, 163],
+    [13, 99]
   ];
   publishesKz = [
     [9, 129],
     [11, 133],
-    [12, 147]
+    [12, 147],
+    [13, 93]
   ]
 
   ngOnInit() {
@@ -104,15 +108,19 @@ export class PdfReaderComponent implements OnInit {
     }
     else{
       if (this.lang == 'kz' && this.getPagesCount(this.pdfReading) != 0){
-        const pagesLocation = this.rootPublishesSite + this.pdfReading + '/svg-pages-kz/Page-';
+        // const pagesLocation = this.rootPublishesSite + this.pdfReading + '/svg-pages-kz/Page-';
+        const pagesLocation = this.rootPublishesSite + this.pdfReading + '/pages-kz/Page';
         for (let x = 1; x <= this.getPagesCount(this.pdfReading); x++){
-          result.push(pagesLocation + x + '.svg');
+          //result.push(pagesLocation + x + '.svg');
+          result.push(pagesLocation + x + '.jpg');
         }
       }
       else{
-        const pagesLocation = this.rootPublishesSite + this.pdfReading + '/svg-pages-ru/Page-';
+        // const pagesLocation = this.rootPublishesSite + this.pdfReading + '/svg-pages-ru/Page-';
+        const pagesLocation = this.rootPublishesSite + this.pdfReading + '/pages-ru/Page';
         for (let x = 1; x <= this.getPagesCount(this.pdfReading, true); x++){
-          result.push(pagesLocation + x + '.svg');
+          // result.push(pagesLocation + x + '.svg');
+          result.push(pagesLocation + x + '.jpg');
         }
       }
     }
@@ -135,7 +143,10 @@ export class PdfReaderComponent implements OnInit {
     window.open('https://yapbp.org', '_blank');
   }
   openPromo() {
-    window.open('http://www.eurasian.press', '_blank');
+    window.open('https://eurasian.press', '_blank');
+  }
+  openPromoKz() {
+    window.open('https://theurasian.kz', '_blank');
   }
   hideMask(ind: number) {
     const page = ind + 1;

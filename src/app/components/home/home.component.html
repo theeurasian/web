@@ -1,5 +1,10 @@
 <div [class.page]="!device.isMobile()" [class.page-m]="device.isMobile()">
   <div class="left-journals" *ngIf="!device.isMobile()">
+    <div class="journal cursor-pointer zoom view" (click)="selectJournal(7)">
+      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e7.jpg">
+      <div class="mask flex-center rgba-black-slight">
+      </div>
+    </div>
     <div class="journal cursor-pointer zoom view" (click)="selectJournal(6)">
       <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e6.jpg">
       <div class="mask flex-center rgba-black-slight">
@@ -32,6 +37,16 @@
     </div>
   </div>
   <div class="right-journals" *ngIf="!device.isMobile()">
+    <div *ngIf="languageManager.language != 'kz'" class="journal cursor-pointer zoom view" (click)="selectJournal(13)">
+      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e13.jpg">
+      <div class="mask flex-center rgba-black-slight">
+      </div>
+    </div>
+    <div *ngIf="languageManager.language == 'kz'" class="journal cursor-pointer zoom view" (click)="selectJournal(13, 'kz')">
+      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e13-kz.jpg">
+      <div class="mask flex-center rgba-black-slight">
+      </div>
+    </div>
     <div *ngIf="languageManager.language != 'kz'" class="journal cursor-pointer zoom view" (click)="selectJournal(12)">
       <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e12.jpg">
       <div class="mask flex-center rgba-black-slight">
@@ -69,11 +84,6 @@
     </div>
     <div class="journal cursor-pointer zoom view" (click)="selectJournal(8)">
       <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e8.jpg">
-      <div class="mask flex-center rgba-black-slight">
-      </div>
-    </div>
-    <div class="journal cursor-pointer zoom view" (click)="selectJournal(7)">
-      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e7.jpg">
       <div class="mask flex-center rgba-black-slight">
       </div>
     </div>

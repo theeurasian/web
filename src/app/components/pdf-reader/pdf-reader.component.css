@@ -297,3 +297,114 @@
   grid-template-columns: 45% 27%;
   height: 100%;
 }
+
+
+
+.first-page-promo-e13 {
+  display: grid;
+  grid-auto-rows: 89% 9%;
+  grid-template-columns: 10% 26%;
+  height: 100%;
+}
+.second-page-promo-e13 {
+  display: grid;
+  grid-template-rows: 81% 10%;
+  grid-template-columns: 45% 13%;
+  height: 100%;
+}
+.rb-13-1qr{
+  display: grid;
+  grid-template-rows: 70% 13%;
+  grid-template-columns: 80% 16%;
+  height: 100%;
+}
+.lb-13-1qr{
+  display: grid;
+  grid-template-rows: 85% 10%;
+  grid-template-columns: 5% 13%;
+  height: 100%;
+}
+.rt-13-1qr{
+  display: grid;
+  grid-template-rows: 4% 12%;
+  grid-template-columns: 79% 15%;
+  height: 100%;
+}
+.rb-13-3qr{
+  display: grid;
+  grid-template-rows: 63% 25%;
+  grid-template-columns: 10% 27% 26.5% 26.5%;
+  height: 100%;
+}
+.rb-13-1qr-1{
+  display: grid;
+  grid-template-rows: 78% 13%;
+  grid-template-columns: 80% 14%;
+  height: 100%;
+}
+.rb-13-2qr{
+  display: grid;
+  grid-template-rows: 78% 14%;
+  grid-template-columns: 60% 15% 15%;
+  height: 100%;
+}
+.rb-13-3qr-1{
+  display: grid;
+  grid-template-rows: 4% 15% 60% 17%;
+  grid-template-columns: 5% 22% 46% 22%;
+  height: 100%;
+}
+.lb-13-1qr-1{
+  display: grid;
+  grid-template-rows: 74% 10%;
+  grid-template-columns: 17% 13%;
+  height: 100%;
+}
+.rb-13-1qr-2 {
+  display: grid;
+  grid-template-rows: 87% 10%;
+  grid-template-columns: 78% 12%;
+  height: 100%;
+}
+.rt-13-2qr{
+  display: grid;
+  grid-template-rows: 5% 14%;
+  grid-template-columns: 58% 18% 18%;
+  height: 100%;
+}
+.rb-13-1qr-2{
+  display: grid;
+  grid-template-rows: 78% 17%;
+  grid-template-columns: 71% 22%;
+  height: 100%;
+}
+.lb-13-1qr-3{
+  display: grid;
+  grid-template-rows: 80% 16%;
+  grid-template-columns: 16% 21%;
+  height: 100%;
+}
+.rb-13-1qr-3{
+  display: grid;
+  grid-template-rows: 77% 15%;
+  grid-template-columns: 69% 20%;
+  height: 100%;
+}
+.rb-13-1qr-2{
+  display: grid;
+  grid-template-rows: 87% 11%;
+  grid-template-columns: 79% 14%;
+  height: 100%;
+}
+.rb-13-1qr-3 {
+  display: grid;
+  grid-template-rows: 86% 10%;
+  grid-template-columns: 81% 14%;
+  height: 100%;
+}
+.rb-13-1qr-4 {
+  display: grid;
+  grid-template-rows: 77% 15%;
+  grid-template-columns: 69% 20%;
+  height: 100%;
+}
