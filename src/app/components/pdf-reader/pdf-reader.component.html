@@ -618,6 +618,10 @@
         <div></div><div></div><div></div>
         <div class="cursor-pointer" (click)="openPromoQr('https://www.eurasian.press/#/download')"></div>
       </div>
+      <div class="second-page-promo" *ngIf="(ind + 1) == 2">
+        <div></div><div></div><div></div>
+        <div class="cursor-pointer" (click)="openPromo()"></div>
+      </div>
       <div class="lb-13-1qr" *ngIf="(ind + 1) == 3">
         <div></div><div></div><div></div>
         <div class="cursor-pointer" (click)="openPromoQr('https://eurasian.press/#/bcalledexam')"></div>

@@ -108,19 +108,19 @@ export class PdfReaderComponent implements OnInit {
     }
     else{
       if (this.lang == 'kz' && this.getPagesCount(this.pdfReading) != 0){
-        // const pagesLocation = this.rootPublishesSite + this.pdfReading + '/svg-pages-kz/Page-';
-        const pagesLocation = this.rootPublishesSite + this.pdfReading + '/pages-kz/Page';
+        const pagesLocation = this.rootPublishesSite + this.pdfReading + '/svg-pages-kz/Page-';
+        //const pagesLocation = this.rootPublishesSite + this.pdfReading + '/pages-kz/Page';
         for (let x = 1; x <= this.getPagesCount(this.pdfReading); x++){
-          //result.push(pagesLocation + x + '.svg');
-          result.push(pagesLocation + x + '.jpg');
+          result.push(pagesLocation + x + '.svg');
+          //result.push(pagesLocation + x + '.jpg');
         }
       }
       else{
-        // const pagesLocation = this.rootPublishesSite + this.pdfReading + '/svg-pages-ru/Page-';
-        const pagesLocation = this.rootPublishesSite + this.pdfReading + '/pages-ru/Page';
+        const pagesLocation = this.rootPublishesSite + this.pdfReading + '/svg-pages-ru/Page-';
+        //const pagesLocation = this.rootPublishesSite + this.pdfReading + '/pages-ru/Page';
         for (let x = 1; x <= this.getPagesCount(this.pdfReading, true); x++){
-          // result.push(pagesLocation + x + '.svg');
-          result.push(pagesLocation + x + '.jpg');
+          result.push(pagesLocation + x + '.svg');
+          //result.push(pagesLocation + x + '.jpg');
         }
       }
     }
