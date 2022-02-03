@@ -25,8 +25,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
   marker;
   ratio;
   date = '';
-  publishes = ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]).reverse();
-  publishesKZ = ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, '11-kz', '12-kz']).reverse();
+  publishes = ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]).reverse();
+  publishesKZ = ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, '11-kz', '12-kz', '13-kz']).reverse();
   videoPreviewSrc = '';
   rssNews: RssItem[] = this.news.rssNews;
   currencyLoaded = false;
@@ -171,7 +171,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       { image: false, width: '300px', height: '400px', thumbnailsColumns: 1, imageAutoPlay: true, thumbnailsArrows: true, imageAutoPlayInterval: 1000, thumbnailsPercent: 100, imageSwipe: true},
     ];
     if (this.languageManager.language == 'kz'){
-      for (let x = 1; x <= 6; x++){
+      for (let x = 1; x <= 10; x++){
         this.galleryImages.push(
           {
             small: 'assets/vr-kz/' + x + '.svg',
@@ -182,7 +182,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       }
     }
     else{
-      for (let x = 1; x <= 7; x++){
+      for (let x = 1; x <= 12; x++){
         this.galleryImages.push(
           {
             small: 'assets/vr/' + x + '.svg',
@@ -367,7 +367,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   openQr(lang: string, vrMobile = 0) {
     console.log(this.gallery);
-    let vr = this.gallery.preview.index + 1;
+    let vr = this.gallery?.preview?.index + 1;
     if (vrMobile != 0){
       vr = vrMobile;
     }
@@ -375,24 +375,47 @@ export class HomeComponent implements OnInit, AfterViewInit {
       case 'kz':{
         switch (vr){
           case 1:{
-            window.open('https://xn--41a.tv/#/watch?video=vr_ww8&lang=' + lang, '_blank'); break;
+            window.open('https://xn--41a.tv/#/watch?video=interlukbbc&lang=' + lang, '_blank'); break;
           }
-          case 2:{
-            window.open('https://xn--41a.tv/#/watch?video=vr_ww9&lang=' + lang, '_blank'); break;
+          case 2: {
+            window.open('https://xn--41a.tv/#/watch?video=svpravda210122&lang=ru', '_blank');
+            break;
           }
-          case 3:{
-            window.open('https://xn--41a.tv/#/watch?video=vr_ww10&lang=' + lang, '_blank'); break;
+          case 3: {
+            window.open('https://xn--41a.tv/#/watch?video=vechervs160122&lang=ru', '_blank');
+            break;
           }
-          case 4:{
-            window.open('https://xn--41a.tv/#/watch?video=vr_ww11&lang=' + lang, '_blank'); break;
+          case 4: {
+            window.open('https://xn--41a.tv/#/watch?video=vechervs170122&lang=ru', '_blank');
+            break;
           }
-          case 5:{
-            window.open('https://xn--41a.tv/#/watch?video=vr_ww12&lang=' + lang, '_blank'); break;
+          case 5: {
+            window.open('https://xn--41a.tv/#/watch?video=vvsvs010922&lang=ru', '_blank');
+            break;
           }
-          case 6:{
-            window.open('https://xn--41a.tv/#/watch?video=vr_ww13&lang=' + lang, '_blank'); break;
+          case 6: {
+            window.open('https://xn--41a.tv/#/watch?video=ukrbesk30let&lang=' + lang, '_blank');
+            break;
           }
           case 7:{
+            window.open('https://xn--41a.tv/#/watch?video=vvechervs261221&lang=ru', '_blank'); break;
+          }
+          case 8:{
+            window.open('https://xn--41a.tv/#/watch?video=vr_ww9&lang=' + lang, '_blank'); break;
+          }
+          case 9:{
+            window.open('https://xn--41a.tv/#/watch?video=vr_ww10&lang=' + lang, '_blank'); break;
+          }
+          case 10:{
+            window.open('https://xn--41a.tv/#/watch?video=vr_ww11&lang=' + lang, '_blank'); break;
+          }
+          case 11:{
+            window.open('https://xn--41a.tv/#/watch?video=vr_ww12&lang=' + lang, '_blank'); break;
+          }
+          case 12:{
+            window.open('https://xn--41a.tv/#/watch?video=vr_ww13&lang=' + lang, '_blank'); break;
+          }
+          case 13:{
             window.open('https://xn--41a.tv/#/watch?video=vr_beslan&lang=' + lang, '_blank'); break;
           }
         }
@@ -401,30 +424,62 @@ export class HomeComponent implements OnInit, AfterViewInit {
       default:{
         switch (vr) {
           case 1: {
-            window.open('https://xn--41a.tv/#/watch?video=vr_ww8&lang=' + lang, '_blank');
+            window.open('https://xn--41a.tv/#/watch?video=interlukbbc&lang=' + lang, '_blank');
             break;
           }
           case 2: {
-            window.open('https://xn--41a.tv/#/watch?video=vr_ww9&lang=' + lang, '_blank');
+            window.open('https://xn--41a.tv/#/watch?video=svpravda210122&lang=ru', '_blank');
             break;
           }
           case 3: {
-            window.open('https://xn--41a.tv/#/watch?video=vr_ww10&lang=' + lang, '_blank');
+            window.open('https://xn--41a.tv/#/watch?video=vechervs160122&lang=ru', '_blank');
             break;
           }
           case 4: {
-            window.open('https://xn--41a.tv/#/watch?video=vr_ww11&lang=' + lang, '_blank');
+            window.open('https://xn--41a.tv/#/watch?video=vechervs170122&lang=ru', '_blank');
             break;
           }
           case 5: {
-            window.open('https://xn--41a.tv/#/watch?video=vr_ww12&lang=' + lang, '_blank');
+            window.open('https://xn--41a.tv/#/watch?video=vvsvs010922&lang=ru', '_blank');
             break;
           }
           case 6: {
+            window.open('https://xn--41a.tv/#/watch?video=ukrbesk30let&lang=' + lang, '_blank');
+            break;
+          }
+          case 7: {
+            window.open('https://xn--41a.tv/#/watch?video=vtorjdocfilm&lang=ru' + lang, '_blank');
+            break;
+          }
+          case 8: {
+            window.open('https://xn--41a.tv/#/watch?video=vvechervs261221&lang=ru', '_blank');
+            break;
+          }
+          case 9: {
+            window.open('https://xn--41a.tv/#/watch?video=vr_ww8&lang=' + lang, '_blank');
+            break;
+          }
+          case 10: {
+            window.open('https://xn--41a.tv/#/watch?video=vr_ww9&lang=' + lang, '_blank');
+            break;
+          }
+          case 11: {
+            window.open('https://xn--41a.tv/#/watch?video=vr_ww10&lang=' + lang, '_blank');
+            break;
+          }
+          case 12: {
+            window.open('https://xn--41a.tv/#/watch?video=vr_ww11&lang=' + lang, '_blank');
+            break;
+          }
+          case 13: {
+            window.open('https://xn--41a.tv/#/watch?video=vr_ww12&lang=' + lang, '_blank');
+            break;
+          }
+          case 14: {
             window.open('https://xn--41a.tv/#/watch?video=vr_ww13&lang=' + lang, '_blank');
             break;
           }
-          case 7:{
+          case 15:{
             window.open('https://xn--41a.tv/#/watch?video=vr_beslan&lang=' + lang, '_blank');
             break;
           }

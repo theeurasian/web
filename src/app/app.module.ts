@@ -62,6 +62,7 @@ const appRoutes: Routes = [
   { path: 'nmrighttoknow', component: NmrighttoknowComponent },
   { path: 'sdvttoyears', component: SdvttoyearsComponent },
   { path: 'temirtransserv', component: TemirtransservComponent },
+  { path: 'privacy', component: PrivacyComponent },
 ];
 
 
