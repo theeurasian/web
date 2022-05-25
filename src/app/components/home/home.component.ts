@@ -25,8 +25,14 @@ export class HomeComponent implements OnInit, AfterViewInit {
   marker;
   ratio;
   date = '';
-  publishes = ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]).reverse();
-  publishesKZ = ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, '11-kz', '12-kz', '13-kz']).reverse();
+  publishes = ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]).reverse();
+  publishesKZ = ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, '11-kz', '12-kz', '13-kz', '14-kz']).reverse();
+
+  vrs = [48, 47, 46, 45, 44, 43, 26, 1];
+  vrsKZ = [26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15];
+  vrsRU = [59, 58, 60, 52, 54, 48, 47, 46, 45, 44, 43, 26, 1];
+  newDesign = [60, 59, 58, 52, 54, 48];
+
   videoPreviewSrc = '';
   rssNews: RssItem[] = this.news.rssNews;
   currencyLoaded = false;
@@ -171,26 +177,37 @@ export class HomeComponent implements OnInit, AfterViewInit {
       { image: false, width: '300px', height: '400px', thumbnailsColumns: 1, imageAutoPlay: true, thumbnailsArrows: true, imageAutoPlayInterval: 1000, thumbnailsPercent: 100, imageSwipe: true},
     ];
     if (this.languageManager.language == 'kz'){
-      for (let x = 1; x <= 10; x++){
+      this.vrsKZ.forEach(vr => {
         this.galleryImages.push(
           {
-            small: 'assets/vr-kz/' + x + '.svg',
-            medium: 'assets/vr-kz/' + x + '.svg',
-            big: 'assets/vr-kz/' + x + '.svg',
+            small: 'assets/vr-kz/' + vr + '.svg',
+            medium: 'assets/vr-kz/' + vr + '.svg',
+            big: 'assets/vr-kz/' + vr + '.svg',
           }
-        )
-      }
+        );
+      });
+    }
+    else if (this.languageManager.language == 'ru'){
+      this.vrsRU.forEach(vr => {
+        this.galleryImages.push(
+          {
+            small: 'assets/vr/' + vr + '.svg',
+            medium: 'assets/vr/' + vr + '.svg',
+            big: 'assets/vr/' + vr + '.svg',
+          }
+        );
+      });
     }
     else{
-      for (let x = 1; x <= 12; x++){
+      this.vrs.forEach(vr => {
         this.galleryImages.push(
           {
-            small: 'assets/vr/' + x + '.svg',
-            medium: 'assets/vr/' + x + '.svg',
-            big: 'assets/vr/' + x + '.svg',
+            small: 'assets/vr/' + vr + '.svg',
+            medium: 'assets/vr/' + vr + '.svg',
+            big: 'assets/vr/' + vr + '.svg',
           }
-        )
-      }
+        );
+      });
     }
     this.galleryImages = [...this.galleryImages];
     this.route
@@ -239,7 +256,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   selectJournal(number: number, lang = 'ru') {
-    window.open('https://eurasian.press/#/read?issue=' + number.toString().replace('-kz', '') + '&lang=' + (number.toString().includes('kz') ? 'kz' : lang), '_blank');
+    if (number >= 14){
+      window.open('https://eurasian.press/publishes/' + number + '/' + lang + '-' + (this.device.isMobile() ? 'mobile' : 'desktop') + '.pdf');
+    }
+    else{
+      window.open('https://eurasian.press/#/read?issue=' + number.toString().replace('-kz', '') + '&lang=' + (number.toString().includes('kz') ? 'kz' : lang), '_blank');
+    }
   }
   openLastJournal(){
     window.open('https://eurasian.press/#/last-issue', '_blank');
@@ -579,5 +601,27 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
   resetSelects() {
     this.selected = '';
+  }
+
+  isOpenedVr(value: number){
+    if (!this.device.isMobile()){
+      return this.galleryImages[this.gallery?.selectedIndex]?.small?.toString().split('/').pop().replace('.svg', '') == value.toString();
+    }
+    else{
+      return this.imgSource?.toString().split('/').pop().replace('.svg', '') == value.toString();
+    }
+  }
+
+  isNewDesign() {
+    let res = false;
+    this.newDesign.forEach(vr => {
+      if (!this.device.isMobile() && this.isOpenedVr(vr)){
+        res = true;
+      }
+      if (this.device.isMobile() && this.imgSource?.toString().split('/').pop().replace('.svg', '') == vr.toString()){
+        res = true;
+      }
+    });
+    return res;
   }
 }

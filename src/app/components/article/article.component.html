@@ -1,0 +1,129 @@
+<div class="logo cx cy" (click)="openLogo()">
+  <img src="assets/home/logo.jpg" height="100"/>
+</div>
+<div *ngIf="page == 'secure-init'">
+  <div class="title my-2 mt-2">
+    Си Цзиньпин выдвинул инициативу в области глобальной безопасности
+  </div>
+  <div class="separator"></div>
+  <div class="title my-2">
+    习近平在博鳌亚洲论坛2022年年会开幕式上发表主旨演讲
+  </div>
+  <div class="separator"></div>
+  <div class="title my-2">
+    Xi Focus: Xi proposes Global Security Initiative
+  </div>
+  <div class="select-language">
+    <div class="open-url" (click)="open('https://russian.news.cn/20220421/1ab1de68121848cb8c25ca7c7101b98f/c.html')">
+      <div class="cx">
+        <ngx-qrcode
+          [value]="'https://russian.news.cn/20220421/1ab1de68121848cb8c25ca7c7101b98f/c.html'"
+          cssClass="aclass" width="220">
+        </ngx-qrcode>
+      </div>
+      <div class="cx">
+        <div class="cx pt-2 mx-2">
+          ССЫЛКА
+        </div>
+        <div class="cx pt-1">
+          <img src="assets/url.png" height="20"/>
+        </div>
+      </div>
+    </div>
+    <div class="open-url" (click)="open('http://www.zlb.gov.cn/2022-04/21/c_1211639101.htm')">
+      <div class="cx">
+        <ngx-qrcode
+          [value]="'http://www.zlb.gov.cn/2022-04/21/c_1211639101.htm'"
+          cssClass="aclass" width="220">
+        </ngx-qrcode>
+      </div>
+      <div class="cx">
+        <div class="cx pt-2 mx-2">
+          关联
+        </div>
+        <div class="cx pt-1">
+          <img src="assets/url.png" height="20"/>
+        </div>
+      </div>
+    </div>
+    <div class="open-url" (click)="open('https://english.news.cn/20220421/98f7642116fb4932be42452178b0c3d8/c.html')">
+      <div class="cx">
+        <ngx-qrcode
+          [value]="'https://english.news.cn/20220421/98f7642116fb4932be42452178b0c3d8/c.html'"
+          cssClass="aclass" width="220">
+        </ngx-qrcode>
+      </div>
+      <div class="cx">
+        <div class="cx pt-2 mx-2">
+          LINK
+        </div>
+        <div class="cx pt-1">
+          <img src="assets/url.png" height="20"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="page == 'health-def'">
+  <div class="title my-2 mt-2">
+    Си Цзиньпин призвал к совместным усилиям для защиты жизни и здоровья человечества
+  </div>
+  <div class="separator"></div>
+  <div class="title my-2">
+    习近平在博鳌亚洲论坛2022年年会开幕式上的主旨演讲（全文）
+  </div>
+  <div class="separator"></div>
+  <div class="title my-2">
+    Xi Focus: Xi urges working together to defend people's lives, health
+  </div>
+  <div class="select-language">
+    <div class="open-url" (click)="open('https://russian.news.cn/20220421/61b0ab50cad941c4aa6cafc07c1a2443/c.html')">
+      <div class="cx">
+        <ngx-qrcode
+          [value]="'https://russian.news.cn/20220421/61b0ab50cad941c4aa6cafc07c1a2443/c.html'"
+          cssClass="aclass" width="220">
+        </ngx-qrcode>
+      </div>
+      <div class="cx">
+        <div class="cx pt-2 mx-2">
+          ССЫЛКА
+        </div>
+        <div class="cx pt-1">
+          <img src="assets/url.png" height="20"/>
+        </div>
+      </div>
+    </div>
+    <div class="open-url" (click)="open('http://ru.china-embassy.org/zgxw/202204/t20220421_10671052.htm')">
+      <div class="cx">
+        <ngx-qrcode
+          [value]="'http://ru.china-embassy.org/zgxw/202204/t20220421_10671052.htm'"
+          cssClass="aclass" width="220">
+        </ngx-qrcode>
+      </div>
+      <div class="cx">
+        <div class="cx pt-2 mx-2">
+          关联
+        </div>
+        <div class="cx pt-1">
+          <img src="assets/url.png" height="20"/>
+        </div>
+      </div>
+    </div>
+    <div class="open-url" (click)="open('https://english.news.cn/20220421/818f03edb70c4d798ff7297da860ca1d/c.html')">
+      <div class="cx">
+        <ngx-qrcode
+          [value]="'https://english.news.cn/20220421/818f03edb70c4d798ff7297da860ca1d/c.html'"
+          cssClass="aclass" width="220">
+        </ngx-qrcode>
+      </div>
+      <div class="cx">
+        <div class="cx pt-2 mx-2">
+          LINK
+        </div>
+        <div class="cx pt-1">
+          <img src="assets/url.png" height="20"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

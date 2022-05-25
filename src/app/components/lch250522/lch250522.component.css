@@ -1,0 +1,33 @@
+.select-language{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  transform: scale(0.7);
+}
+.open-url{
+  cursor: pointer;
+}
+.cx{
+  display: flex;
+  justify-content: center;
+}
+.cy{
+  display: flex;
+  align-items: center;
+}
+.title{
+  text-align: center;
+  margin: 0 auto;
+  font-size: 14px;
+  font-weight: 700;
+}
+.separator{
+  width: 40px;
+  background: black;
+  height: 1px;
+  margin: 0 auto;
+}
+.logo{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}

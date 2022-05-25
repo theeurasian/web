@@ -43,6 +43,12 @@ import { NmrighttoknowComponent } from './components/nmrighttoknow/nmrighttoknow
 import {NgxQRCodeModule} from '@techiediaries/ngx-qrcode';
 import { SdvttoyearsComponent } from './components/sdvttoyears/sdvttoyears.component';
 import { TemirtransservComponent } from './components/temirtransserv/temirtransserv.component';
+import { Wday22Component } from './components/wday22/wday22.component';
+import { ArticleComponent } from './components/article/article.component';
+import { Vsv050522Component } from './components/vsv050522/vsv050522.component';
+import { Akgl250322Component } from './components/akgl250322/akgl250322.component';
+import { Kzbs260322Component } from './components/kzbs260322/kzbs260322.component';
+import { Lch250522Component } from './components/lch250522/lch250522.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent } ,
@@ -63,6 +69,12 @@ const appRoutes: Routes = [
   { path: 'sdvttoyears', component: SdvttoyearsComponent },
   { path: 'temirtransserv', component: TemirtransservComponent },
   { path: 'privacy', component: PrivacyComponent },
+  { path: 'wday22', component: Wday22Component },
+  { path: 'article', component: ArticleComponent },
+  { path: 'vsv050522', component: Vsv050522Component },
+  { path: 'akgl250322', component: Akgl250322Component },
+  { path: 'kzbs260322', component: Kzbs260322Component },
+  { path: 'lch250522', component: Lch250522Component },
 ];
 
 
@@ -89,7 +101,13 @@ const appRoutes: Routes = [
     BcalledexamComponent,
     NmrighttoknowComponent,
     SdvttoyearsComponent,
-    TemirtransservComponent
+    TemirtransservComponent,
+    Wday22Component,
+    ArticleComponent,
+    Vsv050522Component,
+    Akgl250322Component,
+    Kzbs260322Component,
+    Lch250522Component
   ],
   imports: [
     BrowserModule,

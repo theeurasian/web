@@ -1,0 +1,64 @@
+<div class="logo cx cy" (click)="openLogo()">
+  <img src="assets/home/logo.jpg" height="100"/>
+</div>
+<div class="title my-2 mt-2">
+  Что будет с бизнесом в Казахстане?
+</div>
+<div class="separator"></div>
+<div class="title my-2">
+  哈萨克斯坦的生意会怎样？
+</div>
+<div class="separator"></div>
+<div class="title my-2">
+  What will happen to business in Kazakhstan?
+</div>
+<div class="select-language">
+  <div class="open-url" (click)="open('https://xn--41a.tv/#/watch?video=kzbs260322&lang=ru')">
+    <div class="cx">
+      <ngx-qrcode
+        [value]="'https://xn--41a.tv/#/watch?video=kzbs260322&lang=ru'"
+        cssClass="aclass" width="220">
+      </ngx-qrcode>
+    </div>
+    <div class="cx">
+      <div class="cx pt-2 mx-2">
+        ССЫЛКА
+      </div>
+      <div class="cx pt-1">
+        <img src="assets/url.png" height="20"/>
+      </div>
+    </div>
+  </div>
+  <div class="open-url" (click)="open('https://xn--41a.tv/#/watch?video=kzbs260322&lang=zh')">
+    <div class="cx">
+      <ngx-qrcode
+        [value]="'https://xn--41a.tv/#/watch?video=kzbs260322&lang=zh'"
+        cssClass="aclass" width="220">
+      </ngx-qrcode>
+    </div>
+    <div class="cx">
+      <div class="cx pt-2 mx-2">
+        关联
+      </div>
+      <div class="cx pt-1">
+        <img src="assets/url.png" height="20"/>
+      </div>
+    </div>
+  </div>
+  <div class="open-url" (click)="open('https://xn--41a.tv/#/watch?video=kzbs260322&lang=en')">
+    <div class="cx">
+      <ngx-qrcode
+        [value]="'https://xn--41a.tv/#/watch?video=kzbs260322&lang=en'"
+        cssClass="aclass" width="220">
+      </ngx-qrcode>
+    </div>
+    <div class="cx">
+      <div class="cx pt-2 mx-2">
+        LINK
+      </div>
+      <div class="cx pt-1">
+        <img src="assets/url.png" height="20"/>
+      </div>
+    </div>
+  </div>
+</div>

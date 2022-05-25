@@ -5,7 +5,7 @@ import {WSCmd} from '../websocket/structure/wscmd';
   providedIn: 'root'
 })
 export class LangService {
-  language = 'eu';
+  language = 'ru';
   constructor() {
     // this.language = 'kz';
     console.log(location.href);

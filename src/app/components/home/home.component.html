@@ -37,6 +37,16 @@
     </div>
   </div>
   <div class="right-journals" *ngIf="!device.isMobile()">
+    <div *ngIf="languageManager.language != 'kz'" class="journal cursor-pointer zoom view" (click)="selectJournal(14)">
+      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e14.jpg">
+      <div class="mask flex-center rgba-black-slight">
+      </div>
+    </div>
+    <div *ngIf="languageManager.language == 'kz'" class="journal cursor-pointer zoom view" (click)="selectJournal(14, 'kz')">
+      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e14-kz.jpg">
+      <div class="mask flex-center rgba-black-slight">
+      </div>
+    </div>
     <div *ngIf="languageManager.language != 'kz'" class="journal cursor-pointer zoom view" (click)="selectJournal(13)">
       <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e13.jpg">
       <div class="mask flex-center rgba-black-slight">
@@ -93,8 +103,8 @@
       <div class="center-logo">
         <img class="d-block" width="250" height="100" src="../../../assets/home/logo.jpg">
       </div>
-      <img *ngIf="languageManager.language == 'kz'" (click)="selectJournal(13, 'kz')" class="d-block mt-2" height="340" width="250" src="../../../assets/home/publishes/e13-kz.jpg">
-      <img *ngIf="languageManager.language != 'kz'" (click)="selectJournal(13)" class="d-block mt-2" height="340" width="250" src="../../../assets/home/publishes/e13.jpg">
+      <img *ngIf="languageManager.language == 'kz'" (click)="selectJournal(14, 'kz')" class="d-block mt-2" height="340" width="250" src="../../../assets/home/publishes/e14-kz.jpg">
+      <img *ngIf="languageManager.language != 'kz'" (click)="selectJournal(14)" class="d-block mt-2" height="340" width="250" src="../../../assets/home/publishes/e14.jpg">
     </div>
     <div class="row">
       <div class="pr">
@@ -463,7 +473,7 @@
     </div>
   </div>
 
-  <div class="gallery" *ngIf="!device.isMobile()">
+  <div class="gallery">
     <ngx-gallery #gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery"></ngx-gallery>
   </div>
 <!--  <div class="gallery-mobile" *ngIf="device.isMobile()">-->
@@ -532,16 +542,68 @@
       </div>
     </div>
   </div>
-
+  <div *ngIf="languageManager.language == 'ru' && !device.isMobile()">
+    <div class="cx df promo pt-2vh">
+      <div class="df cy">
+        <a href="https://www.garant.ru/" target="_blank" class="mx-4 cy"><img src="assets/promo/garant.png"></a>
+      </div>
+      <div class="df cy">
+        <a href="https://www.aeroflot.ru/" target="_blank" class="mx-4 cy"><img src="assets/promo/aeroflot.png"></a>
+      </div>
+      <div class="df cy">
+        <a href="https://www.rzd.ru/" target="_blank" class="mx-4 cy"><img src="assets/promo/rzd.png"></a>
+      </div>
+      <div class="df cy">
+        <a href="https://www.rossiya-airlines.com/" target="_blank" class="mx-4 cy"><img src="assets/promo/rossiya-airlines.png"></a>
+      </div>
+      <div class="df cy">
+        <a href="https://belavia.by/" target="_blank" class="mx-4 cy"><img src="assets/promo/belavia.png"></a>
+      </div>
+      <div class="df cy">
+        <a href="https://www.scat.kz/" target="_blank" class="mx-4 cy"><img src="assets/promo/scat.png"></a>
+      </div>
+    </div>  </div>
   <app-footer></app-footer>
 </div>
 
 <div [ngStyle]="vrStyle" *ngIf="isGalleryPreview()">
-  <div class="vr-preview-mask">
+  <div class="vr-preview-mask" *ngIf="!isNewDesign()">
     <div></div><div></div><div></div><div></div><div></div>
     <div class="cursor-pointer" (click)="openQr('ru')"></div>
     <div class="cursor-pointer" (click)="openQr('zh')"></div>
     <div class="cursor-pointer" (click)="openQr('en')"></div>
+  </div>
+  <div class="vr-preview-mask-60" *ngIf="isOpenedVr(60)">
+    <div></div><div></div><div></div>
+    <div class="cursor-pointer" (click)="openLink('https://xn--41a.tv/#/watch?video=60m250522&lang=ru')"></div>
+  </div>
+  <div class="vr-preview-mask-58" *ngIf="isOpenedVr(59)">
+    <div></div><div></div><div></div>
+    <div class="cursor-pointer" (click)="openLink('https://xn--41a.tv/#/watch?video=svt130522&lang=ru')"></div>
+  </div>
+  <div class="vr-preview-mask-58" *ngIf="isOpenedVr(58)">
+    <div></div><div></div><div></div>
+    <div class="cursor-pointer" (click)="openLink('https://xn--41a.tv/#/watch?video=rtk140522&lang=ru')"></div>
+  </div>
+  <div class="vr-preview-mask-58" *ngIf="isOpenedVr(58)">
+    <div></div><div></div><div></div>
+    <div class="cursor-pointer" (click)="openLink('https://xn--41a.tv/#/watch?video=rtk140522&lang=ru')"></div>
+  </div>
+  <div class="vr-preview-mask-52" *ngIf="isOpenedVr(52)">
+    <div></div><div></div><div></div>
+    <div class="cursor-pointer" (click)="openLink('http://publication.pravo.gov.ru/Document/View/0001202204260002')"></div>
+    <div></div><div></div><div></div>
+    <div class="cursor-pointer" (click)="openLink('https://xn--41a.tv/#/watch?video=zkd220422&lang=ru')"></div>
+    <div></div><div></div><div></div>
+    <div class="cursor-pointer" (click)="openLink('https://t.me/RKadyrov_95/1951')"></div>
+  </div>
+  <div class="vr-preview-mask-54" *ngIf="isOpenedVr(54)">
+    <div></div><div></div><div></div>
+    <div class="cursor-pointer" (click)="openLink('https://xn--41a.tv/#/watch?video=rusles010522&lang=ru')"></div>
+  </div>
+  <div class="vr-preview-mask-48" *ngIf="isOpenedVr(48)">
+    <div></div><div></div><div></div>
+    <div class="cursor-pointer" (click)="openLink('https://я.tv/#/watch?video=vvsvs130322&lang=ru')"></div>
   </div>
 </div>
 
@@ -557,11 +619,43 @@
   <div class="image-preview-modal">
     <div class="image-preview">
       <img *ngIf="imgSource != ''" [src]="imgSource" class="image"/>
-      <div class="image-preview-mask">
+      <div class="image-preview-mask" *ngIf="!isNewDesign()">
         <div></div><div></div><div></div><div></div><div></div>
         <div class="cursor-pointer" (click)="openQr('ru', vr)"></div>
         <div class="cursor-pointer" (click)="openQr('zh', vr)"></div>
         <div class="cursor-pointer" (click)="openQr('en', vr)"></div>
+      </div>
+      <div class="vr-preview-mask-60 pos-abs" *ngIf="isOpenedVr(60)">
+        <div></div><div></div><div></div>
+        <div class="cursor-pointer" (click)="openLink('https://xn--41a.tv/#/watch?video=60m250522&lang=ru')"></div>
+      </div>
+      <div class="vr-preview-mask-58 pos-abs" *ngIf="isOpenedVr(59)">
+        <div></div><div></div><div></div>
+        <div class="cursor-pointer" (click)="openLink('https://xn--41a.tv/#/watch?video=svt130522&lang=ru')"></div>
+      </div>
+      <div class="vr-preview-mask-58 pos-abs" *ngIf="isOpenedVr(58)">
+        <div></div><div></div><div></div>
+        <div class="cursor-pointer" (click)="openLink('https://xn--41a.tv/#/watch?video=rtk140522&lang=ru')"></div>
+      </div>
+      <div class="vr-preview-mask-58 pos-abs" *ngIf="isOpenedVr(58)">
+        <div></div><div></div><div></div>
+        <div class="cursor-pointer" (click)="openLink('https://xn--41a.tv/#/watch?video=rtk140522&lang=ru')"></div>
+      </div>
+      <div class="vr-preview-mask-52 pos-abs" *ngIf="isOpenedVr(52)">
+        <div></div><div></div><div></div>
+        <div class="cursor-pointer" (click)="openLink('http://publication.pravo.gov.ru/Document/View/0001202204260002')"></div>
+        <div></div><div></div><div></div>
+        <div class="cursor-pointer" (click)="openLink('https://xn--41a.tv/#/watch?video=zkd220422&lang=ru')"></div>
+        <div></div><div></div><div></div>
+        <div class="cursor-pointer" (click)="openLink('https://t.me/RKadyrov_95/1951')"></div>
+      </div>
+      <div class="vr-preview-mask-54 pos-abs" *ngIf="isOpenedVr(54)">
+        <div></div><div></div><div></div>
+        <div class="cursor-pointer" (click)="openLink('https://xn--41a.tv/#/watch?video=rusles010522&lang=ru')"></div>
+      </div>
+      <div class="vr-preview-mask-48 pos-abs" *ngIf="isOpenedVr(48)">
+        <div></div><div></div><div></div>
+        <div class="cursor-pointer" (click)="openLink('https://я.tv/#/watch?video=vvsvs130322&lang=ru')"></div>
       </div>
     </div>
   </div>
