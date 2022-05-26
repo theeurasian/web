@@ -1,63 +1,174 @@
-<p>lch250522 works!</p>
-<div class="logo cx cy" (click)="openLogo()">
-  <img src="assets/home/logo.jpg" height="100"/>
-</div>
-<div class="title my-2 mt-2">
-  The inhabitants of Leningrad are my children... Dzhambul Dzhabaev
-</div>
-<div class="separator"></div>
-<div class="title my-2">
-  列宁格勒的居民是我的孩子... Dzhambul Dzhabaev
-</div>
-<div class="separator"></div>
-<div class="title my-2">
-  Leningraders are my children... Dzhambul Dzhabaev</div>
-<div class="select-language">
-  <div class="open-url" (click)="open('https://xn--41a.tv/#/watch?video=lch250522&lang=ru')">
-    <div class="cx">
-      <ngx-qrcode
-        [value]="'https://xn--41a.tv/#/watch?video=lch250522&lang=ru'"
-        cssClass="aclass" width="220">
-      </ngx-qrcode>
+<div>
+  <div class="center-logo cursor-pointer">
+    <a href="https://eurasian.press/" target="_blank">
+      <img *ngIf="!device.isMobile()" class="d-block" width="220" src="https://eurasian.press/assets/home/logo.jpg">
+      <img *ngIf="device.isMobile()" class="d-block" width="250" src="https://eurasian.press/assets/home/logo.jpg">
+    </a>
+  </div>
+
+  <div class="content">
+    <div class="title my-2 mt-2">
+      Ленинградцы, дети мои! Джамбул Джабаев
     </div>
-    <div class="cx">
-      <div class="cx pt-2 mx-2">
-        ССЫЛКА
+    <div class="separator"></div>
+    <div class="title my-2 mt-2">
+      Ленинградтықтар, балаларым! Джамбул Жабаев
+    </div>
+    <div class="separator"></div>
+    <div class="title my-2">
+      列宁格勒的居民是我的孩子... Dzhambul Dzhabaev
+    </div>
+    <div class="separator"></div>
+    <div class="title my-2">
+      The inhabitants of Leningrad are my children... Dzhambul Dzhabaev
+    </div>
+  </div>
+
+
+  <div class="cy my-2" *ngIf="lang == ''">
+    <div *ngIf="device.isMobile()">
+      <div class="cx my-1">
+        <div *ngFor="let lang of getLanguages().slice(0, 6)">
+          <img class="mx-1 cursor-pointer" [src]="'assets/' + lang + '.png'" height="48" (click)="selectLanguage(lang)"/>
+        </div>
       </div>
-      <div class="cx pt-1">
-        <img src="assets/url.png" height="20"/>
+      <div class="cx my-1">
+        <div *ngFor="let lang of getLanguages().slice(6, 12)">
+          <img class="mx-1 cursor-pointer" [src]="'assets/' + lang + '.png'" height="48" (click)="selectLanguage(lang)"/>
+        </div>
+      </div>
+      <div class="cx my-1">
+        <div *ngFor="let lang of getLanguages().slice(12, 17)">
+          <img class="mx-1 cursor-pointer" [src]="'assets/' + lang + '.png'" height="48" (click)="selectLanguage(lang)"/>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="!device.isMobile()">
+      <div class="cx my-1">
+        <div *ngFor="let lang of getLanguages().slice(0, 8)">
+          <img class="mx-1 cursor-pointer" [src]="'assets/' + lang + '.png'" height="48" (click)="selectLanguage(lang)"/>
+        </div>
+      </div>
+      <div class="cx my-1">
+        <div *ngFor="let lang of getLanguages().slice(8, 17)">
+          <img class="mx-1 cursor-pointer" [src]="'assets/' + lang + '.png'" height="48" (click)="selectLanguage(lang)"/>
+        </div>
       </div>
     </div>
   </div>
-  <div class="open-url" (click)="open('https://xn--41a.tv/#/watch?video=lch250522&lang=zh')">
-    <div class="cx">
-      <ngx-qrcode
-        [value]="'https://xn--41a.tv/#/watch?video=lch250522&lang=zh'"
-        cssClass="aclass" width="220">
-      </ngx-qrcode>
-    </div>
-    <div class="cx">
-      <div class="cx pt-2 mx-2">
-        关联
+  <div *ngIf="lang == 'ru'">
+    <div class="df cx pb-40">
+      <div class="text-center">
+        <div>Ленинградцы, дети мои!</div>
+        <div>Ленинградцы, гордость моя!</div>
+        <div>Мне в струе степного ручья</div>
+        <div>Виден отблеск невской струи.</div>
+        <div>Если вдоль снеговых хребтов</div>
+        <div>Взором старческим я скользну, —</div>
+        <div>Вижу своды ваших мостов,</div>
+        <div>Зорь балтийских голубизну,</div>
+        <div>Фонарей вечерних рои,</div>
+        <div>Золочёных крыш острия…</div>
+        <div>Ленинградцы, дети мои!</div>
+        <div>Ленинградцы, гордость моя!</div>
+        <div>Не затем я на свете жил,</div>
+        <div>Чтоб разбойничий чуять смрад;</div>
+        <div>Не затем вам, братья, служил,</div>
+        <div>Чтоб забрался ползучий гад</div>
+        <div>В город сказочный, в город-сад;</div>
+        <div>Не затем к себе Ленинград</div>
+        <div>Взор Джамбула приворожил!</div>
+        <div>А затем я на свете жил,</div>
+        <div>Чтобы сброд фашистских громил,</div>
+        <div>Не успев отпрянуть назад,</div>
+        <div>Волчьи кости свои сложил</div>
+        <div>У священных ваших оград.</div>
+        <div>Вот зачем на север бегут</div>
+        <div>Казахстанских рельс колеи,</div>
+        <div>Вот зачем Неву берегут</div>
+        <div>Ваших набережных края,</div>
+        <div>Ленинградцы, дети мои,</div>
+        <div>Ленинградцы, гордость моя,</div>
+        <div>Ваших дедов помнит Джамбул,</div>
+        <div>Ваших прадедов помнит он:</div>
+        <div>Их ссылали в его аул,</div>
+        <div>И кандальный он слышал звон.</div>
+        <div>Пережив четырёх царей,</div>
+        <div>Испытал я свирепость их;</div>
       </div>
-      <div class="cx pt-1">
-        <img src="assets/url.png" height="20"/>
+      <div class="text-center">
+        <div>Я хотел, чтоб пала скорей</div>
+        <div>Петербургская крепость их;</div>
+        <div>Я под рокот моей струны</div>
+        <div>Воспевал, уже поседев,</div>
+        <div>Грозный ход балтийской волны,</div>
+        <div>Где бурлил всенародный гнев.</div>
+        <div>Это в ваших стройных домах</div>
+        <div>Проблеск ленинских слов-лучей</div>
+        <div>Заиграл впервые впотьмах!</div>
+        <div>Это ваш, и больше ничей,</div>
+        <div>Первый натиск его речей</div>
+        <div>И руки его первый взмах!</div>
+        <div>Ваших лучших станков дары</div>
+        <div>Киров к нам привез неспроста:</div>
+        <div>Мы родня вам с давней поры,</div>
+        <div>Ближе брата, ближе сестры</div>
+        <div>Ленинграду Алма-Ата.</div>
+        <div>Не случайно Балтийский флот,</div>
+        <div>Славный мужеством двух веков,</div>
+        <div>Делегации моряков</div>
+        <div>В Казахстан ежегодно шлёт,</div>
+        <div>И недаром своих сынов</div>
+        <div>С юных лет на выучку мы</div>
+        <div>Шлем к Неве, к основе основ,</div>
+        <div>Где, мужая, зреют умы.</div>
+        <div>Что же слышит Джамбул теперь?</div>
+        <div>К вам в стальную ломится дверь,</div>
+        <div>Словно вечность проголодав, —</div>
+        <div>Обезумевший от потерь</div>
+        <div>Многоглавый жадный удав…</div>
+        <div>Сдохнет он у ваших застав!</div>
+        <div>Без зубов и без чешуи</div>
+        <div>Будет в корчах шипеть змея!</div>
+        <div>Будут снова петь соловьи,</div>
+        <div>Будет вольной наша семья,</div>
+        <div>Ленинградцы, дети мои,</div>
       </div>
-    </div>
-  </div>
-  <div class="open-url" (click)="open('https://xn--41a.tv/#/watch?video=lch250522&lang=en')">
-    <div class="cx">
-      <ngx-qrcode
-        [value]="'https://xn--41a.tv/#/watch?video=lch250522&lang=en'"
-        cssClass="aclass" width="220">
-      </ngx-qrcode>
-    </div>
-    <div class="cx">
-      <div class="cx pt-2 mx-2">
-        LINK
-      </div>
-      <div class="cx pt-1">
-        <img src="assets/url.png" height="20"/>
+      <div class="text-center">
+        <div>Ленинградцы, гордость моя!</div>
+        <div>Ленинград сильней и грозней,</div>
+        <div>Чем в любой из прежних годов:</div>
+        <div>Он напор отразить готов!</div>
+        <div>Не расколют его камней,</div>
+        <div>Не растопчут его садов.</div>
+        <div>К Ленинграду со всех концов</div>
+        <div>Направляются поезда,</div>
+        <div>Провожают своих бойцов</div>
+        <div>Наши сёла и города.</div>
+        <div>Взор страны грозово-свинцов,</div>
+        <div>И готова уже узда</div>
+        <div>На зарвавшихся подлецов.</div>
+        <div>Из глубин казахской земли</div>
+        <div>Реки нефти к вам потекли,</div>
+        <div>Чёрный уголь, красная медь</div>
+        <div>И свинец, что в срок и впопад</div>
+        <div>Песню смерти готов пропеть.</div>
+        <div>Бандам, рвущимся в Ленинград.</div>
+        <div>Хлеб в тяжёлом, как дробь, зерне</div>
+        <div>Со свинцом идет наравне.</div>
+        <div>Наших лучших коней приплод,</div>
+        <div>Груды яблок, сладких, как мёд, —</div>
+        <div>Это всё должно вам помочь</div>
+        <div>Душегубов откинуть прочь.</div>
+        <div>Не бывать им в нашем жилье!</div>
+        <div>Не жиреть на нашем сырье!</div>
+        <div>Предстоят большие бои,</div>
+        <div>Но не будет врагам житья!</div>
+        <div>Спать не в силах сегодня я…</div>
+        <div>Пусть подмогой будут, друзья,</div>
+        <div>Песни вам на, рассвете мои,</div>
+        <div>Ленинградцы, дети мои,</div>
+        <div>Ленинградцы, гордость моя!</div>
       </div>
     </div>
   </div>

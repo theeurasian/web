@@ -1,0 +1,64 @@
+<div class="logo cx cy my-2" (click)="openLogo()">
+  <img src="assets/home/logo.jpg" height="100"/>
+</div>
+<div class="title my-2 mt-2">
+  Встреча президентов РФ и Казахстана
+</div>
+<div class="separator"></div>
+<div class="title my-2">
+  俄罗斯联邦和哈萨克斯坦总统会晤
+</div>
+<div class="separator"></div>
+<div class="title my-2">
+  Meeting of the Presidents of the Russian Federation and Kazakhstan
+</div>
+<div class="select-language">
+  <div class="open-url" (click)="open('https://xn--41a.tv/#/watch?video=sdvttoyears&lang=ru')">
+    <div class="cx">
+      <ngx-qrcode
+        [value]="'https://xn--41a.tv/#/watch?video=meetrfandkz&lang=ru'"
+        cssClass="aclass">
+      </ngx-qrcode>
+    </div>
+    <div class="cx">
+      <div class="cx pt-2 mx-2">
+        ССЫЛКА
+      </div>
+      <div class="cx pt-1">
+        <img src="assets/url.png" height="20"/>
+      </div>
+    </div>
+  </div>
+  <div class="open-url" (click)="open('https://xn--41a.tv/#/watch?video=meetrfandkz&lang=zh')">
+    <div class="cx">
+      <ngx-qrcode
+        [value]="'https://xn--41a.tv/#/watch?video=meetrfandkz&lang=zh'"
+        cssClass="aclass">
+      </ngx-qrcode>
+    </div>
+    <div class="cx">
+      <div class="cx pt-2 mx-2">
+        关联
+      </div>
+      <div class="cx pt-1">
+        <img src="assets/url.png" height="20"/>
+      </div>
+    </div>
+  </div>
+  <div class="open-url" (click)="open('https://xn--41a.tv/#/watch?video=meetrfandkz&lang=en')">
+    <div class="cx">
+      <ngx-qrcode
+        [value]="'https://xn--41a.tv/#/watch?video=meetrfandkz&lang=en'"
+        cssClass="aclass">
+      </ngx-qrcode>
+    </div>
+    <div class="cx">
+      <div class="cx pt-2 mx-2">
+        LINK
+      </div>
+      <div class="cx pt-1">
+        <img src="assets/url.png" height="20"/>
+      </div>
+    </div>
+  </div>
+</div>

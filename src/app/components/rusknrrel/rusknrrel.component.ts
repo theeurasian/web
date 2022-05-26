@@ -1,27 +1,42 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute, Router} from "@angular/router";
-import {DeviceDetectorService} from "ngx-device-detector";
+import {ActivatedRoute, Router} from '@angular/router';
+import {DeviceDetectorService} from 'ngx-device-detector';
 
 @Component({
-  selector: 'app-lch250522',
-  templateUrl: './lch250522.component.html',
-  styleUrls: ['./lch250522.component.css']
+  selector: 'app-rusknrrel',
+  templateUrl: './rusknrrel.component.html',
+  styleUrls: ['./rusknrrel.component.css']
 })
-export class Lch250522Component implements OnInit {
-  lang = 'ru';
+export class RusknrrelComponent implements OnInit {
+
+
+  lang = '';
 
   constructor(private route: ActivatedRoute, public device: DeviceDetectorService, private router: Router) { }
   getLanguages() {
     return [
-      'cn',
-      'kz',
-      'ru',
       'uk',
+      'eu',
+      //'es',
+      'fr',
+      //'in',
+      //'ir',
+      //'id',
+      'it',
+      //'qa',
+      //'kz',
+      //'kr',
+      //'mn',
+      //'vn',
+      'cn',
+      //'pk',
+      //'de',
+      'ru'
     ].sort();
   }
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
-      this.lang = params.lang != null ? params.lang : 'ru';
+      this.lang = params.lang != null ? params.lang : '';
     });
   }
 
