@@ -13,15 +13,15 @@ export class Lch250522Component implements OnInit {
   constructor(private route: ActivatedRoute, public device: DeviceDetectorService, private router: Router) { }
   getLanguages() {
     return [
-      'cn',
+      //'cn',
       'kz',
       'ru',
-      'uk',
+      //'uk',
     ].sort();
   }
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
-      this.lang = params.lang != null ? params.lang : 'ru';
+      this.lang = params.lang != null ? params.lang : '';
     });
   }
 

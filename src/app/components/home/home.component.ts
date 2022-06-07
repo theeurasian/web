@@ -28,10 +28,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
   publishes = ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]).reverse();
   publishesKZ = ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, '11-kz', '12-kz', '13-kz', '14-kz']).reverse();
 
-  vrs = [48, 47, 46, 45, 44, 43, 26, 1];
+  vrs = [52, 60, 61, 58, 48, 47, 46, 45, 44, 43, 26, 1];
   vrsKZ = [26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15];
-  vrsRU = [59, 58, 60, 52, 54, 48, 47, 46, 45, 44, 43, 26, 1];
-  newDesign = [60, 59, 58, 52, 54, 48];
+  vrsRU = [52, 60, 61, 58, 54, 48, 47, 46, 45, 44, 43, 26, 1];
+  newDesign = [60, 61, 59, 58, 52, 54, 48];
 
   videoPreviewSrc = '';
   rssNews: RssItem[] = this.news.rssNews;
@@ -44,6 +44,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
   url = '';
 
   selected = '';
+  selectedNext = '';
+  selectedNextNext = '';
 
 
   aliasLabel = 'Mail Alias (Google)';
@@ -187,7 +189,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
         );
       });
     }
-    else if (this.languageManager.language == 'ru'){
+    else if (this.languageManager.language == 'ru' || this.languageManager.language == 'by'){
       this.vrsRU.forEach(vr => {
         this.galleryImages.push(
           {
@@ -255,9 +257,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
     }, 1000);
   }
 
-  selectJournal(number: number, lang = 'ru') {
-    if (number >= 14){
-      window.open('https://eurasian.press/publishes/' + number + '/' + lang + '-' + (this.device.isMobile() ? 'mobile' : 'desktop') + '.pdf');
+  selectJournal(number: any, lang = 'ru') {
+    if (number == 14 || number == '14-kz'){
+      window.open('https://eurasian.press/publishes/14/' + lang + '-' + (this.device.isMobile() ? 'mobile' : 'desktop') + '.pdf');
     }
     else{
       window.open('https://eurasian.press/#/read?issue=' + number.toString().replace('-kz', '') + '&lang=' + (number.toString().includes('kz') ? 'kz' : lang), '_blank');
@@ -354,6 +356,10 @@ export class HomeComponent implements OnInit, AfterViewInit {
         window.open('https://theurasian.vn', '_blank');
         break;
       }
+      case 'by':{
+        window.open('https://theurasian.by', '_blank');
+        break;
+      }
       default:{
         window.open('https://xn--80adikfagbh9cp.xn--p1ai/', '_blank');
         break;
@@ -367,7 +373,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
       'es',
       'fr',
       'in',
-      'ir',
       'id',
       'it',
       'qa',
@@ -379,6 +384,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       'pk',
       'de',
       'ru',
+      'by'
     ].filter(x => this.languageManager.language != x);
   }
 
@@ -611,7 +617,20 @@ export class HomeComponent implements OnInit, AfterViewInit {
       return this.imgSource?.toString().split('/').pop().replace('.svg', '') == value.toString();
     }
   }
+  isSelectedNext(input: string){
+    return this.selectedNext == input;
+  }
+  resetSelectsNext() {
+    this.selectedNext = '';
+    this.resetSelectsNextNext();
+  }
 
+  isSelectedNextNext(input: string) {
+    return this.selectedNextNext == input;
+  }
+  resetSelectsNextNext() {
+    this.selectedNextNext = '';
+  }
   isNewDesign() {
     let res = false;
     this.newDesign.forEach(vr => {

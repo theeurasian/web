@@ -111,6 +111,11 @@ export class NewsManagerService {
         this.ws.send(cmd.toJson());
         break;
       }
+      case 'by':{
+        cmd = new WSCmd("getByRss");
+        this.ws.send(cmd.toJson());
+        break;
+      }
     }
 
 

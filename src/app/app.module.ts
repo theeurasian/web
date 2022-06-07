@@ -49,11 +49,11 @@ import { Vsv050522Component } from './components/vsv050522/vsv050522.component';
 import { Akgl250322Component } from './components/akgl250322/akgl250322.component';
 import { Kzbs260322Component } from './components/kzbs260322/kzbs260322.component';
 import { Lch250522Component } from './components/lch250522/lch250522.component';
-import {MeetrfandkzComponent} from "./components/meetrfandkz/meetrfandkz.component";
-import {Newreg210322Component} from "./components/newreg210322/newreg210322.component";
-import {Pcf120422Component} from "./components/pcf120422/pcf120422.component";
-import {RusknrrelComponent} from "./components/rusknrrel/rusknrrel.component";
-import {Zrsr250322Component} from "./components/zrsr250322/zrsr250322.component";
+import {MeetrfandkzComponent} from './components/meetrfandkz/meetrfandkz.component';
+import {Newreg210322Component} from './components/newreg210322/newreg210322.component';
+import {Pcf120422Component} from './components/pcf120422/pcf120422.component';
+import {RusknrrelComponent} from './components/rusknrrel/rusknrrel.component';
+import {Zrsr250322Component} from './components/zrsr250322/zrsr250322.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent } ,
@@ -118,7 +118,11 @@ const appRoutes: Routes = [
     Vsv050522Component,
     Akgl250322Component,
     Kzbs260322Component,
-    Lch250522Component
+    Lch250522Component,
+    MeetrfandkzComponent,
+    Zrsr250322Component,
+    RusknrrelComponent,
+    Newreg210322Component
   ],
   imports: [
     BrowserModule,

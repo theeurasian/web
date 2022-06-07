@@ -5,9 +5,9 @@ import {WSCmd} from '../websocket/structure/wscmd';
   providedIn: 'root'
 })
 export class LangService {
-  language = 'ru';
+  language = 'by';
   constructor() {
-    // this.language = 'kz';
+    this.language = 'ru';
     console.log(location.href);
     if (location.href.includes('theurasian.eu')){
       this.language = 'eu';
@@ -63,6 +63,9 @@ export class LangService {
     if (location.href.includes('theurasian.de')){
       this.language = 'de';
     }
+    if (location.href.includes('theurasian.by')){
+      this.language = 'by';
+    }
     console.log(this.language);
   }
   tr(input: string){
@@ -75,6 +78,42 @@ export class LangService {
         switch (input) {
           case 'Editorial Office address: 8 Presnenskaya naberezhnaya, bldg. 1, Gorod Stolitz Business Center, P.O. Box 82, Moscow City, Moscow, 123112, Russian Federation; Telephone: 8 (800) 300 81 18': return 'Адрес редакции РК: 010000, Республика Казахстан, г. Нур-Султан, ул. Есенберлина, д. 25, каб. 220, тел. +7 (7172) 38 14 21';
           case 'Editorial Office address in the Republic of Kazakhstan: 25 Esenberlina street, AIFC, Nur-Sultan, 010000, Republic of Kazakhstan; Telephone: +7 (7172) 38 14 21': return 'Адрес редакции: 123112, Москва-Сити, а/ я № 82, Российская Федерация, г. Москва, Пресненская набережная, д.8, стр. 1, Бизнес Центр «Город Столиц», тел. 8 (800) 300 81 18';
+          case 'Feels like': return 'По ощущениям:';
+          case 'Wind': return 'Ветер';
+
+          case '010000, Republic of Kazakhstan, Nur-Sultan, st. Esenberlina, 25': return '010000, Республика Казахстан, г. Нур-Султан, ул. Есенберлина, 25';
+          case 'Phone: 8 (800) 300 81 18': return 'Тел. 8 (800) 300 81 18';
+          case 'OFFICIAL DATA ONLY': return 'ТОЛЬКО ОФИЦИАЛЬНЫЕ ДАННЫЕ';
+          case 'News articles. Write an entire article or a succinct blog post.': return 'Новостные статьи. Напишите целую статью или лаконичную публикацию в блоге.';
+          case 'ASK QUESTIONS': return 'ЗАДАВАЙТЕ ВОПРОСЫ';
+          case 'Ask questions, set topics for disputes and online meetings.': return 'Задавайте вопросы, назначайте темы диспутов и онлайн встреч.';
+          case 'CONTACT US': return 'СВЯЖИТЕСЬ С НАМИ';
+          case 'CONTACTS:': return 'КОНТАКТЫ:';
+          case '123112 PO Box No. 82, Moscow, Presnenskaya embankment, 8, building 1': return '123112 а/я №82, Москва, Пресненская набережная, дом 8, строение 1';
+          case 'Phone 8 (800) 300 81 18': return 'Тел. 8 (800) 300 81 18';
+          case 'Requisites:': return 'Реквизиты:';
+          case 'Mass media registration certificate:': return 'Свидетельство о регистрации СМИ:';
+          case 'view': return 'открыть';
+          case 'Certificate of the Union Eurasia-Russia magazine:': return 'Свидетельство журнала Союз Евразия- Россия:';
+          case 'EDITORIAL ADDRESSES:': return 'АДРЕСА РЕДАКЦИЙ:';
+          case 'In Russian federation:': return 'В Российской Федерации:';
+          case '123112, PO Box No. 82, Russian Federation, Moscow, Presnenskaya embankment, 8, bldg. 1, Business Center "City of Capitals"': return '123112, а/ я № 82, Российская Федерация, г. Москва, Пресненская набережная, д.8, стр. 1, Бизнес Центр «Город Столиц»';
+          case 'Phone +7 (7172) 38 14 21': return 'Тел. +7 (7172) 38 14 21';
+          case 'In the Republic of Kazakhstan:': return 'В Республике Казахстан:';
+          case 'FOUNDERS:': return 'УЧРЕДИТЕЛИ:';
+          case 'LLC "SSN", 123007. Moscow, 2nd Horoshevsky prospect, 9, building 2, office 103': return 'ООО «ССС», 123007. г. Москва, 2-й Хорошевский пр-д, д.9, к. 2, оф.103';
+          case 'JSC "Financial Academy", 010000, Republic of Kazakhstan, Nur-Sultan, st. Esenberlina, 25': return 'АО «Финансовая Академия», 010000, Республика Казахстан, г. Нур-Султан, ул. Есенберлина, д. 25';
+          case 'Media Testimonies': return 'Свидетельство СМИ';
+
+          case 'Add New': return 'Добавить';
+          case 'Media Kit': return 'Медиакит';
+          default: return input;
+        }
+      }
+      case 'by':{
+        switch (input) {
+          case 'Editorial Office address: 8 Presnenskaya naberezhnaya, bldg. 1, Gorod Stolitz Business Center, P.O. Box 82, Moscow City, Moscow, 123112, Russian Federation; Telephone: 8 (800) 300 81 18': return 'Адрас рэдакцыі: Прэсненская набярэжная, 8, буд. 1, Бізнес-цэнтр «Горад Століц», П.О. 123112, Расійская Федэрацыя, г. Масква, г. Масква, бокс 82; Тэлефон: 8 (800) 300 81 18';
+          case 'Editorial Office address in the Republic of Kazakhstan: 25 Esenberlina street, AIFC, Nur-Sultan, 010000, Republic of Kazakhstan; Telephone: +7 (7172) 38 14 21': return 'Адрас рэдакцыі ў Рэспубліцы Казахстан: 010000, Рэспубліка Казахстан, МФЦА, вул. Эсенберліна, 25; Тэлефон: +7 (7172) 38 14 21';
           case 'Feels like': return 'По ощущениям:';
           case 'Wind': return 'Ветер';
 

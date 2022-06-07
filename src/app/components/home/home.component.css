@@ -217,13 +217,13 @@ p, h4, h6{
 .right-arrow-m{
   position: absolute;
   right: 5%;
-  padding-top: 140px;
+  padding-top: 100px;
   z-index: 1;
 }
 .left-arrow-m{
   position: absolute;
   left: 5%;
-  padding-top: 140px;
+  padding-top: 100px;
   z-index: 1;
 }
 ::ng-deep .col1{
@@ -360,7 +360,7 @@ td{
   left: 50%;
   color: #f44336;
   font-weight: 700;
-  transform: translate(-50%, 200%);
+  transform: translate(-50%, 215%);
 }
 .journals{
   margin-top: 20px;
@@ -606,6 +606,22 @@ td{
 ::ng-deep.ngx-gallery-thumbnail{
   border: none !important;
 }
+.select-next{
+  position: absolute;
+  background-color: rgba(82, 81, 81, 0.5);
+  width: 180px;
+  padding-left: 30px;
+  top: 0;
+  left: 120px;
+}
+.select-next-next{
+  position: absolute;
+  background-color: rgba(82, 81, 81, 0.5);
+  width: 180px;
+  padding-left: 30px;
+  top: 0;
+  left: 120px;
+}
 .vr-preview-mask-58 {
   display: grid;
   grid-template-rows: 82% 15%;
@@ -658,4 +674,9 @@ td{
 }
 .pos-abs{
   position: absolute;
+}
+.mil-by-promo{
+  background: #414242;
+  padding: 5px;
+  height: 50px;
 }

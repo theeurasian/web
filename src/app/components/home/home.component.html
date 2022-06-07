@@ -184,6 +184,7 @@
       <img (mouseenter)="resetSelects();" class="pt-2vh cursor-pointer mx-1" src="assets/menu/pg.png">
 
 
+    <div>
       <img (mouseenter)="resetSelects(); selected = 'conference'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/conference.png">
       <div class="select-mail" [hidden]="!isSelected('conference')" (mouseleave)="resetSelects()">
         <div class="pt-2vh"></div>
@@ -203,19 +204,23 @@
         </div>
         <div class="pt-2vh cursor-pointer"></div>
       </div>
+    </div>
 
 
-      <img (mouseenter)="resetSelects(); selected = 'horo'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/horo.png">
-      <div class="select-mail" [hidden]="!isSelected('horo')" (mouseleave)="resetSelects()">
-        <div class="pt-2vh"></div>
-        <div (click)="openLink('https://horo.mail.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/scorp.png"> {{lang.tr('Horoscope')}}</div>
-        <div class="pt-2vh"></div>
-        <div (click)="openLink('https://horo.mail.ru/sonnik/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/nights.png"> {{lang.tr('Dream Book')}}</div>
-        <div class="pt-2vh"></div>
-        <div (click)="openLink('https://horo.mail.ru/horoscope/business/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/business.png"> {{lang.tr('Business')}}</div>
-        <div class="pt-2vh cursor-pointer"></div>
-      </div>
+     <div>
+       <img (mouseenter)="resetSelects(); selected = 'horo'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/horo.png">
+       <div class="select-mail" [hidden]="!isSelected('horo')" (mouseleave)="resetSelects()">
+         <div class="pt-2vh"></div>
+         <div (click)="openLink('https://horo.mail.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/scorp.png"> {{lang.tr('Horoscope')}}</div>
+         <div class="pt-2vh"></div>
+         <div (click)="openLink('https://horo.mail.ru/sonnik/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/nights.png"> {{lang.tr('Dream Book')}}</div>
+         <div class="pt-2vh"></div>
+         <div (click)="openLink('https://horo.mail.ru/horoscope/business/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/business.png"> {{lang.tr('Business')}}</div>
+         <div class="pt-2vh cursor-pointer"></div>
+       </div>
+     </div>
 
+    <div>
       <img (mouseenter)="resetSelects(); selected = 'video'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/video.png">
       <div class="select-mail" [hidden]="!isSelected('video')" (mouseleave)="resetSelects()">
         <div class="pt-2vh"></div>
@@ -226,144 +231,257 @@
         <div (click)="openLink('https://xn--41a.tv/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/yatv.png"> {{lang.tr('Я.TV')}}</div>
         <div class="pt-2vh"></div>
       </div>
+    </div>
 
-      <img (mouseenter)="resetSelects(); selected = 'afisha'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/afisha.png">
-      <div class="select-mail" [hidden]="!isSelected('afisha')" (mouseleave)="resetSelects()">
-        <div class="pt-2vh"></div>
-        <div (click)="openLink('https://afisha.yandex.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 pl-3 cursor-pointer" src="assets/menu/yandex-afisha.png"> {{lang.tr('Yandex Afisha')}}</div>
-       <div class="pt-2vh"></div>
-        <div (click)="openLink('https://www.kassir.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/kassir.png"> {{lang.tr('Kassir.Ru')}}</div>
-        <div class="pt-2vh"></div>
-        <div (click)="openLink('https://kassa.rambler.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 pl-3 cursor-pointer" src="assets/menu/rambler-kassa.png"> {{lang.tr('Rambler Kassa')}}</div>
-        <div class="pt-2vh"></div>
-      </div>
-
-      <img (mouseenter)="resetSelects(); selected = 'afisha-cinema'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/afisha-cinema.png">
-      <div class="select-mail" [hidden]="!isSelected('afisha-cinema')" (mouseleave)="resetSelects()">
-        <div class="pt-2vh cursor-pointer"></div>
-        <div (click)="openLink('https://www.kinopoisk.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/kinopoisk.png"> {{lang.tr('Kinopoisk')}}</div>
-        <div class="pt-2vh cursor-pointer"></div>
-        <div (click)="openLink('https://okko.tv/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/okko.png"> {{lang.tr('OKKO')}}</div>
-        <div class="pt-2vh cursor-pointer"></div>
-        <div (click)="openLink('https://www.ivi.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/ivi.png"> {{lang.tr('IVI.RU')}}</div>
-        <div class="pt-2vh"></div>
-        <div (click)="openLink('https://www.netflix.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/netflix.png"> {{lang.tr('NETFLIX')}}</div>
-        <div class="pt-2vh"></div>
-      </div>
-
-      <img (mouseenter)="resetSelects(); selected = 'search'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/search.png">
-      <div class="select-mail" [hidden]="!isSelected('search')" (mouseleave)="resetSelects()">
-        <img (click)="openLink('https://www.google.com/')" class="pt-2vh cursor-pointer" src="assets/menu/google.png">
-        <img (click)="openLink('https://yandex.ru/')" class="pt-2vh cursor-pointer" src="assets/menu/yandex.png">
-        <img (click)="openLink('https://baidu.com/')" class="pt-2vh cursor-pointer" src="assets/menu/baidu.png">
-        <div class="pt-2vh position-relative" *ngFor="let alias of getAliases('search')">
-          <div (click)="openLink(alias.url)" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/csearch.png"> {{alias.name}}</div>
-          <div (click)="removeAlias('search', alias)" class="remove-menu">x</div>
+      <div>
+        <img (mouseenter)="resetSelects(); selected = 'afisha'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/afisha.png">
+        <div class="select-mail" [hidden]="!isSelected('afisha')" (mouseleave)="resetSelects()">
+          <div class="pt-2vh"></div>
+          <div (click)="openLink('https://afisha.yandex.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 pl-3 cursor-pointer" src="assets/menu/yandex-afisha.png"> {{lang.tr('Yandex Afisha')}}</div>
+          <div class="pt-2vh"></div>
+          <div (click)="openLink('https://www.kassir.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/kassir.png"> {{lang.tr('Kassir.Ru')}}</div>
+          <div class="pt-2vh"></div>
+          <div (click)="openLink('https://kassa.rambler.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 pl-3 cursor-pointer" src="assets/menu/rambler-kassa.png"> {{lang.tr('Rambler Kassa')}}</div>
+          <div class="pt-2vh"></div>
         </div>
-        <div class="pt-2vh cursor-pointer">
-          <div (click)="alias = ''; url = ''; aliasName = 'search'; aliasLabel = 'Search Engine Alias (Google)';  aliasUrl = 'Search Engine Url (https://google.com/)'; askForNew.show()" class="add-new-button cx cy">{{lang.tr('Add New')}} +</div>
-        </div>
-        <div class="pt-2vh cursor-pointer"></div>
       </div>
+
+
+      <div>
+        <img (mouseenter)="resetSelects(); selected = 'afisha-cinema'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/afisha-cinema.png">
+        <div class="select-mail" [hidden]="!isSelected('afisha-cinema')" (mouseleave)="resetSelects()">
+          <div class="pt-2vh cursor-pointer"></div>
+          <div (click)="openLink('https://www.kinopoisk.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/kinopoisk.png"> {{lang.tr('Kinopoisk')}}</div>
+          <div class="pt-2vh cursor-pointer"></div>
+          <div (click)="openLink('https://okko.tv/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/okko.png"> {{lang.tr('OKKO')}}</div>
+          <div class="pt-2vh cursor-pointer"></div>
+          <div (click)="openLink('https://www.ivi.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/ivi.png"> {{lang.tr('IVI.RU')}}</div>
+          <div class="pt-2vh"></div>
+          <div (click)="openLink('https://www.netflix.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/netflix.png"> {{lang.tr('NETFLIX')}}</div>
+          <div class="pt-2vh"></div>
+        </div>
+      </div>
+
+
+      <div>
+        <img (mouseenter)="resetSelects(); selected = 'search'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/search.png">
+        <div class="select-mail" [hidden]="!isSelected('search')" (mouseleave)="resetSelects()">
+          <img (click)="openLink('https://www.google.com/')" class="pt-2vh cursor-pointer" src="assets/menu/google.png">
+          <img (click)="openLink('https://yandex.ru/')" class="pt-2vh cursor-pointer" src="assets/menu/yandex.png">
+          <img (click)="openLink('https://baidu.com/')" class="pt-2vh cursor-pointer" src="assets/menu/baidu.png">
+          <div class="pt-2vh position-relative" *ngFor="let alias of getAliases('search')">
+            <div (click)="openLink(alias.url)" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/csearch.png"> {{alias.name}}</div>
+            <div (click)="removeAlias('search', alias)" class="remove-menu">x</div>
+          </div>
+          <div class="pt-2vh cursor-pointer">
+            <div (click)="alias = ''; url = ''; aliasName = 'search'; aliasLabel = 'Search Engine Alias (Google)';  aliasUrl = 'Search Engine Url (https://google.com/)'; askForNew.show()" class="add-new-button cx cy">{{lang.tr('Add New')}} +</div>
+          </div>
+          <div class="pt-2vh cursor-pointer"></div>
+        </div>
+      </div>
+
 
     </div>
     <div class="col-2">
-      <div class="center-logo cursor-pointer" (mouseenter)="resetSelects()" (click)="videoPreview.show(); previewSrc.play()">
+<!--      <div class="center-logo cursor-pointer" (mouseenter)="resetSelects()" (click)="videoPreview.show(); previewSrc.play()">-->
+      <div class="center-logo cursor-pointer" (mouseenter)="resetSelects()" (click)="openLink('https://eurasian.press')">
         <img *ngIf="!device.isMobile()" class="d-block" width="220" src="../../../assets/home/logo.jpg">
         <img *ngIf="device.isMobile()" class="d-block" width="250" src="../../../assets/home/logo.jpg">
       </div>
     </div>
-    <div class="col-2 cx z-index-100">
+    <div class="col-2 cx z-index-100 position-relative">
 
+      <div>
+        <img (mouseenter)="resetSelects(); selected = 'mail'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/at.png">
+        <div class="select-mail" [hidden]="!isSelected('mail')" (mouseleave)="resetSelects()">
+          <img (click)="openMail('mail')" class="pt-2vh cursor-pointer" src="assets/menu/mail.ru.png">
+          <img (click)="openMail('yandex')" class="pt-2vh cursor-pointer" src="assets/menu/ya.ru.png">
+          <img (click)="openMail('gmail')" class="pt-2vh cursor-pointer" src="assets/menu/gmail.ru.png">
+          <div class="pt-2vh position-relative" *ngFor="let alias of getAliases('mail')">
+            <div (click)="openLink(alias.url)" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/cmail.png"> {{alias.name}}</div>
+            <div (click)="removeAlias('mail', alias)" class="remove-menu">x</div>
+          </div>
+          <div class="pt-2vh cursor-pointer">
+            <div (click)="alias = ''; url = ''; aliasName = 'mail'; aliasLabel = 'Mail Alias (Google)';  aliasUrl = 'Mail Url (https://mail.google.com/mail/)'; askForNew.show()" class="add-new-button cx cy">{{lang.tr('Add New')}} +</div>
+          </div>
+          <div class="pt-2vh cursor-pointer">
+          </div>
+        </div>
 
-      <img (mouseenter)="resetSelects(); selected = 'mail'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/at.png">
-      <div class="select-mail" [hidden]="!isSelected('mail')" (mouseleave)="resetSelects()">
-        <img (click)="openMail('mail')" class="pt-2vh cursor-pointer" src="assets/menu/mail.ru.png">
-        <img (click)="openMail('yandex')" class="pt-2vh cursor-pointer" src="assets/menu/ya.ru.png">
-        <img (click)="openMail('gmail')" class="pt-2vh cursor-pointer" src="assets/menu/gmail.ru.png">
-        <div class="pt-2vh position-relative" *ngFor="let alias of getAliases('mail')">
-          <div (click)="openLink(alias.url)" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/cmail.png"> {{alias.name}}</div>
-          <div (click)="removeAlias('mail', alias)" class="remove-menu">x</div>
-        </div>
-        <div class="pt-2vh cursor-pointer">
-          <div (click)="alias = ''; url = ''; aliasName = 'mail'; aliasLabel = 'Mail Alias (Google)';  aliasUrl = 'Mail Url (https://mail.google.com/mail/)'; askForNew.show()" class="add-new-button cx cy">{{lang.tr('Add New')}} +</div>
-        </div>
-        <div class="pt-2vh cursor-pointer">
-        </div>
-      </div>
-
-      <img (mouseenter)="resetSelects(); selected = 'office'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/office.png">
-      <div class="select-mail" [hidden]="!isSelected('office')" (mouseleave)="resetSelects()">
-        <div class="pt-2vh"></div>
-        <div (click)="openLink('https://www.office.com/launch/word')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/word.png"> {{lang.tr('Word')}}</div>
-        <div class="pt-2vh"></div>
-        <div (click)="openLink('https://www.office.com/launch/excel')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/excel.png"> {{lang.tr('Excel')}}</div>
-        <div class="pt-2vh"></div>
-        <div (click)="openLink('https://www.office.com/launch/powerpoint')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/powerpoint.png"> {{lang.tr('PowerPoint')}}</div>
-        <div class="pt-2vh cursor-pointer"></div>
       </div>
 
 
-      <img (mouseenter)="resetSelects(); selected = 'social'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/social.png">
-      <div class="select-mail" [hidden]="!isSelected('social')" (mouseleave)="resetSelects()">
-        <div class="pt-2vh"></div>
-        <div (click)="openLink('https://www.instagram.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/instagram.png"> {{lang.tr('Instagram')}}</div>
-        <div class="pt-2vh"></div>
-        <div (click)="openLink('https://web.telegram.org/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/telegram.png"> {{lang.tr('Telegram')}}</div>
-        <div class="pt-2vh"></div>
-        <div (click)="openLink('https://vk.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/vk.png"> {{lang.tr('VK')}}</div>
+      <div>
+
+        <img (mouseenter)="resetSelects(); selected = 'office'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/office.png">
+        <div class="select-mail" [hidden]="!isSelected('office')" (mouseleave)="resetSelects()">
           <div class="pt-2vh"></div>
-        <div (click)="openLink('https://www.facebook.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/facebook.png"> {{lang.tr('FaceBook')}}</div>
-        <div class="pt-2vh cursor-pointer"></div>
-      </div>
-
-
-
-      <img (mouseenter)="resetSelects(); selected = 'market'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/market.png">
-      <div class="select-mail" [hidden]="!isSelected('market')" (mouseleave)="resetSelects()">
-        <div class="pt-2vh"></div>
-        <div (click)="openLink('https://www.ozon.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/ozon.png"> {{lang.tr('Ozon')}}</div>
-        <div class="pt-2vh"></div>
-        <div (click)="openLink('https://www.joom.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/joom.png"> {{lang.tr('Joom')}}</div>
-        <div class="pt-2vh"></div>
-        <div (click)="openLink('https://www.wildberries.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/wb.png"> {{lang.tr('WildBerries')}}</div>
-        <div class="pt-2vh"></div>
-        <div (click)="openLink('https://market.yandex.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 pl-4 cursor-pointer" src="assets/menu/yandex-market.png"> {{lang.tr('Yandex Market')}}</div>
-        <div class="pt-2vh"></div>
-        <div (click)="openLink('https://sbermarket.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/sbermarket.png"> {{lang.tr('Sber Market')}}</div>
-        <div class="pt-2vh position-relative" *ngFor="let alias of getAliases('market')">
-          <div (click)="openLink(alias.url)" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/cmarket.png"> {{alias.name}}</div>
-          <div (click)="removeAlias('mail', alias)" class="remove-menu">x</div>
+          <div (click)="openLink('https://www.office.com/launch/word')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/word.png"> {{lang.tr('Word')}}</div>
+          <div class="pt-2vh"></div>
+          <div (click)="openLink('https://www.office.com/launch/excel')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/excel.png"> {{lang.tr('Excel')}}</div>
+          <div class="pt-2vh"></div>
+          <div (click)="openLink('https://www.office.com/launch/powerpoint')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/powerpoint.png"> {{lang.tr('PowerPoint')}}</div>
+          <div class="pt-2vh cursor-pointer"></div>
         </div>
-        <div class="pt-2vh cursor-pointer">
-          <div (click)="alias = ''; url = ''; aliasName = 'mail'; aliasLabel = 'Market Alias (Yandex Market)';  aliasUrl = 'Market Url (https://market.yandex.ru/)'; askForNew.show()" class="add-new-button cx cy">{{lang.tr('Add New')}} +</div>
+
+      </div>
+
+      <div>
+        <img (mouseenter)="resetSelects(); selected = 'embedgov'" class="pt-2vh cursor-pointer mx-1" src="assets/promo/embedika.png">
+        <div class="select-mail" [hidden]="!isSelected('embedgov')" (mouseleave)="resetSelects()">
+          <div class="pt-2vh"></div>
+          <div *ngIf="languageManager.language == 'ru' || languageManager.language == 'kz'" (click)="openLink('https://contract.embedika.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/promo/embedika.png">Проверка договоров</div>
+          <div class="pt-2vh"></div>
+          <div *ngIf="languageManager.language == 'ru'" (click)="openLink('https://www.gosuslugi.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/gosuslugi.png">Госуслуги</div>
+          <div class="pt-2vh"></div>
+          <div class="position-relative" *ngIf="languageManager.language == 'ru'">
+            <div (mouseenter)="selectedNext = 'goszakupki'" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/goszakupki.png">Госзакупки</div>
+            <div class="select-next" [hidden]="!isSelectedNext('goszakupki')" (mouseleave)="resetSelectsNext()">
+              <div class="pt-2vh"></div>
+
+              <div class="position-relative">
+                <div (mouseenter)="resetSelectsNextNext(); selectedNextNext = 'armenia'" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/ar.png">Армения</div>
+                <div class="select-next-next" [hidden]="!isSelectedNextNext('armenia')" (mouseleave)="resetSelectsNextNext()">
+                  <div class="pt-2vh"></div>
+                  <div (click)="openLink('https://www.tender.am/ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/zakupki.png"> Закупки</div>
+                  <div class="pt-2vh"></div>
+                  <div (click)="openLink('https://www.b2b-center.ru/firms/?f_country=51')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/deals.png"> Площадка</div>
+                  <div class="pt-2vh"></div>
+                </div>
+              </div>
+              <div class="pt-2vh"></div>
+
+
+              <div class="position-relative">
+                <div (mouseenter)="resetSelectsNextNext(); selectedNextNext = 'belorussia'" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/bl.png">Белоруссия</div>
+                <div class="select-next-next" [hidden]="!isSelectedNextNext('belorussia')" (mouseleave)="resetSelectsNextNext()">
+                  <div class="pt-2vh"></div>
+                  <div (click)="openLink('https://goszakupki.by/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/zakupki.png"> Закупки</div>
+                  <div class="pt-2vh"></div>
+                  <div (click)="openLink('https://zakupki.butb.by/auctions/index.html')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/deals.png"> Площадка</div>
+                  <div class="pt-2vh"></div>
+                </div>
+              </div>
+              <div class="pt-2vh"></div>
+
+
+              <div class="position-relative">
+                <div (mouseenter)="selectedNextNext = 'kazakhstan'" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/kz.png">Казахстан</div>
+                <div class="select-next-next" [hidden]="!isSelectedNextNext('kazakhstan')" (mouseleave)="resetSelectsNextNext()">
+                  <div class="pt-2vh"></div>
+                  <div (click)="openLink('https://www.goszakup.gov.kz/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/zakupki.png"> Закупки</div>
+                  <div class="pt-2vh"></div>
+                  <div (click)="openLink('https://e-auction.gosreestr.kz/p/ru/auction-guest-list')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/deals.png"> Площадка</div>
+                  <div class="pt-2vh"></div>
+                </div>
+              </div>
+              <div class="pt-2vh"></div>
+
+
+              <div class="position-relative">
+                <div (mouseenter)="selectedNextNext = 'kirgizia'" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/kr.png">Киргизия</div>
+                <div class="select-next-next" [hidden]="!isSelectedNextNext('kirgizia')" (mouseleave)="resetSelectsNextNext()">
+                  <div class="pt-2vh"></div>
+                  <div (click)="openLink('http://zakupki.gov.kg/popp/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/zakupki.png"> Закупки</div>
+                  <div class="pt-2vh"></div>
+                  <div (click)="openLink('https://www.b2b-center.ru/firms/?f_country=417')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/deals.png"> Площадка</div>
+                  <div class="pt-2vh"></div>
+                </div>
+              </div>
+              <div class="pt-2vh"></div>
+
+              <div class="position-relative">
+                <div (mouseenter)="selectedNextNext = 'rossiya'" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/ru.png">Россия</div>
+                <div class="select-next-next" [hidden]="!isSelectedNextNext('rossiya')" (mouseleave)="resetSelectsNextNext()">
+                  <div class="pt-2vh"></div>
+                  <div (click)="openLink('https://zakupki.gov.ru/epz/main/public/home.html')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/zakupki.png"> Закупки</div>
+                  <div class="pt-2vh"></div>
+                  <div (click)="openLink('https://www.sberbank-ast.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/deals.png"> Площадка</div>
+                  <div class="pt-2vh"></div>
+                </div>
+              </div>
+              <div class="pt-2vh"></div>
+
+            </div>
+          </div>
+          <div class="pt-2vh"></div>
+          <div *ngIf="languageManager.language == 'kz'" (click)="openLink('https://egov.kz/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/govkz.png"></div>
+          <div class="pt-2vh"></div>
         </div>
-        <div class="pt-2vh cursor-pointer">
+
+      </div>
+
+      <div>
+        <img (mouseenter)="resetSelects(); selected = 'social'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/social.png">
+        <div class="select-mail" [hidden]="!isSelected('social')" (mouseleave)="resetSelects()">
+          <div class="pt-2vh"></div>
+          <div (click)="openLink('https://www.instagram.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/instagram.png"> {{lang.tr('Instagram')}}</div>
+          <div class="pt-2vh"></div>
+          <div (click)="openLink('https://web.telegram.org/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/telegram.png"> {{lang.tr('Telegram')}}</div>
+          <div class="pt-2vh"></div>
+          <div (click)="openLink('https://vk.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/vk.png"> {{lang.tr('VK')}}</div>
+          <div class="pt-2vh"></div>
+          <div (click)="openLink('https://www.facebook.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/facebook.png"> {{lang.tr('FaceBook')}}</div>
+          <div class="pt-2vh cursor-pointer"></div>
         </div>
       </div>
 
 
-      <img (mouseenter)="resetSelects(); selected = 'translate'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/translate.png">
-      <div class="select-mail" [hidden]="!isSelected('translate')" (mouseleave)="resetSelects()">
-        <div class="pt-2vh"></div>
-        <div (click)="openLink('https://translate.google.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 pl-3 cursor-pointer" src="assets/menu/google-translate.png"> {{lang.tr('Google Translate')}}</div>
-        <div class="pt-2vh"></div>
-        <div (click)="openLink('https://translate.yandex.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 pl-3 cursor-pointer" src="assets/menu/yandex-translate.png"> {{lang.tr('Yandex Translate')}}</div>
-        <div class="pt-2vh"></div>
-        <div (click)="openLink('https://www.multitran.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/multitran.png"> {{lang.tr('Multitran')}}</div>
-        <div class="pt-2vh cursor-pointer"></div>
+      <div>
+        <img (mouseenter)="resetSelects(); selected = 'market'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/market.png">
+        <div class="select-mail" [hidden]="!isSelected('market')" (mouseleave)="resetSelects()">
+          <div class="pt-2vh"></div>
+          <div (click)="openLink('https://www.ozon.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/ozon.png"> {{lang.tr('Ozon')}}</div>
+          <div class="pt-2vh"></div>
+          <div (click)="openLink('https://www.joom.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/joom.png"> {{lang.tr('Joom')}}</div>
+          <div class="pt-2vh"></div>
+          <div (click)="openLink('https://www.wildberries.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/wb.png"> {{lang.tr('WildBerries')}}</div>
+          <div class="pt-2vh"></div>
+          <div (click)="openLink('https://market.yandex.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 pl-4 cursor-pointer" src="assets/menu/yandex-market.png"> {{lang.tr('Yandex Market')}}</div>
+          <div class="pt-2vh"></div>
+          <div (click)="openLink('https://sbermarket.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/sbermarket.png"> {{lang.tr('Sber Market')}}</div>
+          <div class="pt-2vh position-relative" *ngFor="let alias of getAliases('market')">
+            <div (click)="openLink(alias.url)" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/cmarket.png"> {{alias.name}}</div>
+            <div (click)="removeAlias('mail', alias)" class="remove-menu">x</div>
+          </div>
+          <div class="pt-2vh cursor-pointer">
+            <div (click)="alias = ''; url = ''; aliasName = 'mail'; aliasLabel = 'Market Alias (Yandex Market)';  aliasUrl = 'Market Url (https://market.yandex.ru/)'; askForNew.show()" class="add-new-button cx cy">{{lang.tr('Add New')}} +</div>
+          </div>
+          <div class="pt-2vh cursor-pointer">
+          </div>
+        </div>
+
       </div>
 
-      <img (mouseenter)="resetSelects(); selected = 'messages'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/chat.png">
-      <div class="select-mail" [hidden]="!isSelected('messages')" (mouseleave)="resetSelects()">
-        <div class="pt-2vh"></div>
-        <div (click)="openLink('https://web.whatsapp.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 pl-3 cursor-pointer" src="assets/menu/whatsapp.png"> {{lang.tr('WhatsApp')}}</div>
-        <div class="pt-2vh"></div>
-        <div (click)="openLink('https://www.wechat.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 pl-3 cursor-pointer" src="assets/menu/wechat.png"> {{lang.tr('WeChat')}}</div>
-        <div class="pt-2vh"></div>
-        <div (click)="openLink('https://www.icq.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/icq.png"> {{lang.tr('ICQ')}}</div>
-        <div class="pt-2vh cursor-pointer"></div>
+
+      <div>
+
+        <img (mouseenter)="resetSelects(); selected = 'translate'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/translate.png">
+        <div class="select-mail" [hidden]="!isSelected('translate')" (mouseleave)="resetSelects()">
+          <div class="pt-2vh"></div>
+          <div (click)="openLink('https://translate.google.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 pl-3 cursor-pointer" src="assets/menu/google-translate.png"> {{lang.tr('Google Translate')}}</div>
+          <div class="pt-2vh"></div>
+          <div (click)="openLink('https://translate.yandex.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 pl-3 cursor-pointer" src="assets/menu/yandex-translate.png"> {{lang.tr('Yandex Translate')}}</div>
+          <div class="pt-2vh"></div>
+          <div (click)="openLink('https://www.multitran.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/multitran.png"> {{lang.tr('Multitran')}}</div>
+          <div class="pt-2vh cursor-pointer"></div>
+        </div>
       </div>
+
+
+      <div>
+        <img (mouseenter)="resetSelects(); selected = 'messages'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/chat.png">
+        <div class="select-mail" [hidden]="!isSelected('messages')" (mouseleave)="resetSelects()">
+          <div class="pt-2vh"></div>
+          <div (click)="openLink('https://web.whatsapp.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 pl-3 cursor-pointer" src="assets/menu/whatsapp.png"> {{lang.tr('WhatsApp')}}</div>
+          <div class="pt-2vh"></div>
+          <div (click)="openLink('https://www.wechat.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 pl-3 cursor-pointer" src="assets/menu/wechat.png"> {{lang.tr('WeChat')}}</div>
+          <div class="pt-2vh"></div>
+          <div (click)="openLink('https://www.icq.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/icq.png"> {{lang.tr('ICQ')}}</div>
+          <div class="pt-2vh cursor-pointer"></div>
+        </div>
+      </div>
+
 
 
 
@@ -473,7 +591,7 @@
     </div>
   </div>
 
-  <div class="gallery">
+  <div class="gallery" *ngIf="!device.isMobile()">
     <ngx-gallery #gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery"></ngx-gallery>
   </div>
 <!--  <div class="gallery-mobile" *ngIf="device.isMobile()">-->
@@ -562,7 +680,15 @@
       <div class="df cy">
         <a href="https://www.scat.kz/" target="_blank" class="mx-4 cy"><img src="assets/promo/scat.png"></a>
       </div>
-    </div>  </div>
+    </div>
+  </div>
+  <div *ngIf="languageManager.language == 'by' && !device.isMobile()">
+    <div class="cx df promo pt-2vh">
+      <div class="df cy">
+        <a href="https://www.mil.by/by/" target="_blank" class="mx-4 cy"><img class="mil-by-promo" src="https://www.mil.by/local/templates/.default/images/by_logo.png"></a>
+      </div>
+    </div>
+  </div>
   <app-footer></app-footer>
 </div>
 
@@ -577,9 +703,9 @@
     <div></div><div></div><div></div>
     <div class="cursor-pointer" (click)="openLink('https://xn--41a.tv/#/watch?video=60m250522&lang=ru')"></div>
   </div>
-  <div class="vr-preview-mask-58" *ngIf="isOpenedVr(59)">
+  <div class="vr-preview-mask-58" *ngIf="isOpenedVr(61)">
     <div></div><div></div><div></div>
-    <div class="cursor-pointer" (click)="openLink('https://xn--41a.tv/#/watch?video=svt130522&lang=ru')"></div>
+    <div class="cursor-pointer" (click)="openLink('https://xn--41a.tv/#/watch?video=vsv310522&lang=ru')"></div>
   </div>
   <div class="vr-preview-mask-58" *ngIf="isOpenedVr(58)">
     <div></div><div></div><div></div>
