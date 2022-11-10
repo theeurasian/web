@@ -1,351 +1,324 @@
-<div [class.page]="!device.isMobile()" [class.page-m]="device.isMobile()">
-  <div class="left-journals" *ngIf="!device.isMobile()">
-    <div class="journal cursor-pointer zoom view" (click)="selectJournal(7)">
-      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e7.jpg">
-      <div class="mask flex-center rgba-black-slight">
-      </div>
-    </div>
-    <div class="journal cursor-pointer zoom view" (click)="selectJournal(6)">
-      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e6.jpg">
-      <div class="mask flex-center rgba-black-slight">
-      </div>
-    </div>
-    <div class="journal cursor-pointer zoom view" (click)="selectJournal(5)">
-      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e5.jpg">
-      <div class="mask flex-center rgba-black-slight">
-      </div>
-    </div>
-    <div class="journal cursor-pointer zoom view" (click)="selectJournal(4)">
-      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e4.jpg">
-      <div class="mask flex-center rgba-black-slight">
-      </div>
-    </div>
-    <div class="journal cursor-pointer zoom view" (click)="selectJournal(3)">
-      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e3.jpg">
-      <div class="mask flex-center rgba-black-slight">
-      </div>
-    </div>
-    <div class="journal cursor-pointer zoom view" (click)="selectJournal(2)">
-      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e2.jpg">
-      <div class="mask flex-center rgba-black-slight">
-      </div>
-    </div>
-    <div class="journal cursor-pointer zoom view" (click)="selectJournal(1)">
-      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e1.jpg">
-      <div class="mask flex-center rgba-black-slight">
-      </div>
-    </div>
-  </div>
-  <div class="right-journals" *ngIf="!device.isMobile()">
-    <div *ngIf="languageManager.language != 'kz'" class="journal cursor-pointer zoom view" (click)="selectJournal(14)">
-      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e14.jpg">
-      <div class="mask flex-center rgba-black-slight">
-      </div>
-    </div>
-    <div *ngIf="languageManager.language == 'kz'" class="journal cursor-pointer zoom view" (click)="selectJournal(14, 'kz')">
-      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e14-kz.jpg">
-      <div class="mask flex-center rgba-black-slight">
-      </div>
-    </div>
-    <div *ngIf="languageManager.language != 'kz'" class="journal cursor-pointer zoom view" (click)="selectJournal(13)">
-      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e13.jpg">
-      <div class="mask flex-center rgba-black-slight">
-      </div>
-    </div>
-    <div *ngIf="languageManager.language == 'kz'" class="journal cursor-pointer zoom view" (click)="selectJournal(13, 'kz')">
-      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e13-kz.jpg">
-      <div class="mask flex-center rgba-black-slight">
-      </div>
-    </div>
-    <div *ngIf="languageManager.language != 'kz'" class="journal cursor-pointer zoom view" (click)="selectJournal(12)">
-      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e12.jpg">
-      <div class="mask flex-center rgba-black-slight">
-      </div>
-    </div>
-    <div *ngIf="languageManager.language == 'kz'" class="journal cursor-pointer zoom view" (click)="selectJournal(12, 'kz')">
-      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e12-kz.jpg">
-      <div class="mask flex-center rgba-black-slight">
-      </div>
-    </div>
-    <div  *ngIf="languageManager.language != 'kz'"class="journal cursor-pointer zoom view" (click)="selectJournal(11)">
-      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e11.jpg">
-      <div class="mask flex-center rgba-black-slight">
-      </div>
-    </div>
-    <div *ngIf="languageManager.language == 'kz'" class="journal cursor-pointer zoom view" (click)="selectJournal(11, 'kz')">
-      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e11-kz.jpg">
-      <div class="mask flex-center rgba-black-slight">
-      </div>
-    </div>
-    <div class="journal cursor-pointer zoom view" (click)="selectJournal(10)">
-      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e10.jpg">
-      <div class="mask flex-center rgba-black-slight">
-      </div>
-    </div>
-    <div *ngIf="languageManager.language != 'kz'" class="journal cursor-pointer zoom view" (click)="selectJournal(9)">
-      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e9.jpg">
-      <div class="mask flex-center rgba-black-slight">
-      </div>
-    </div>
-    <div *ngIf="languageManager.language == 'kz'" class="journal cursor-pointer zoom view" (click)="selectJournal(9, 'kz')">
-      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e9k.jpg">
-      <div class="mask flex-center rgba-black-slight">
-      </div>
-    </div>
-    <div class="journal cursor-pointer zoom view" (click)="selectJournal(8)">
-      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e8.jpg">
-      <div class="mask flex-center rgba-black-slight">
-      </div>
-    </div>
-  </div>
+<div [class.page]="!device.isMobile()" [class.page-m]="device.isMobile()" (click)="resetSelects()">
+<!--  <div class="left-journals" *ngIf="!device.isMobile()">-->
+<!--    <div class="journal cp zoom view" (click)="selectJournal(7)">-->
+<!--      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e7.jpg">-->
+<!--      <div class="mask flex-center rgba-black-slight">-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="journal cp zoom view" (click)="selectJournal(6)">-->
+<!--      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e6.jpg">-->
+<!--      <div class="mask flex-center rgba-black-slight">-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="journal cp zoom view" (click)="selectJournal(5)">-->
+<!--      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e5.jpg">-->
+<!--      <div class="mask flex-center rgba-black-slight">-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="journal cp zoom view" (click)="selectJournal(4)">-->
+<!--      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e4.jpg">-->
+<!--      <div class="mask flex-center rgba-black-slight">-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="journal cp zoom view" (click)="selectJournal(3)">-->
+<!--      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e3.jpg">-->
+<!--      <div class="mask flex-center rgba-black-slight">-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="journal cp zoom view" (click)="selectJournal(2)">-->
+<!--      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e2.jpg">-->
+<!--      <div class="mask flex-center rgba-black-slight">-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="journal cp zoom view" (click)="selectJournal(1)">-->
+<!--      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e1.jpg">-->
+<!--      <div class="mask flex-center rgba-black-slight">-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="right-journals" *ngIf="!device.isMobile()">-->
+<!--    <div *ngIf="languageManager.language != 'kz'" class="journal cp zoom view" (click)="selectJournal(14)">-->
+<!--      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e14.jpg">-->
+<!--      <div class="mask flex-center rgba-black-slight">-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div *ngIf="languageManager.language == 'kz'" class="journal cp zoom view" (click)="selectJournal(14, 'kz')">-->
+<!--      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e14-kz.jpg">-->
+<!--      <div class="mask flex-center rgba-black-slight">-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div *ngIf="languageManager.language != 'kz'" class="journal cp zoom view" (click)="selectJournal(13)">-->
+<!--      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e13.jpg">-->
+<!--      <div class="mask flex-center rgba-black-slight">-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div *ngIf="languageManager.language == 'kz'" class="journal cp zoom view" (click)="selectJournal(13, 'kz')">-->
+<!--      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e13-kz.jpg">-->
+<!--      <div class="mask flex-center rgba-black-slight">-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div *ngIf="languageManager.language != 'kz'" class="journal cp zoom view" (click)="selectJournal(12)">-->
+<!--      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e12.jpg">-->
+<!--      <div class="mask flex-center rgba-black-slight">-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div *ngIf="languageManager.language == 'kz'" class="journal cp zoom view" (click)="selectJournal(12, 'kz')">-->
+<!--      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e12-kz.jpg">-->
+<!--      <div class="mask flex-center rgba-black-slight">-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div  *ngIf="languageManager.language != 'kz'"class="journal cp zoom view" (click)="selectJournal(11)">-->
+<!--      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e11.jpg">-->
+<!--      <div class="mask flex-center rgba-black-slight">-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div *ngIf="languageManager.language == 'kz'" class="journal cp zoom view" (click)="selectJournal(11, 'kz')">-->
+<!--      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e11-kz.jpg">-->
+<!--      <div class="mask flex-center rgba-black-slight">-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="journal cp zoom view" (click)="selectJournal(10)">-->
+<!--      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e10.jpg">-->
+<!--      <div class="mask flex-center rgba-black-slight">-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div *ngIf="languageManager.language != 'kz'" class="journal cp zoom view" (click)="selectJournal(9)">-->
+<!--      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e9.jpg">-->
+<!--      <div class="mask flex-center rgba-black-slight">-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div *ngIf="languageManager.language == 'kz'" class="journal cp zoom view" (click)="selectJournal(9, 'kz')">-->
+<!--      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e9k.jpg">-->
+<!--      <div class="mask flex-center rgba-black-slight">-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="journal cp zoom view" (click)="selectJournal(8)">-->
+<!--      <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e8.jpg">-->
+<!--      <div class="mask flex-center rgba-black-slight">-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+
   <div *ngIf="device.isMobile()">
-    <div class="row">
-      <div class="center-logo">
-        <img class="d-block" width="250" height="100" src="../../../assets/home/logo.jpg">
-      </div>
-      <img *ngIf="languageManager.language == 'kz'" (click)="selectJournal(14, 'kz')" class="d-block mt-2" height="340" width="250" src="../../../assets/home/publishes/e14-kz.jpg">
-      <img *ngIf="languageManager.language != 'kz'" (click)="selectJournal(14)" class="d-block mt-2" height="340" width="250" src="../../../assets/home/publishes/e14.jpg">
+    <div class="df c pt-2vh">
+      <img class="d-block" width="250" height="100" src="../../../assets/home/logo.jpg">
+    </div>
+    <div class="df c pt-2vh">
+      <img *ngIf="getPublishLang() == 'kz'" (click)="openPublish(15)" class="d-block mt-2" height="340" width="250" src="assets/publishes/thumbs/kz/15.jpg">
+      <img *ngIf="getPublishLang() != 'kz'" (click)="openPublish(15)" class="d-block mt-2" height="340" width="250" src="assets/publishes/thumbs/ru/15.jpg">
+    </div>
+
+    <div class="df c mt20px">
+      <img height="46" width="46" src="assets/menu/pg.png">
     </div>
     <div class="row">
-      <div class="pr">
-        <mdb-icon far icon="circle" class="cx cy pt-3vh cursor-pointer text-red" size="3x"></mdb-icon>
-        <div class="plus-text-m">
-          16+
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="h4 cx cy pt-3vh">
+      <div class="h4 df c y pt-3vh">
         <div *ngFor="let language of getLanguages().slice(0, 6)">
-          <img class="mx-1 cursor-pointer" [src]="'assets/' + language + '.png'" height="48" (click)="setLang(language)"/>
+          <img class="mx-1 cp" [src]="'assets/' + language + '.png'" height="48" (click)="setLang(language)"/>
         </div>
       </div>
     </div>
     <div class="row">
-      <div class="h4 cx cy pt-3vh">
+      <div class="h4 df c y pt-3vh">
         <div *ngFor="let language of getLanguages().slice(6, 12)">
-          <img class="mx-1 cursor-pointer" [src]="'assets/' + language + '.png'" height="48" (click)="setLang(language)"/>
+          <img class="mx-1 cp" [src]="'assets/' + language + '.png'" height="48" (click)="setLang(language)"/>
         </div>
       </div>
     </div>
     <div class="row">
-      <div class="h4 cx cy pt-3vh">
+      <div class="h4 df c y pt-3vh">
         <div *ngFor="let language of getLanguages().slice(12, 16)">
-          <img class="mx-1 cursor-pointer" [src]="'assets/' + language + '.png'" height="48" (click)="setLang(language)"/>
+          <img class="mx-1 cp" [src]="'assets/' + language + '.png'" height="48" (click)="setLang(language)"/>
         </div>
       </div>
     </div>
-    <div class="row h4 cx cy my-2">
-      <div class="col-7">
-        <div class="row">
-          <img (click)="openPbp()" class="mx-1 cursor-pointer" [src]="'assets/pbp.png'" height="50"/>
-        </div>
-        <div class="row h6 text-red text-small" (click)="openPbp()">
-          Personal Browser Page
-        </div>
-      </div>
-      <div class="col-5 cy">
-        <div class="my-2">
-          <a href="https://play.google.com/store/apps/details?id=press.eurasian.the" target="_blank">
-            <img src="assets/googlePlayMobile.png">
-          </a>
-        </div>
-        <div class="my-2">
-          <a class="my-2" href="https://apps.apple.com/us/app/the-eurasian/id1559418805" target="_blank">
-            <img src="assets/appStoreMobile.png">
-          </a>
-        </div>
-        <div class="my-2">
-          <a class="my-2" href="https://wap-drru.hispace.hicloud.com/uowap/index.html#/detailApp/C104131097?source=qrCodeShare" target="_blank">
-            <img src="assets/appGalleryMobile.png">
-          </a>
-        </div>
-      </div>
-    </div>
+<!--    <div class="mt20px df c y">-->
+<!--      <div class="mx-2">-->
+<!--        <div class="df c">-->
+<!--          <img (click)="openPbp()" class="mx-1 cp" [src]="'assets/pbp.png'" height="50"/>-->
+<!--        </div>-->
+<!--        <div class="text-red text-small text text-bold" (click)="openPbp()">-->
+<!--          Personal Browser Page-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="mx-2">-->
+<!--        <div class="mt5px">-->
+<!--          <a href="https://play.google.com/store/apps/details?id=press.eurasian.the" target="_blank">-->
+<!--            <img src="assets/googlePlayMobile.png">-->
+<!--          </a>-->
+<!--        </div>-->
+<!--        <div class="mt5px">-->
+<!--          <a class="my-2" href="https://apps.apple.com/us/app/the-eurasian/id1559418805" target="_blank">-->
+<!--            <img src="assets/appStoreMobile.png">-->
+<!--          </a>-->
+<!--        </div>-->
+<!--        <div class="mt5px">-->
+<!--          <a class="my-2" href="https://wap-drru.hispace.hicloud.com/uowap/index.html#/detailApp/C104131097?source=qrCodeShare" target="_blank">-->
+<!--            <img src="assets/appGalleryMobile.png">-->
+<!--          </a>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
   </div>
-  <div class="row margin-auto" *ngIf="!device.isMobile()">
-    <div class="col-3 cx z-index-100">
+
+
+  <div class="df c mt20px" *ngIf="!device.isMobile()">
+    <div class="df c">
+      <img (mouseenter)="resetSelects();" height="46" width="46"  class="pt-2vh" src="assets/menu/pg.png">
+
       <div>
-        <div class="cx cy pt-3vh z-index-100">
-          <div *ngFor="let language of getLanguages().slice(0, 8)">
-            <img class="px-1 cursor-pointer" [src]="'assets/' + language + '.png'" height="40" (click)="setLang(language)"/>
+        <img (mouseenter)="resetSelects(); selected = 'conference'" class="pt-2vh cp mx-1" src="assets/menu/conference.png">
+        <div class="menu" [hidden]="!isSelected('conference')" (mouseleave)="resetSelects()">
+          <div class="pt-2vh"></div>
+          <div (click)="openLink('https://zoom.us/')" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/zoom.png"> {{lang.tr('Zoom')}}</div>
+          <div class="pt-2vh"></div>
+          <div (click)="openLink('https://duo.google.com/')" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/duo.png"> {{lang.tr('Google Duo')}}</div>
+          <div class="pt-2vh"></div>
+          <div (click)="openLink('https://www.skype.com/')" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/skype.png"> {{lang.tr('Skype')}}</div>
+          <div class="pt-2vh"></div>
+          <div (click)="openLink('https://meet.google.com/')" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/gmeet.png"> {{lang.tr('Google Meet')}}</div>
+          <div class="pt-2vh position-relative" *ngFor="let alias of getAliases('conference')">
+            <div (click)="openLink(alias.url)" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/cconference.png"> {{alias.name}}</div>
+            <div (click)="removeAlias('conference', alias)" class="remove-menu">x</div>
           </div>
-        </div>
-        <div class="cx cy pt-10px z-index-100">
-          <div *ngFor="let language of getLanguages().slice(8, 16)">
-            <img class="px-1 cursor-pointer" [src]="'assets/' + language + '.png'" height="40" (click)="setLang(language)"/>
-          </div>
+  <!--        <div class="pt-2vh cp">-->
+  <!--          <div (click)="alias = ''; url = ''; aliasName = 'conference'; aliasLabel = 'Video Meeting Alias (Zoom)';  aliasUrl = 'Video Meeting Url (https://zoom.us/)'; askForNew.show()" class="menu-item df c y">{{lang.tr('Add New')}} +</div>-->
+  <!--        </div>-->
+          <div class="pt-2vh cp"></div>
         </div>
       </div>
-    </div>
-    <div class="col-2 position-relative cx cy z-index-100">
 
-
-      <img (mouseenter)="resetSelects();" class="pt-2vh cursor-pointer mx-1" src="assets/menu/pg.png">
-
-
-    <div>
-      <img (mouseenter)="resetSelects(); selected = 'conference'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/conference.png">
-      <div class="select-mail" [hidden]="!isSelected('conference')" (mouseleave)="resetSelects()">
-        <div class="pt-2vh"></div>
-        <div (click)="openLink('https://zoom.us/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/zoom.png"> {{lang.tr('Zoom')}}</div>
-        <div class="pt-2vh"></div>
-        <div (click)="openLink('https://duo.google.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/duo.png"> {{lang.tr('Google Duo')}}</div>
-        <div class="pt-2vh"></div>
-        <div (click)="openLink('https://www.skype.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/skype.png"> {{lang.tr('Skype')}}</div>
-        <div class="pt-2vh"></div>
-        <div (click)="openLink('https://meet.google.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/gmeet.png"> {{lang.tr('Google Meet')}}</div>
-        <div class="pt-2vh position-relative" *ngFor="let alias of getAliases('conference')">
-          <div (click)="openLink(alias.url)" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/cconference.png"> {{alias.name}}</div>
-          <div (click)="removeAlias('conference', alias)" class="remove-menu">x</div>
-        </div>
-        <div class="pt-2vh cursor-pointer">
-          <div (click)="alias = ''; url = ''; aliasName = 'conference'; aliasLabel = 'Video Meeting Alias (Zoom)';  aliasUrl = 'Video Meeting Url (https://zoom.us/)'; askForNew.show()" class="add-new-button cx cy">{{lang.tr('Add New')}} +</div>
-        </div>
-        <div class="pt-2vh cursor-pointer"></div>
-      </div>
-    </div>
-
-
-     <div>
-       <img (mouseenter)="resetSelects(); selected = 'horo'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/horo.png">
-       <div class="select-mail" [hidden]="!isSelected('horo')" (mouseleave)="resetSelects()">
+      <div>
+       <img (mouseenter)="resetSelects(); selected = 'horo'" class="pt-2vh cp mx-1" src="assets/menu/horo.png">
+       <div class="menu" [hidden]="!isSelected('horo')" (mouseleave)="resetSelects()">
          <div class="pt-2vh"></div>
-         <div (click)="openLink('https://horo.mail.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/scorp.png"> {{lang.tr('Horoscope')}}</div>
+         <div (click)="openLink('https://horo.mail.ru/')" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/scorp.png"> {{lang.tr('Horoscope')}}</div>
          <div class="pt-2vh"></div>
-         <div (click)="openLink('https://horo.mail.ru/sonnik/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/nights.png"> {{lang.tr('Dream Book')}}</div>
+         <div (click)="openLink('https://horo.mail.ru/sonnik/')" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/nights.png"> {{lang.tr('Dream Book')}}</div>
          <div class="pt-2vh"></div>
-         <div (click)="openLink('https://horo.mail.ru/horoscope/business/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/business.png"> {{lang.tr('Business')}}</div>
-         <div class="pt-2vh cursor-pointer"></div>
+         <div (click)="openLink('https://horo.mail.ru/horoscope/business/')" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/business.png"> {{lang.tr('Business')}}</div>
+         <div class="pt-2vh cp"></div>
        </div>
      </div>
 
-    <div>
-      <img (mouseenter)="resetSelects(); selected = 'video'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/video.png">
-      <div class="select-mail" [hidden]="!isSelected('video')" (mouseleave)="resetSelects()">
-        <div class="pt-2vh"></div>
-        <div (click)="openLink('https://www.tiktok.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/tiktok.png"> {{lang.tr('TikTok')}}</div>
-        <div class="pt-2vh cursor-pointer"></div>
-        <div (click)="openLink('https://www.youtube.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 pl-3 cursor-pointer" src="assets/menu/youtube.png"> {{lang.tr('YouTube')}}</div>
-        <div class="pt-2vh"></div>
-        <div (click)="openLink('https://xn--41a.tv/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/yatv.png"> {{lang.tr('Я.TV')}}</div>
-        <div class="pt-2vh"></div>
-      </div>
-    </div>
+      <div>
+        <img (mouseenter)="resetSelects(); selected = 'video'" class="pt-2vh cp mx-1" src="assets/menu/video.png">
+        <div class="menu" [hidden]="!isSelected('video')" (mouseleave)="resetSelects()">
+          <div class="pt-2vh"></div>
+          <div (click)="openLink('https://www.tiktok.com/')" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/tiktok.png"> {{lang.tr('TikTok')}}</div>
+          <div class="pt-2vh cp"></div>
+          <div (click)="openLink('https://www.youtube.com/')" class="menu-item df c y cp ml30px"><img class="pr-1 pl-3 cp" src="assets/menu/youtube.png"> {{lang.tr('YouTube')}}</div>
+          <div class="pt-2vh"></div>
+          <div (click)="openLink('https://xn--41a.tv/')" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/yatv.png"> {{lang.tr('Я.TV')}}</div>
+          <div class="pt-2vh"></div>
+        </div>
+       </div>
 
       <div>
-        <img (mouseenter)="resetSelects(); selected = 'afisha'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/afisha.png">
-        <div class="select-mail" [hidden]="!isSelected('afisha')" (mouseleave)="resetSelects()">
+        <img (mouseenter)="resetSelects(); selected = 'afisha'" class="pt-2vh cp mx-1" src="assets/menu/afisha.png">
+        <div class="menu" [hidden]="!isSelected('afisha')" (mouseleave)="resetSelects()">
           <div class="pt-2vh"></div>
-          <div (click)="openLink('https://afisha.yandex.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 pl-3 cursor-pointer" src="assets/menu/yandex-afisha.png"> {{lang.tr('Yandex Afisha')}}</div>
+          <div (click)="openLink('https://afisha.yandex.ru/')" class="menu-item df c y cp ml30px"><img class="pr-1 pl-3 cp" src="assets/menu/yandex-afisha.png"> {{lang.tr('Yandex Afisha')}}</div>
           <div class="pt-2vh"></div>
-          <div (click)="openLink('https://www.kassir.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/kassir.png"> {{lang.tr('Kassir.Ru')}}</div>
+          <div (click)="openLink('https://www.kassir.ru/')" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/kassir.png"> {{lang.tr('Kassir.Ru')}}</div>
           <div class="pt-2vh"></div>
-          <div (click)="openLink('https://kassa.rambler.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 pl-3 cursor-pointer" src="assets/menu/rambler-kassa.png"> {{lang.tr('Rambler Kassa')}}</div>
+          <div (click)="openLink('https://kassa.rambler.ru/')" class="menu-item df c y cp ml30px"><img class="pr-1 pl-3 cp" src="assets/menu/rambler-kassa.png"> {{lang.tr('Rambler Kassa')}}</div>
           <div class="pt-2vh"></div>
         </div>
       </div>
 
-
       <div>
-        <img (mouseenter)="resetSelects(); selected = 'afisha-cinema'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/afisha-cinema.png">
-        <div class="select-mail" [hidden]="!isSelected('afisha-cinema')" (mouseleave)="resetSelects()">
-          <div class="pt-2vh cursor-pointer"></div>
-          <div (click)="openLink('https://www.kinopoisk.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/kinopoisk.png"> {{lang.tr('Kinopoisk')}}</div>
-          <div class="pt-2vh cursor-pointer"></div>
-          <div (click)="openLink('https://okko.tv/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/okko.png"> {{lang.tr('OKKO')}}</div>
-          <div class="pt-2vh cursor-pointer"></div>
-          <div (click)="openLink('https://www.ivi.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/ivi.png"> {{lang.tr('IVI.RU')}}</div>
+        <img (mouseenter)="resetSelects(); selected = 'afisha-cinema'" class="pt-2vh cp mx-1" src="assets/menu/afisha-cinema.png">
+        <div class="menu" [hidden]="!isSelected('afisha-cinema')" (mouseleave)="resetSelects()">
+          <div class="pt-2vh cp"></div>
+          <div (click)="openLink('https://www.kinopoisk.ru/')" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/kinopoisk.png"> {{lang.tr('Kinopoisk')}}</div>
+          <div class="pt-2vh cp"></div>
+          <div (click)="openLink('https://okko.tv/')" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/okko.png"> {{lang.tr('OKKO')}}</div>
+          <div class="pt-2vh cp"></div>
+          <div (click)="openLink('https://www.ivi.ru/')" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/ivi.png"> {{lang.tr('IVI.RU')}}</div>
           <div class="pt-2vh"></div>
-          <div (click)="openLink('https://www.netflix.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/netflix.png"> {{lang.tr('NETFLIX')}}</div>
+          <div (click)="openLink('https://www.netflix.com/')" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/netflix.png"> {{lang.tr('NETFLIX')}}</div>
           <div class="pt-2vh"></div>
         </div>
       </div>
 
-
       <div>
-        <img (mouseenter)="resetSelects(); selected = 'search'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/search.png">
-        <div class="select-mail" [hidden]="!isSelected('search')" (mouseleave)="resetSelects()">
-          <img (click)="openLink('https://www.google.com/')" class="pt-2vh cursor-pointer" src="assets/menu/google.png">
-          <img (click)="openLink('https://yandex.ru/')" class="pt-2vh cursor-pointer" src="assets/menu/yandex.png">
-          <img (click)="openLink('https://baidu.com/')" class="pt-2vh cursor-pointer" src="assets/menu/baidu.png">
+        <img (mouseenter)="resetSelects(); selected = 'search'" class="pt-2vh cp mx-1" src="assets/menu/search.png">
+        <div class="menu" [hidden]="!isSelected('search')" (mouseleave)="resetSelects()">
+          <img (click)="openLink('https://www.google.com/')" class="pt-2vh df c y cp ml30px" src="assets/menu/google.png">
+          <img (click)="openLink('https://yandex.ru/')" class="pt-2vh df c y cp ml30px" src="assets/menu/yandex.png">
+          <img (click)="openLink('https://baidu.com/')" class="pt-2vh df c y cp ml30px" src="assets/menu/baidu.png">
           <div class="pt-2vh position-relative" *ngFor="let alias of getAliases('search')">
-            <div (click)="openLink(alias.url)" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/csearch.png"> {{alias.name}}</div>
+            <div (click)="openLink(alias.url)" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/csearch.png"> {{alias.name}}</div>
             <div (click)="removeAlias('search', alias)" class="remove-menu">x</div>
           </div>
-          <div class="pt-2vh cursor-pointer">
-            <div (click)="alias = ''; url = ''; aliasName = 'search'; aliasLabel = 'Search Engine Alias (Google)';  aliasUrl = 'Search Engine Url (https://google.com/)'; askForNew.show()" class="add-new-button cx cy">{{lang.tr('Add New')}} +</div>
-          </div>
-          <div class="pt-2vh cursor-pointer"></div>
+<!--          <div class="pt-2vh cp">-->
+<!--            <div (click)="alias = ''; url = ''; aliasName = 'search'; aliasLabel = 'Search Engine Alias (Google)';  aliasUrl = 'Search Engine Url (https://google.com/)'; askForNew.show()" class="menu-item df c y">{{lang.tr('Add New')}} +</div>-->
+<!--          </div>-->
+          <div class="pt-2vh cp"></div>
         </div>
       </div>
-
-
     </div>
-    <div class="col-2">
-<!--      <div class="center-logo cursor-pointer" (mouseenter)="resetSelects()" (click)="videoPreview.show(); previewSrc.play()">-->
-      <div class="center-logo cursor-pointer" (mouseenter)="resetSelects()" (click)="openLink('https://eurasian.press')">
+
+    <div class="mx-2">
+      <div class="center-logo cp" (mouseenter)="resetSelects()" (click)="openLink('https://eurasian.press')">
         <img *ngIf="!device.isMobile()" class="d-block" width="220" src="../../../assets/home/logo.jpg">
         <img *ngIf="device.isMobile()" class="d-block" width="250" src="../../../assets/home/logo.jpg">
       </div>
     </div>
-    <div class="col-2 cx z-index-100 position-relative">
 
+    <div class="df c">
       <div>
-        <img (mouseenter)="resetSelects(); selected = 'mail'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/at.png">
-        <div class="select-mail" [hidden]="!isSelected('mail')" (mouseleave)="resetSelects()">
-          <img (click)="openMail('mail')" class="pt-2vh cursor-pointer" src="assets/menu/mail.ru.png">
-          <img (click)="openMail('yandex')" class="pt-2vh cursor-pointer" src="assets/menu/ya.ru.png">
-          <img (click)="openMail('gmail')" class="pt-2vh cursor-pointer" src="assets/menu/gmail.ru.png">
+        <img (mouseenter)="resetSelects(); selected = 'mail'" class="pt-2vh cp mx-1" src="assets/menu/at.png">
+        <div class="menu" [hidden]="!isSelected('mail')" (mouseleave)="resetSelects()">
+          <img (click)="openMail('mail')" class="pt-2vh df c y cp ml30px" src="assets/menu/mail.ru.png">
+          <img (click)="openMail('yandex')" class="pt-2vh df c y cp ml30px" src="assets/menu/ya.ru.png">
+          <img (click)="openMail('gmail')" class="pt-2vh df c y cp ml30px" src="assets/menu/gmail.ru.png">
           <div class="pt-2vh position-relative" *ngFor="let alias of getAliases('mail')">
-            <div (click)="openLink(alias.url)" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/cmail.png"> {{alias.name}}</div>
+            <div (click)="openLink(alias.url)" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/cmail.png"> {{alias.name}}</div>
             <div (click)="removeAlias('mail', alias)" class="remove-menu">x</div>
           </div>
-          <div class="pt-2vh cursor-pointer">
-            <div (click)="alias = ''; url = ''; aliasName = 'mail'; aliasLabel = 'Mail Alias (Google)';  aliasUrl = 'Mail Url (https://mail.google.com/mail/)'; askForNew.show()" class="add-new-button cx cy">{{lang.tr('Add New')}} +</div>
-          </div>
-          <div class="pt-2vh cursor-pointer">
+<!--          <div class="pt-2vh cp">-->
+<!--            <div (click)="alias = ''; url = ''; aliasName = 'mail'; aliasLabel = 'Mail Alias (Google)';  aliasUrl = 'Mail Url (https://mail.google.com/mail/)'; askForNew.show()" class="menu-item df c y">{{lang.tr('Add New')}} +</div>-->
+<!--          </div>-->
+          <div class="pt-2vh cp">
           </div>
         </div>
-
-      </div>
-
-
-      <div>
-
-        <img (mouseenter)="resetSelects(); selected = 'office'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/office.png">
-        <div class="select-mail" [hidden]="!isSelected('office')" (mouseleave)="resetSelects()">
-          <div class="pt-2vh"></div>
-          <div (click)="openLink('https://www.office.com/launch/word')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/word.png"> {{lang.tr('Word')}}</div>
-          <div class="pt-2vh"></div>
-          <div (click)="openLink('https://www.office.com/launch/excel')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/excel.png"> {{lang.tr('Excel')}}</div>
-          <div class="pt-2vh"></div>
-          <div (click)="openLink('https://www.office.com/launch/powerpoint')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/powerpoint.png"> {{lang.tr('PowerPoint')}}</div>
-          <div class="pt-2vh cursor-pointer"></div>
-        </div>
-
       </div>
 
       <div>
-        <img (mouseenter)="resetSelects(); selected = 'embedgov'" class="pt-2vh cursor-pointer mx-1" src="assets/promo/embedika.png">
-        <div class="select-mail" [hidden]="!isSelected('embedgov')" (mouseleave)="resetSelects()">
+        <img (mouseenter)="resetSelects(); selected = 'office'" class="pt-2vh cp mx-1" src="assets/menu/office.png">
+        <div class="menu" [hidden]="!isSelected('office')" (mouseleave)="resetSelects()">
           <div class="pt-2vh"></div>
-          <div *ngIf="languageManager.language == 'ru' || languageManager.language == 'kz'" (click)="openLink('https://contract.embedika.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/promo/embedika.png">Проверка договоров</div>
+          <div (click)="openLink('https://www.office.com/launch/word')" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/word.png"> {{lang.tr('Word')}}</div>
           <div class="pt-2vh"></div>
-          <div *ngIf="languageManager.language == 'ru'" (click)="openLink('https://www.gosuslugi.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/gosuslugi.png">Госуслуги</div>
+          <div (click)="openLink('https://www.office.com/launch/excel')" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/excel.png"> {{lang.tr('Excel')}}</div>
+          <div class="pt-2vh"></div>
+          <div (click)="openLink('https://www.office.com/launch/powerpoint')" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/powerpoint.png"> {{lang.tr('PowerPoint')}}</div>
+          <div class="pt-2vh cp"></div>
+        </div>
+      </div>
+
+      <div>
+        <img (mouseenter)="resetSelects(); selected = 'embedgov'" class="pt-2vh cp mx-1" src="assets/promo/embedika.png">
+        <div class="menu" [hidden]="!isSelected('embedgov')" (mouseleave)="resetSelects()">
+          <div class="pt-2vh"></div>
+          <div (mouseenter)="resetSelectsNext()" *ngIf="languageManager.language == 'ru' || languageManager.language == 'kz'" (click)="openLink('https://contract.embedika.ru/')" class="menu-item df c y cp ml30px"><img class="pr-1 cp pl-1" src="assets/promo/embedika.png">Проверка договоров</div>
+          <div class="pt-2vh"></div>
+          <div (mouseenter)="resetSelectsNext()" *ngIf="languageManager.language == 'ru'" (click)="openLink('https://www.gosuslugi.ru/')" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/gosuslugi.png">Госуслуги</div>
           <div class="pt-2vh"></div>
           <div class="position-relative" *ngIf="languageManager.language == 'ru'">
-            <div (mouseenter)="selectedNext = 'goszakupki'" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/goszakupki.png">Госзакупки</div>
-            <div class="select-next" [hidden]="!isSelectedNext('goszakupki')" (mouseleave)="resetSelectsNext()">
+            <div (mouseenter)="selectedNext = 'goszakupki'" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/goszakupki.png">Госзакупки</div>
+            <div class="menu-item-sub" [hidden]="!isSelectedNext('goszakupki')" (mouseleave)="resetSelectsNext()">
               <div class="pt-2vh"></div>
 
               <div class="position-relative">
-                <div (mouseenter)="resetSelectsNextNext(); selectedNextNext = 'armenia'" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/ar.png">Армения</div>
-                <div class="select-next-next" [hidden]="!isSelectedNextNext('armenia')" (mouseleave)="resetSelectsNextNext()">
+                <div (mouseenter)="resetSelectsNextNext(); selectedNextNext = 'armenia'" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/ar.png">Армения</div>
+                <div class="menu-item-sub-sub" [hidden]="!isSelectedNextNext('armenia')" (mouseleave)="resetSelectsNextNext()">
                   <div class="pt-2vh"></div>
-                  <div (click)="openLink('https://www.tender.am/ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/zakupki.png"> Закупки</div>
+                  <div (click)="openLink('https://www.tender.am/ru/')" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/zakupki.png"> Закупки</div>
                   <div class="pt-2vh"></div>
-                  <div (click)="openLink('https://www.b2b-center.ru/firms/?f_country=51')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/deals.png"> Площадка</div>
+                  <div (click)="openLink('https://www.b2b-center.ru/firms/?f_country=51')" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/deals.png"> Площадка</div>
                   <div class="pt-2vh"></div>
                 </div>
               </div>
@@ -353,25 +326,12 @@
 
 
               <div class="position-relative">
-                <div (mouseenter)="resetSelectsNextNext(); selectedNextNext = 'belorussia'" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/bl.png">Белоруссия</div>
-                <div class="select-next-next" [hidden]="!isSelectedNextNext('belorussia')" (mouseleave)="resetSelectsNextNext()">
+                <div (mouseenter)="resetSelectsNextNext(); selectedNextNext = 'belorussia'" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/bl.png">Белоруссия</div>
+                <div class="menu-item-sub-sub" [hidden]="!isSelectedNextNext('belorussia')" (mouseleave)="resetSelectsNextNext()">
                   <div class="pt-2vh"></div>
-                  <div (click)="openLink('https://goszakupki.by/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/zakupki.png"> Закупки</div>
+                  <div (click)="openLink('https://goszakupki.by/')" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/zakupki.png"> Закупки</div>
                   <div class="pt-2vh"></div>
-                  <div (click)="openLink('https://zakupki.butb.by/auctions/index.html')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/deals.png"> Площадка</div>
-                  <div class="pt-2vh"></div>
-                </div>
-              </div>
-              <div class="pt-2vh"></div>
-
-
-              <div class="position-relative">
-                <div (mouseenter)="selectedNextNext = 'kazakhstan'" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/kz.png">Казахстан</div>
-                <div class="select-next-next" [hidden]="!isSelectedNextNext('kazakhstan')" (mouseleave)="resetSelectsNextNext()">
-                  <div class="pt-2vh"></div>
-                  <div (click)="openLink('https://www.goszakup.gov.kz/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/zakupki.png"> Закупки</div>
-                  <div class="pt-2vh"></div>
-                  <div (click)="openLink('https://e-auction.gosreestr.kz/p/ru/auction-guest-list')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/deals.png"> Площадка</div>
+                  <div (click)="openLink('https://zakupki.butb.by/auctions/index.html')" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/deals.png"> Площадка</div>
                   <div class="pt-2vh"></div>
                 </div>
               </div>
@@ -379,24 +339,37 @@
 
 
               <div class="position-relative">
-                <div (mouseenter)="selectedNextNext = 'kirgizia'" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/kr.png">Киргизия</div>
-                <div class="select-next-next" [hidden]="!isSelectedNextNext('kirgizia')" (mouseleave)="resetSelectsNextNext()">
+                <div (mouseenter)="selectedNextNext = 'kazakhstan'" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/kz.png">Казахстан</div>
+                <div class="menu-item-sub-sub" [hidden]="!isSelectedNextNext('kazakhstan')" (mouseleave)="resetSelectsNextNext()">
                   <div class="pt-2vh"></div>
-                  <div (click)="openLink('http://zakupki.gov.kg/popp/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/zakupki.png"> Закупки</div>
+                  <div (click)="openLink('https://www.goszakup.gov.kz/')" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/zakupki.png"> Закупки</div>
                   <div class="pt-2vh"></div>
-                  <div (click)="openLink('https://www.b2b-center.ru/firms/?f_country=417')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/deals.png"> Площадка</div>
+                  <div (click)="openLink('https://e-auction.gosreestr.kz/p/ru/auction-guest-list')" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/deals.png"> Площадка</div>
+                  <div class="pt-2vh"></div>
+                </div>
+              </div>
+              <div class="pt-2vh"></div>
+
+
+              <div class="position-relative">
+                <div (mouseenter)="selectedNextNext = 'kirgizia'" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/kr.png">Киргизия</div>
+                <div class="menu-item-sub-sub" [hidden]="!isSelectedNextNext('kirgizia')" (mouseleave)="resetSelectsNextNext()">
+                  <div class="pt-2vh"></div>
+                  <div (click)="openLink('http://zakupki.gov.kg/popp/')" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/zakupki.png"> Закупки</div>
+                  <div class="pt-2vh"></div>
+                  <div (click)="openLink('https://www.b2b-center.ru/firms/?f_country=417')" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/deals.png"> Площадка</div>
                   <div class="pt-2vh"></div>
                 </div>
               </div>
               <div class="pt-2vh"></div>
 
               <div class="position-relative">
-                <div (mouseenter)="selectedNextNext = 'rossiya'" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/ru.png">Россия</div>
-                <div class="select-next-next" [hidden]="!isSelectedNextNext('rossiya')" (mouseleave)="resetSelectsNextNext()">
+                <div (mouseenter)="selectedNextNext = 'rossiya'" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/ru.png">Россия</div>
+                <div class="menu-item-sub-sub" [hidden]="!isSelectedNextNext('rossiya')" (mouseleave)="resetSelectsNextNext()">
                   <div class="pt-2vh"></div>
-                  <div (click)="openLink('https://zakupki.gov.ru/epz/main/public/home.html')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/zakupki.png"> Закупки</div>
+                  <div (click)="openLink('https://zakupki.gov.ru/epz/main/public/home.html')" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/zakupki.png"> Закупки</div>
                   <div class="pt-2vh"></div>
-                  <div (click)="openLink('https://www.sberbank-ast.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/deals.png"> Площадка</div>
+                  <div (click)="openLink('https://www.sberbank-ast.ru/')" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/deals.png"> Площадка</div>
                   <div class="pt-2vh"></div>
                 </div>
               </div>
@@ -405,409 +378,537 @@
             </div>
           </div>
           <div class="pt-2vh"></div>
-          <div *ngIf="languageManager.language == 'kz'" (click)="openLink('https://egov.kz/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/govkz.png"></div>
+          <div *ngIf="languageManager.language == 'kz'" (click)="openLink('https://egov.kz/')" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/govkz.png"></div>
           <div class="pt-2vh"></div>
         </div>
 
       </div>
 
       <div>
-        <img (mouseenter)="resetSelects(); selected = 'social'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/social.png">
-        <div class="select-mail" [hidden]="!isSelected('social')" (mouseleave)="resetSelects()">
+        <img (mouseenter)="resetSelects(); selected = 'social'" class="pt-2vh cp mx-1" src="assets/menu/social.png">
+        <div class="menu" [hidden]="!isSelected('social')" (mouseleave)="resetSelects()">
           <div class="pt-2vh"></div>
-          <div (click)="openLink('https://www.instagram.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/instagram.png"> {{lang.tr('Instagram')}}</div>
+          <div (click)="openLink('https://www.instagram.com/')" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/instagram.png"> {{lang.tr('Instagram')}}</div>
           <div class="pt-2vh"></div>
-          <div (click)="openLink('https://web.telegram.org/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/telegram.png"> {{lang.tr('Telegram')}}</div>
+          <div (click)="openLink('https://web.telegram.org/')" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/telegram.png"> {{lang.tr('Telegram')}}</div>
           <div class="pt-2vh"></div>
-          <div (click)="openLink('https://vk.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/vk.png"> {{lang.tr('VK')}}</div>
+          <div (click)="openLink('https://vk.com/')" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/vk.png"> {{lang.tr('VK')}}</div>
           <div class="pt-2vh"></div>
-          <div (click)="openLink('https://www.facebook.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/facebook.png"> {{lang.tr('FaceBook')}}</div>
-          <div class="pt-2vh cursor-pointer"></div>
+          <div (click)="openLink('https://www.facebook.com/')" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/facebook.png"> {{lang.tr('FaceBook')}}</div>
+          <div class="pt-2vh cp"></div>
         </div>
       </div>
 
-
       <div>
-        <img (mouseenter)="resetSelects(); selected = 'market'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/market.png">
-        <div class="select-mail" [hidden]="!isSelected('market')" (mouseleave)="resetSelects()">
+        <img (mouseenter)="resetSelects(); selected = 'market'" class="pt-2vh cp mx-1" src="assets/menu/market.png">
+        <div class="menu" [hidden]="!isSelected('market')" (mouseleave)="resetSelects()">
           <div class="pt-2vh"></div>
-          <div (click)="openLink('https://www.ozon.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/ozon.png"> {{lang.tr('Ozon')}}</div>
+          <div (click)="openLink('https://www.ozon.ru/')" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/ozon.png"> {{lang.tr('Ozon')}}</div>
           <div class="pt-2vh"></div>
-          <div (click)="openLink('https://www.joom.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/joom.png"> {{lang.tr('Joom')}}</div>
+          <div (click)="openLink('https://www.joom.com/')" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/joom.png"> {{lang.tr('Joom')}}</div>
           <div class="pt-2vh"></div>
-          <div (click)="openLink('https://www.wildberries.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/wb.png"> {{lang.tr('WildBerries')}}</div>
+          <div (click)="openLink('https://www.wildberries.ru/')" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/wb.png"> {{lang.tr('WildBerries')}}</div>
           <div class="pt-2vh"></div>
-          <div (click)="openLink('https://market.yandex.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 pl-4 cursor-pointer" src="assets/menu/yandex-market.png"> {{lang.tr('Yandex Market')}}</div>
+          <div (click)="openLink('https://market.yandex.ru/')" class="menu-item df c y cp ml30px"><img class="pr-1 pl-4 cp" src="assets/menu/yandex-market.png"> {{lang.tr('Yandex Market')}}</div>
           <div class="pt-2vh"></div>
-          <div (click)="openLink('https://sbermarket.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/sbermarket.png"> {{lang.tr('Sber Market')}}</div>
+          <div (click)="openLink('https://sbermarket.ru/')" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/sbermarket.png"> {{lang.tr('Sber Market')}}</div>
           <div class="pt-2vh position-relative" *ngFor="let alias of getAliases('market')">
-            <div (click)="openLink(alias.url)" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/cmarket.png"> {{alias.name}}</div>
+            <div (click)="openLink(alias.url)" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/cmarket.png"> {{alias.name}}</div>
             <div (click)="removeAlias('mail', alias)" class="remove-menu">x</div>
           </div>
-          <div class="pt-2vh cursor-pointer">
-            <div (click)="alias = ''; url = ''; aliasName = 'mail'; aliasLabel = 'Market Alias (Yandex Market)';  aliasUrl = 'Market Url (https://market.yandex.ru/)'; askForNew.show()" class="add-new-button cx cy">{{lang.tr('Add New')}} +</div>
-          </div>
-          <div class="pt-2vh cursor-pointer">
+<!--          <div class="pt-2vh cp">-->
+<!--            <div (click)="alias = ''; url = ''; aliasName = 'mail'; aliasLabel = 'Market Alias (Yandex Market)';  aliasUrl = 'Market Url (https://market.yandex.ru/)'; askForNew.show()" class="menu-item df c y">{{lang.tr('Add New')}} +</div>-->
+<!--          </div>-->
+          <div class="pt-2vh cp">
           </div>
         </div>
-
       </div>
-
 
       <div>
-
-        <img (mouseenter)="resetSelects(); selected = 'translate'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/translate.png">
-        <div class="select-mail" [hidden]="!isSelected('translate')" (mouseleave)="resetSelects()">
+        <img (mouseenter)="resetSelects(); selected = 'translate'" class="pt-2vh cp mx-1" src="assets/menu/translate.png">
+        <div class="menu" [hidden]="!isSelected('translate')" (mouseleave)="resetSelects()">
           <div class="pt-2vh"></div>
-          <div (click)="openLink('https://translate.google.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 pl-3 cursor-pointer" src="assets/menu/google-translate.png"> {{lang.tr('Google Translate')}}</div>
+          <div (click)="openLink('https://translate.google.com/')" class="menu-item df c y cp ml30px"><img class="pr-1 pl-3 cp" src="assets/menu/google-translate.png"> {{lang.tr('Google Translate')}}</div>
           <div class="pt-2vh"></div>
-          <div (click)="openLink('https://translate.yandex.ru/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 pl-3 cursor-pointer" src="assets/menu/yandex-translate.png"> {{lang.tr('Yandex Translate')}}</div>
+          <div (click)="openLink('https://translate.yandex.ru/')" class="menu-item df c y cp ml30px"><img class="pr-1 pl-3 cp" src="assets/menu/yandex-translate.png"> {{lang.tr('Yandex Translate')}}</div>
           <div class="pt-2vh"></div>
-          <div (click)="openLink('https://www.multitran.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/multitran.png"> {{lang.tr('Multitran')}}</div>
-          <div class="pt-2vh cursor-pointer"></div>
+          <div (click)="openLink('https://www.multitran.com/')" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/multitran.png"> {{lang.tr('Multitran')}}</div>
+          <div class="pt-2vh cp"></div>
         </div>
       </div>
-
 
       <div>
-        <img (mouseenter)="resetSelects(); selected = 'messages'" class="pt-2vh cursor-pointer mx-1" src="assets/menu/chat.png">
-        <div class="select-mail" [hidden]="!isSelected('messages')" (mouseleave)="resetSelects()">
+        <img (mouseenter)="resetSelects(); selected = 'messages'" class="pt-2vh cp mx-1" src="assets/menu/chat.png">
+        <div class="menu" [hidden]="!isSelected('messages')" (mouseleave)="resetSelects()">
           <div class="pt-2vh"></div>
-          <div (click)="openLink('https://web.whatsapp.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 pl-3 cursor-pointer" src="assets/menu/whatsapp.png"> {{lang.tr('WhatsApp')}}</div>
+          <div (click)="openLink('https://web.whatsapp.com/')" class="menu-item df c y cp ml30px"><img class="pr-1 pl-3 cp" src="assets/menu/whatsapp.png"> {{lang.tr('WhatsApp')}}</div>
           <div class="pt-2vh"></div>
-          <div (click)="openLink('https://www.wechat.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 pl-3 cursor-pointer" src="assets/menu/wechat.png"> {{lang.tr('WeChat')}}</div>
+          <div (click)="openLink('https://www.wechat.com/')" class="menu-item df c y cp ml30px"><img class="pr-1 pl-3 cp" src="assets/menu/wechat.png"> {{lang.tr('WeChat')}}</div>
           <div class="pt-2vh"></div>
-          <div (click)="openLink('https://www.icq.com/')" class="add-new-button cx cy cursor-pointer"><img class="pr-1 cursor-pointer" src="assets/menu/icq.png"> {{lang.tr('ICQ')}}</div>
-          <div class="pt-2vh cursor-pointer"></div>
+          <div (click)="openLink('https://www.icq.com/')" class="menu-item df c y cp ml30px"><img class="pr-1 cp" src="assets/menu/icq.png"> {{lang.tr('ICQ')}}</div>
+          <div class="pt-2vh cp"></div>
         </div>
       </div>
-
-
-
-
     </div>
-    <div class="col-3 cx cy" (mouseenter)="resetSelects()">
-      <div class="cursor-pointer" (click)="openPbp()">
-        <div class="row">
-          <div class="col no-gutters">
-            <div class="row h4 cx cy pt-3vh">
-              <img class="mx-1 cursor-pointer" [src]="'assets/pbp.png'" height="50"/>
-            </div>
-            <div class="row h6 text-red text-small">
-              Personal Browser Page
-            </div>
+  </div>
+
+  <div class="df c mt20px" *ngIf="!device.isMobile()">
+    <div class="page-width">
+      <div class="header-sub df c">
+<!--        <div class="promo df c y mx-2">-->
+<!--          <div class="cp" (click)="openPbp()">-->
+<!--            <div class="row">-->
+<!--              <div class="col no-gutters">-->
+<!--                <div class="row h4 df c y pt-3vh">-->
+<!--                  <img class="mx-1 cp" [src]="'assets/pbp.png'" height="50"/>-->
+<!--                </div>-->
+<!--                <div class="row h6 text-red text-small text text-bold">-->
+<!--                  Personal Browser Page-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+        <div class="flags mx-2">
+          <div *ngFor="let language of getLanguages()">
+            <img class="flag cp" [src]="'assets/flags/' + language + '.svg'" height="40" (click)="setLang(language)"/>
           </div>
         </div>
-      </div>
-      <a class="app-gallery" href="https://wap-drru.hispace.hicloud.com/uowap/index.html#/detailApp/C104131097?source=qrCodeShare" target="_blank">
-        <img src="assets/appGalleryEurasian.png">
-      </a>
-      <div class="center-logo">
-        <a class="px-1" href="https://play.google.com/store/apps/details?id=press.eurasian.the" target="_blank">
-          <img src="assets/googlePlayEurasian.png">
-        </a>
-        <a class="px-1" href="https://apps.apple.com/us/app/the-eurasian/id1559418805" target="_blank">
-          <img src="assets/appStoreEurasian.png">
-        </a>
-      </div>
-    </div>
-  </div>
-  <div class="vrs-m" *ngIf="device.isMobile()">
-    <div class="vr" *ngFor="let vr of galleryImages; let ind = index">
-      <img (click)="openVR(vr.big, ind + 1)" height="180px" [src]="vr.small"/>
-    </div>
-  </div>
-  <div class="df cx" [class.currencies]="!device.isMobile()">
-    <div [class.currencies-and-weather-m]="device.isMobile()" [class.currencies-and-weather]="!device.isMobile()" class="mx-3">
-      <div [class.weather-widgets-m]="device.isMobile()" class="weather-widgets">
-        <div *ngFor="let weather of weathers" class="weather-widget">
-          <div class="weather-content">
-            <div class="weather-icon">
-              <img [src]="'https://openweathermap.org/img/wn/' + weather.weather[0].icon + '.png'"/>
-            </div>
-            <div class="weather-info">
-              <div class="weather-value">{{round(weather.tempMain.temp)}} °C</div>
-            </div>
-          </div>
-          <div class="widget-title">{{weather.name}}</div>
-          <div class="weather-property">{{weather.weather[0]?.description}}</div>
-          <div class="weather-property">{{lang.tr('Feels like')}}: {{round(weather.tempMain.feels_like)}} °C</div>
-          <div class="weather-property">{{lang.tr('Wind')}}: {{weather.wind.speed}} m/s</div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="df cx overflow-auto mx-2" [class.currencies]="!device.isMobile()">
-    <div [class.currencies-and-weather-m]="device.isMobile()" [class.currencies-and-weather]="!device.isMobile()" class="mx-3">
-      <div class="currency-widgets">
-        <div class="currency-row">
-          <div class="currency-source"></div>
-          <div class="currency-property" *ngFor="let lang of currencyLanguages">{{lang}}</div>
-        </div>
-        <div *ngFor="let currency of currencies" class="currency-widget">
-          <div class="currency-row">
-            <div class="currency-source"><img width="25px" height="25px" [src]="'assets/' + getLangIcon(currency.source) + '.png'"/></div>
-            <div class="currency-property" *ngFor="let lang of currencyLanguages">{{getQuote(currency, lang)}}</div>
-          </div>
-        </div>
+<!--        <div class="promo df c y mx-2">-->
+<!--          <div class="df c y" (mouseenter)="resetSelects()">-->
+<!--            <a class="mx-1" href="https://wap-drru.hispace.hicloud.com/uowap/index.html#/detailApp/C104131097?source=qrCodeShare" target="_blank">-->
+<!--              <img src="assets/appGalleryEurasian.png">-->
+<!--            </a>-->
+<!--            <a class="mx-1" href="https://play.google.com/store/apps/details?id=press.eurasian.the" target="_blank">-->
+<!--              <img src="assets/googlePlayEurasian.png">-->
+<!--            </a>-->
+<!--            <a class="mx-1" href="https://apps.apple.com/us/app/the-eurasian/id1559418805" target="_blank">-->
+<!--              <img src="assets/appStoreEurasian.png">-->
+<!--            </a>-->
+<!--          </div>-->
+<!--        </div>-->
       </div>
     </div>
   </div>
 
-  <div class="list-group journals" *ngIf="device.isMobile()">
-    <div class="transparent" [class.left-arrow]="!device.isMobile()" [class.left-arrow-m]="device.isMobile()" #hScroll1ArrowLeft [hidden]="screenWidth > 1750">
-      <mdb-icon *ngIf="!device.isMobile()" fas icon="chevron-left" class="text-gray" size="3x" (click)="hScroll1.scrollLeft = hScroll1.scrollLeft - 100"></mdb-icon>
-      <mdb-icon *ngIf="device.isMobile()" fas icon="chevron-left" class="text-gray" size="3x" (click)="hScroll1.scrollLeft = hScroll1.scrollLeft - 100"></mdb-icon>
-    </div>
-    <div [class.journals-carousel]="screenWidth > 1700">
-      <ul class="list-group overflow-hidden list-group-horizontal" #hScroll1>
-        <li class="list-group-item horizontal" *ngFor="let publish of getPublishes()">
-          <div class="journal cursor-pointer zoom view" (click)="selectJournal(publish)">
-            <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e{{publish}}.jpg">
-            <div class="mask flex-center rgba-black-slight">
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
-    <div class="transparent" [class.right-arrow]="!device.isMobile()" #hScroll1ArrowRight [hidden]="screenWidth > 1750" [class.right-arrow-m]="device.isMobile()">
-      <mdb-icon *ngIf="!device.isMobile()" fas icon="chevron-right" class="text-gray" size="3x" (click)="hScroll1.scrollLeft = hScroll1.scrollLeft + 100"></mdb-icon>
-      <mdb-icon *ngIf="device.isMobile()" fas icon="chevron-right" class="text-gray" size="3x" (click)="hScroll1.scrollLeft = hScroll1.scrollLeft + 100"></mdb-icon>
+  <div class="df c mt20px" *ngIf="!device.isMobile()">
+    <div class="pr" (mouseenter)="showSound = true" (mouseleave)="showSound = false">
+      <video (loadedmetadata)="onVideoLoad($event, video)" [currentTime]="videoTime" #video autoplay loop [muted]="true" class="tv-video" src="assets/news.mp4"></video>
+<!--      <div class="enable-sound cp" [class.sound-hidden]="!soundEnabled || !showSound" (click)="soundEnabled = false; videoDesktop.muted = true"><i class="pi pi-volume-off" style="font-size: 3rem"></i></div>-->
+      <div class="enable-sound cp" [class.sound-hidden]="soundEnabled" (click)="soundEnabled = true; video.muted = false"><i class="pi pi-volume-up" style="font-size: 3rem"></i></div>
     </div>
   </div>
-  <div class="news overflow" [class.news-m]="device.isMobile()">
-    <div *ngFor="let rssItem of rssNews">
-      <mdb-card class="my-2 mx-2">
-        <mdb-card-body>
-          <mdb-card-title>
-            <h4 class="url" (click)="openLink(rssItem.url)">{{rssItem.title}}</h4>
-          </mdb-card-title>
-          <mdb-card-text>{{rssItem.descr}}</mdb-card-text>
-          <div class="float-right rss-time">
+  <div class="df c mt20px" *ngIf="device.isMobile()" (mouseenter)="showSound = true" (mouseleave)="showSound = false">
+    <div class="pr" (mouseenter)="showSound = true" (mouseleave)="showSound = false">
+      <video (click)="video.requestFullscreen()" playsinline (loadedmetadata)="onVideoLoad($event, video)" [currentTime]="videoTime" #video autoplay loop [muted]="true" class="tv-video-m" src="assets/news.mp4"></video>
+      <div class="enable-sound m cp" [class.sound-hidden]="soundEnabled" (click)="soundEnabled = true; video.muted = false"><i class="pi pi-volume-up" style="font-size: 2.5rem"></i></div>
+    </div>
+  </div>
+
+  <!--  <div class="vrs-m" *ngIf="device.isMobile()">-->
+<!--    <div class="vr" *ngFor="let vr of galleryImages; let ind = index">-->
+<!--      <img (click)="openVR(vr.big, ind + 1)" height="180px" [src]="vr.small"/>-->
+<!--    </div>-->
+<!--  </div>-->
+
+
+
+<!--  <div class="df c mt20px" *ngIf="!device.isMobile()">-->
+<!--    <div class="df c fw page-width">-->
+<!--      <div *ngFor="let weather of weathers" class="weather">-->
+<!--        <div class="df c">-->
+<!--          <div class="df c y">-->
+<!--            <img [src]="'https://openweathermap.org/img/wn/' + weather.weather[0].icon + '.png'"/>-->
+<!--          </div>-->
+<!--          <div class="df c y">-->
+<!--            <div>{{round(weather.tempMain.temp)}} °C</div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="df c text-bold text">{{weather.name}}</div>-->
+<!--        <div class="df c text-small text">{{weather.weather[0]?.description}}</div>-->
+<!--        <div class="df c text-small text">{{lang.tr('Feels like')}}: {{round(weather.tempMain.feels_like)}} °C</div>-->
+<!--        <div class="df c text-small text">{{lang.tr('Wind')}}: {{weather.wind.speed}} m/s</div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+<!--  <div class="df c mt20px" *ngIf="device.isMobile()">-->
+<!--    <div class="df c fw page-width weathers-m">-->
+<!--      <div *ngFor="let weather of weathers" class="weather">-->
+<!--        <div class="df c">-->
+<!--          <div class="df c y">-->
+<!--            <img [src]="'https://openweathermap.org/img/wn/' + weather.weather[0].icon + '.png'"/>-->
+<!--          </div>-->
+<!--          <div class="df c y">-->
+<!--            <div>{{round(weather.tempMain.temp)}} °C</div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="df c text-bold text">{{weather.name}}</div>-->
+<!--        <div class="df c text-small text">{{weather.weather[0]?.description}}</div>-->
+<!--        <div class="df c text-small text">{{lang.tr('Feels like')}}: {{round(weather.tempMain.feels_like)}} °C</div>-->
+<!--        <div class="df c text-small text">{{lang.tr('Wind')}}: {{weather.wind.speed}} m/s</div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+<!--  <div class="df c mt20px" *ngIf="!device.isMobile()">-->
+<!--    <div class="page-width-long shadow p15">-->
+<!--      <div class="df">-->
+<!--        <div class="currency-value"></div>-->
+<!--        <div class="currency-value" *ngFor="let code of currencyCodes">{{code}}</div>-->
+<!--      </div>-->
+<!--      <div *ngFor="let currency of currencies" class="">-->
+<!--        <div class="df">-->
+<!--          <div class="currency-value"><img width="25px" height="25px" [src]="'assets/flags/' + getCurrencyIcon(currency.source) + '.svg'"/></div>-->
+<!--          <div class="currency-value" *ngFor="let lang of currencyCodes">{{getCurrencyQuote(currency, lang)}}</div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+<!--  <div class="df c mt20px" *ngIf="device.isMobile()">-->
+<!--    <div class="page-width-long m shadow p15">-->
+<!--      <div class="df">-->
+<!--        <div class="currency-value"></div>-->
+<!--        <div class="currency-value" *ngFor="let code of currencyCodes">{{code}}</div>-->
+<!--      </div>-->
+<!--      <div *ngFor="let currency of currencies" class="">-->
+<!--        <div class="df">-->
+<!--          <div class="currency-value"><img width="25px" height="25px" [src]="'assets/flags/' + getCurrencyIcon(currency.source) + '.svg'"/></div>-->
+<!--          <div class="currency-value" *ngFor="let lang of currencyCodes">{{getCurrencyQuote(currency, lang)}}</div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+  <div class="df c mt20px" *ngIf="device.isMobile()">
+    <div class="thumbs m df c">
+      <div class="perspective" *ngFor="let publish of publishes; let i = index;" [ngStyle]="getThumbMargin(i)" (click)="preOpenPublish(publish)">
+        <img class="thumb-m" [class.thumb-hover]="openingPublish == publish" [src]="'/assets/publishes/thumbs/' + getPublishLang() + '/' + (publish).toString() + '.jpg'">
+      </div>
+    </div>
+  </div>
+
+<!--  <div class="list-group journals" *ngIf="device.isMobile()">-->
+<!--    <div class="transparent" [class.left-arrow]="!device.isMobile()" [class.left-arrow-m]="device.isMobile()" #hScroll1ArrowLeft [hidden]="screenWidth > 1750">-->
+<!--&lt;!&ndash;      <mdb-icon *ngIf="!device.isMobile()" fas icon="chevron-left" class="text-gray" size="3x" (click)="hScroll1.scrollLeft = hScroll1.scrollLeft - 100"></mdb-icon>&ndash;&gt;-->
+<!--&lt;!&ndash;      <mdb-icon *ngIf="device.isMobile()" fas icon="chevron-left" class="text-gray" size="3x" (click)="hScroll1.scrollLeft = hScroll1.scrollLeft - 100"></mdb-icon>&ndash;&gt;-->
+<!--    </div>-->
+<!--    <div [class.journals-carousel]="screenWidth > 1700">-->
+<!--      <ul class="list-group overflow-hidden list-group-horizontal" #hScroll1>-->
+<!--        <li class="list-group-item horizontal" *ngFor="let publish of getPublishes()">-->
+<!--          <div class="journal cp zoom view" (click)="selectJournal(publish)">-->
+<!--            <img class="d-block w-100 pb-3" src="../../../assets/home/publishes/e{{publish}}.jpg">-->
+<!--            <div class="mask flex-center rgba-black-slight">-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </li>-->
+<!--      </ul>-->
+<!--    </div>-->
+<!--    <div class="transparent" [class.right-arrow]="!device.isMobile()" #hScroll1ArrowRight [hidden]="screenWidth > 1750" [class.right-arrow-m]="device.isMobile()">-->
+<!--&lt;!&ndash;      <mdb-icon *ngIf="!device.isMobile()" fas icon="chevron-right" class="text-gray" size="3x" (click)="hScroll1.scrollLeft = hScroll1.scrollLeft + 100"></mdb-icon>&ndash;&gt;-->
+<!--&lt;!&ndash;      <mdb-icon *ngIf="device.isMobile()" fas icon="chevron-right" class="text-gray" size="3x" (click)="hScroll1.scrollLeft = hScroll1.scrollLeft + 100"></mdb-icon>&ndash;&gt;-->
+<!--    </div>-->
+<!--  </div>-->
+
+
+  <div class="df c mt20px" *ngIf="!device.isMobile()">
+    <div class="df c fw page-width h600px ovf news-header">
+      <div *ngFor="let rssItem of rssNews" class="news cp">
+        <div>
+          <div class="news-title text-bold text" (click)="openLink(rssItem.url)">
+            {{rssItem.title}}
+          </div>
+          <div class="news-date text-bold text-small text">
             {{rssItem.date}}
           </div>
-        </mdb-card-body>
-      </mdb-card>
+          <div class="news-descr mt20px text">
+            {{rssItem.descr}}
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="gallery" *ngIf="!device.isMobile()">
-    <ngx-gallery #gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery"></ngx-gallery>
+  <div class="df c mt40px" *ngIf="!device.isMobile()">
+    <div class="thumbs df c">
+      <div class="perspective" *ngFor="let publish of publishes; let i = index;" [ngStyle]="getThumbMargin(i)" (click)="openPublish(publish)">
+        <img class="thumb" [src]="'/assets/publishes/thumbs/' + getPublishLang() + '/' + (publish).toString() + '.jpg'">
+      </div>
+    </div>
   </div>
+
+  <div class="df c mt20px" *ngIf="device.isMobile()">
+    <div class="df c fw page-width-m">
+      <div *ngFor="let rssItem of rssNews" class="news-m cp">
+        <div>
+          <div class="news-title-m text-bold text" (click)="openLink(rssItem.url)">
+            {{rssItem.title}}
+          </div>
+          <div class="news-date text-bold text-small text">
+            {{rssItem.date}}
+          </div>
+          <div class="mt20px text">
+            {{rssItem.descr}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--  <div class="gallery" *ngIf="!device.isMobile()">-->
+<!--    <ngx-gallery #gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery"></ngx-gallery>-->
+<!--  </div>-->
 <!--  <div class="gallery-mobile" *ngIf="device.isMobile()">-->
 <!--    <ngx-gallery #gallery [options]="galleryOptionsMobile" [images]="galleryImages" class="ngx-gallery"></ngx-gallery>-->
 <!--  </div>-->
 
-  <div *ngIf="languageManager.language == 'ru'">
-    <div class="tvs-carousel" *ngIf="!device.isMobile()">
-      <div class="tvs list-group-item horizontal" *ngFor="let tv of tvs">
-        <a href="{{tv[1]}}" target="_blank" class="mx-1">
-          <div class="tv mx-1 cursor-pointer zoom view">
-            <img class="d-block w-100 pb-3" src="../../../assets/tvs/{{tv[0]}}">
-            <div class="mask flex-center"></div>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="tvs-carousel-m" *ngIf="device.isMobile()">
-      <div class="tvs list-group-item horizontal" *ngFor="let tv of tvs1">
-        <a href="{{tv[1]}}" target="_blank" class="mx-1">
-          <div class="tv mx-1 cursor-pointer zoom view">
-            <img class="d-block w-100 pb-3" src="../../../assets/tvs/{{tv[0]}}">
-            <div class="mask flex-center"></div>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="tvs-carousel-m" *ngIf="device.isMobile()">
-      <div class="tvs list-group-item horizontal" *ngFor="let tv of tvs2">
-        <a href="{{tv[1]}}" target="_blank" class="mx-1">
-          <div class="tv mx-1 cursor-pointer zoom view">
-            <img class="d-block w-100 pb-3" src="../../../assets/tvs/{{tv[0]}}">
-            <div class="mask flex-center"></div>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="tvs-carousel-m" *ngIf="device.isMobile()">
-      <div class="tvs list-group-item horizontal" *ngFor="let tv of tvs3">
-        <a href="{{tv[1]}}" target="_blank" class="mx-1">
-          <div class="tv mx-1 cursor-pointer zoom view">
-            <img class="d-block w-100 pb-3" src="../../../assets/tvs/{{tv[0]}}">
-            <div class="mask flex-center"></div>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="tvs-carousel-m" *ngIf="device.isMobile()">
-      <div class="tvs list-group-item horizontal" *ngFor="let tv of tvs4">
-        <a href="{{tv[1]}}" target="_blank" class="mx-1">
-          <div class="tv mx-1 cursor-pointer zoom view">
-            <img class="d-block w-100 pb-3" src="../../../assets/tvs/{{tv[0]}}">
-            <div class="mask flex-center"></div>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="tvs-carousel-m" *ngIf="device.isMobile()">
-      <div class="tvs list-group-item horizontal" *ngFor="let tv of tvs5">
-        <a href="{{tv[1]}}" target="_blank" class="mx-1">
-          <div class="tv mx-1 cursor-pointer zoom view">
-            <img class="d-block w-100 pb-3" src="../../../assets/tvs/{{tv[0]}}">
-            <div class="mask flex-center"></div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-  <div *ngIf="languageManager.language == 'ru' && !device.isMobile()">
-    <div class="cx df promo pt-2vh">
-      <div class="df cy">
+  <div class="mt40px" *ngIf="!device.isMobile()">
+    <div class="mt20px df c">
+      <div class="df c y mx10px shadow p15">
         <a href="https://www.garant.ru/" target="_blank" class="mx-4 cy"><img src="assets/promo/garant.png"></a>
       </div>
-      <div class="df cy">
+      <div class="df c y mx10px shadow p15">
         <a href="https://www.aeroflot.ru/" target="_blank" class="mx-4 cy"><img src="assets/promo/aeroflot.png"></a>
       </div>
-      <div class="df cy">
+      <div class="df c y mx10px shadow p15">
         <a href="https://www.rzd.ru/" target="_blank" class="mx-4 cy"><img src="assets/promo/rzd.png"></a>
       </div>
-      <div class="df cy">
-        <a href="https://www.rossiya-airlines.com/" target="_blank" class="mx-4 cy"><img src="assets/promo/rossiya-airlines.png"></a>
-      </div>
-      <div class="df cy">
+      <div class="df c y mx10px shadow p15">
         <a href="https://belavia.by/" target="_blank" class="mx-4 cy"><img src="assets/promo/belavia.png"></a>
       </div>
-      <div class="df cy">
+      <div class="df c y mx10px shadow p15">
         <a href="https://www.scat.kz/" target="_blank" class="mx-4 cy"><img src="assets/promo/scat.png"></a>
       </div>
     </div>
-  </div>
-  <div *ngIf="languageManager.language == 'by' && !device.isMobile()">
-    <div class="cx df promo pt-2vh">
-      <div class="df cy">
-        <a href="https://www.mil.by/by/" target="_blank" class="mx-4 cy"><img class="mil-by-promo" src="https://www.mil.by/local/templates/.default/images/by_logo.png"></a>
+    <div class="mt20px df c">
+      <div class="df c y mx10px shadow p15">
+        <a href="https://www.tvr.by/televidenie/belarus-24/" target="_blank" class="mx-4 cy"><img src="assets/promo/belarus24.png"></a>
+      </div>
+      <div class="df c y mx10px shadow p15">
+        <a href="https://www.inform.kz/" target="_blank" class="mx-4 cy"><img src="assets/promo/kazinform.png"></a>
+      </div>
+      <div class="df c y mx10px shadow p15">
+        <a href="https://kabar.kg/" target="_blank" class="mx-4 cy"><img src="assets/promo/kabar.png"></a>
+      </div>
+      <div class="df c y mx10px shadow p15">
+        <a href="https://russian.cgtn.com/home" target="_blank" class="mx-4 cy"><img src="assets/promo/cgtn.png"></a>
+      </div>
+      <div class="df c y mx10px shadow p15">
+        <a href="https://uza.uz/uz" target="_blank" class="mx-4 cy"><img src="assets/promo/uza.png"></a>
       </div>
     </div>
   </div>
-  <app-footer></app-footer>
-</div>
-
-<div [ngStyle]="vrStyle" *ngIf="isGalleryPreview()">
-  <div class="vr-preview-mask" *ngIf="!isNewDesign()">
-    <div></div><div></div><div></div><div></div><div></div>
-    <div class="cursor-pointer" (click)="openQr('ru')"></div>
-    <div class="cursor-pointer" (click)="openQr('zh')"></div>
-    <div class="cursor-pointer" (click)="openQr('en')"></div>
-  </div>
-  <div class="vr-preview-mask-60" *ngIf="isOpenedVr(60)">
-    <div></div><div></div><div></div>
-    <div class="cursor-pointer" (click)="openLink('https://xn--41a.tv/#/watch?video=60m250522&lang=ru')"></div>
-  </div>
-  <div class="vr-preview-mask-58" *ngIf="isOpenedVr(61)">
-    <div></div><div></div><div></div>
-    <div class="cursor-pointer" (click)="openLink('https://xn--41a.tv/#/watch?video=vsv310522&lang=ru')"></div>
-  </div>
-  <div class="vr-preview-mask-58" *ngIf="isOpenedVr(58)">
-    <div></div><div></div><div></div>
-    <div class="cursor-pointer" (click)="openLink('https://xn--41a.tv/#/watch?video=rtk140522&lang=ru')"></div>
-  </div>
-  <div class="vr-preview-mask-58" *ngIf="isOpenedVr(58)">
-    <div></div><div></div><div></div>
-    <div class="cursor-pointer" (click)="openLink('https://xn--41a.tv/#/watch?video=rtk140522&lang=ru')"></div>
-  </div>
-  <div class="vr-preview-mask-52" *ngIf="isOpenedVr(52)">
-    <div></div><div></div><div></div>
-    <div class="cursor-pointer" (click)="openLink('http://publication.pravo.gov.ru/Document/View/0001202204260002')"></div>
-    <div></div><div></div><div></div>
-    <div class="cursor-pointer" (click)="openLink('https://xn--41a.tv/#/watch?video=zkd220422&lang=ru')"></div>
-    <div></div><div></div><div></div>
-    <div class="cursor-pointer" (click)="openLink('https://t.me/RKadyrov_95/1951')"></div>
-  </div>
-  <div class="vr-preview-mask-54" *ngIf="isOpenedVr(54)">
-    <div></div><div></div><div></div>
-    <div class="cursor-pointer" (click)="openLink('https://xn--41a.tv/#/watch?video=rusles010522&lang=ru')"></div>
-  </div>
-  <div class="vr-preview-mask-48" *ngIf="isOpenedVr(48)">
-    <div></div><div></div><div></div>
-    <div class="cursor-pointer" (click)="openLink('https://я.tv/#/watch?video=vvsvs130322&lang=ru')"></div>
-  </div>
-</div>
-
-<div mdbModal #videoPreview class="modal fade bottom" tabindex="-1" role="dialog" aria-hidden="true" [config]="{backdrop: 'static'}" (click)="videoPreview.hide()">
-  <div class="image-preview-modal">
-    <div class="video-preview">
-      <video #previewSrc controls class="image" [src]="videoPreviewSrc"></video>
+  <div class="mt20px" *ngIf="device.isMobile()">
+    <div class="mt20px df c fw">
+      <div class="df c y m10px my10px shadow p15">
+        <a href="https://www.garant.ru/" target="_blank" class="cy"><img src="assets/promo/garant.png"></a>
+      </div>
+      <div class="df c y m10px shadow p15">
+        <a href="https://www.aeroflot.ru/" target="_blank" class="cy"><img src="assets/promo/aeroflot.png"></a>
+      </div>
+      <div class="df c y m10px shadow p15">
+        <a href="https://www.rzd.ru/" target="_blank" class="cy"><img src="assets/promo/rzd.png"></a>
+      </div>
+      <div class="df c y m10px shadow p15">
+        <a href="https://belavia.by/" target="_blank" class="cy"><img src="assets/promo/belavia.png"></a>
+      </div>
+      <div class="df c y m10px shadow p15">
+        <a href="https://www.scat.kz/" target="_blank" class="cy"><img src="assets/promo/scat.png"></a>
+      </div>
     </div>
-  </div>
-</div>
-
-<div mdbModal #imagePreview class="modal fade bottom" tabindex="-1" role="dialog" aria-hidden="true" [config]="{backdrop: 'static'}" (click)="imagePreview.hide()">
-  <div class="image-preview-modal">
-    <div class="image-preview">
-      <img *ngIf="imgSource != ''" [src]="imgSource" class="image"/>
-      <div class="image-preview-mask" *ngIf="!isNewDesign()">
-        <div></div><div></div><div></div><div></div><div></div>
-        <div class="cursor-pointer" (click)="openQr('ru', vr)"></div>
-        <div class="cursor-pointer" (click)="openQr('zh', vr)"></div>
-        <div class="cursor-pointer" (click)="openQr('en', vr)"></div>
+    <div class="df c fw">
+      <div class="df c y m10px shadow p15">
+        <a href="https://www.tvr.by/televidenie/belarus-24/" target="_blank" class="mx-4 cy"><img src="assets/promo/belarus24.png"></a>
       </div>
-      <div class="vr-preview-mask-60 pos-abs" *ngIf="isOpenedVr(60)">
-        <div></div><div></div><div></div>
-        <div class="cursor-pointer" (click)="openLink('https://xn--41a.tv/#/watch?video=60m250522&lang=ru')"></div>
+      <div class="df c y m10px shadow p15">
+        <a href="https://www.inform.kz/" target="_blank" class="mx-4 cy"><img src="assets/promo/kazinform.png"></a>
       </div>
-      <div class="vr-preview-mask-58 pos-abs" *ngIf="isOpenedVr(59)">
-        <div></div><div></div><div></div>
-        <div class="cursor-pointer" (click)="openLink('https://xn--41a.tv/#/watch?video=svt130522&lang=ru')"></div>
+      <div class="df c y m10px shadow p15">
+        <a href="https://kabar.kg/" target="_blank" class="mx-4 cy"><img src="assets/promo/kabar.png"></a>
       </div>
-      <div class="vr-preview-mask-58 pos-abs" *ngIf="isOpenedVr(58)">
-        <div></div><div></div><div></div>
-        <div class="cursor-pointer" (click)="openLink('https://xn--41a.tv/#/watch?video=rtk140522&lang=ru')"></div>
+      <div class="df c y m10px shadow p15">
+        <a href="https://russian.cgtn.com/home" target="_blank" class="mx-4 cy"><img src="assets/promo/cgtn.png"></a>
       </div>
-      <div class="vr-preview-mask-58 pos-abs" *ngIf="isOpenedVr(58)">
-        <div></div><div></div><div></div>
-        <div class="cursor-pointer" (click)="openLink('https://xn--41a.tv/#/watch?video=rtk140522&lang=ru')"></div>
-      </div>
-      <div class="vr-preview-mask-52 pos-abs" *ngIf="isOpenedVr(52)">
-        <div></div><div></div><div></div>
-        <div class="cursor-pointer" (click)="openLink('http://publication.pravo.gov.ru/Document/View/0001202204260002')"></div>
-        <div></div><div></div><div></div>
-        <div class="cursor-pointer" (click)="openLink('https://xn--41a.tv/#/watch?video=zkd220422&lang=ru')"></div>
-        <div></div><div></div><div></div>
-        <div class="cursor-pointer" (click)="openLink('https://t.me/RKadyrov_95/1951')"></div>
-      </div>
-      <div class="vr-preview-mask-54 pos-abs" *ngIf="isOpenedVr(54)">
-        <div></div><div></div><div></div>
-        <div class="cursor-pointer" (click)="openLink('https://xn--41a.tv/#/watch?video=rusles010522&lang=ru')"></div>
-      </div>
-      <div class="vr-preview-mask-48 pos-abs" *ngIf="isOpenedVr(48)">
-        <div></div><div></div><div></div>
-        <div class="cursor-pointer" (click)="openLink('https://я.tv/#/watch?video=vvsvs130322&lang=ru')"></div>
+      <div class="df c y m10px shadow p15">
+        <a href="https://uza.uz/uz" target="_blank" class="mx-4 cy"><img src="assets/promo/uza.png"></a>
       </div>
     </div>
   </div>
-</div>
 
-<div mdbModal #askForNew class="modal fade bottom" tabindex="-1" role="dialog" aria-hidden="true" [config]="{backdrop: 'static'}">
-  <div class="ask-modal">
-    <div class="ask-for-mail-modal">
-      <div class="modal-exit">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="askForNew.hide()">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="ask-inputs">
-        <div class="md-form cx">
-          <input [(ngModel)]="alias" type="email" class="form-control" id="mailAlias" mdbInput>
-          <label for="mailAlias">{{aliasLabel}}</label>
-        </div>
-        <div class="md-form cx">
-          <input [(ngModel)]="url" type="email" class="form-control" id="mailUrl" mdbInput>
-          <label for="mailUrl">{{aliasUrl}}</label>
-        </div>
-        <div class="cx">
-          <div [class.disabled-button]="alias.trim() == '' || url.trim() == ''" (click)="addAlias(); askForNew.hide()" class="ask-for-mail-modal-button cx cy cursor-pointer text-white">OK</div>
-        </div>
+  <div class="separator"></div>
+
+
+<!--  <div class="df c" *ngIf="!device.isMobile()">-->
+<!--    <div class="df c fw page-width ovf news-header">-->
+<!--      <div class="tv df c y" *ngFor="let tv of tvs">-->
+<!--        <a href="{{tv[1]}}" target="_blank" class="mx-1">-->
+<!--          <img class="" src="../../../assets/tvs/{{tv[0]}}">-->
+<!--        </a>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+<!--  <div class="df c" *ngIf="device.isMobile()">-->
+<!--    <div class="df c fw page-width m ovf news-header">-->
+<!--      <div class="tv df c y" *ngFor="let tv of tvs">-->
+<!--        <a href="{{tv[1]}}" target="_blank" class="mx-1">-->
+<!--          <img class="" src="../../../assets/tvs/{{tv[0]}}">-->
+<!--        </a>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+  <div class="footer mt20px" *ngIf="!device.isMobile()">
+    <div class="df c footer-row text">
+      {{lang.tr('Editorial Office address: 2nd Horoshevsky proezd 9, building 2, office 103, Moscow, 123007, Russian Federation; Telephone: 8 (800) 300 81 18')}}
+    </div>
+    <div class="df c footer-row text">
+      {{lang.tr('Editorial Office address in the Republic of Kazakhstan: 25 Esenberlina street, AIFC, Nur-Sultan, 010000, Republic of Kazakhstan; Telephone: +7 (7172) 38 14 21')}}
+    </div>
+    <div class="df c footer-row text">
+      <div class="df c">
+        © 2021 Copyright:
+<!--        <span (click)="openLink('/#/contacts')" class="text-url">eurasian.press</span>-->
+        <span class="text-url">eurasian.press</span>
+        YA-TSOI, OOO (D-U-N-S 537141585)
+        <span (click)="openSMI()" class="text-url">{{lang.tr('Media Testimonies')}}</span>
       </div>
     </div>
   </div>
+
+  <div class="footer m mt20px" *ngIf="device.isMobile()">
+    <div class="pt-2vh text-center">
+      {{lang.tr('Editorial Office address: 2nd Horoshevsky proezd 9, building 2, office 103, Moscow, 123007, Russian Federation; Telephone: 8 (800) 300 81 18')}}
+    </div>
+    <div class="pt-2vh text-center">
+      {{lang.tr('Editorial Office address in the Republic of Kazakhstan: 25 Esenberlina street, AIFC, Nur-Sultan, 010000, Republic of Kazakhstan; Telephone: +7 (7172) 38 14 21')}}
+    </div>
+    <div class="pt-2vh text-center">
+      © 2021 Copyright: eurasian.press
+    </div>
+    <div class="text-center">
+      YA-TSOI, OOO (D-U-N-S 537141585)
+    </div>
 </div>
+
+<!--<div [ngStyle]="vrStyle" *ngIf="isGalleryPreview()">-->
+<!--  <div class="vr-preview-mask" *ngIf="!isNewDesign()">-->
+<!--    <div></div><div></div><div></div><div></div><div></div>-->
+<!--    <div class="cp" (click)="openQr('ru')"></div>-->
+<!--    <div class="cp" (click)="openQr('zh')"></div>-->
+<!--    <div class="cp" (click)="openQr('en')"></div>-->
+<!--  </div>-->
+<!--  <div class="vr-preview-mask-60" *ngIf="isOpenedVr(60)">-->
+<!--    <div></div><div></div><div></div>-->
+<!--    <div class="cp" (click)="openLink('https://xn&#45;&#45;41a.tv/#/watch?video=60m250522&lang=ru')"></div>-->
+<!--  </div>-->
+<!--  <div class="vr-preview-mask-58" *ngIf="isOpenedVr(61)">-->
+<!--    <div></div><div></div><div></div>-->
+<!--    <div class="cp" (click)="openLink('https://xn&#45;&#45;41a.tv/#/watch?video=vsv310522&lang=ru')"></div>-->
+<!--  </div>-->
+<!--  <div class="vr-preview-mask-58" *ngIf="isOpenedVr(58)">-->
+<!--    <div></div><div></div><div></div>-->
+<!--    <div class="cp" (click)="openLink('https://xn&#45;&#45;41a.tv/#/watch?video=rtk140522&lang=ru')"></div>-->
+<!--  </div>-->
+<!--  <div class="vr-preview-mask-58" *ngIf="isOpenedVr(58)">-->
+<!--    <div></div><div></div><div></div>-->
+<!--    <div class="cp" (click)="openLink('https://xn&#45;&#45;41a.tv/#/watch?video=rtk140522&lang=ru')"></div>-->
+<!--  </div>-->
+<!--  <div class="vr-preview-mask-52" *ngIf="isOpenedVr(52)">-->
+<!--    <div></div><div></div><div></div>-->
+<!--    <div class="cp" (click)="openLink('http://publication.pravo.gov.ru/Document/View/0001202204260002')"></div>-->
+<!--    <div></div><div></div><div></div>-->
+<!--    <div class="cp" (click)="openLink('https://xn&#45;&#45;41a.tv/#/watch?video=zkd220422&lang=ru')"></div>-->
+<!--    <div></div><div></div><div></div>-->
+<!--    <div class="cp" (click)="openLink('https://t.me/RKadyrov_95/1951')"></div>-->
+<!--  </div>-->
+<!--  <div class="vr-preview-mask-54" *ngIf="isOpenedVr(54)">-->
+<!--    <div></div><div></div><div></div>-->
+<!--    <div class="cp" (click)="openLink('https://xn&#45;&#45;41a.tv/#/watch?video=rusles010522&lang=ru')"></div>-->
+<!--  </div>-->
+<!--  <div class="vr-preview-mask-48" *ngIf="isOpenedVr(48)">-->
+<!--    <div></div><div></div><div></div>-->
+<!--    <div class="cp" (click)="openLink('https://я.tv/#/watch?video=vvsvs130322&lang=ru')"></div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<!--<div mdbModal #videoPreview class="modal fade bottom" tabindex="-1" role="dialog" aria-hidden="true" [config]="{backdrop: 'static'}" (click)="videoPreview.hide()">-->
+<!--  <div class="image-preview-modal">-->
+<!--    <div class="video-preview">-->
+<!--      <video #previewSrc controls class="image" [src]="videoPreviewSrc"></video>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<!--<div mdbModal #imagePreview class="modal fade bottom" tabindex="-1" role="dialog" aria-hidden="true" [config]="{backdrop: 'static'}" (click)="imagePreview.hide()">-->
+<!--  <div class="image-preview-modal">-->
+<!--    <div class="image-preview">-->
+<!--      <img *ngIf="imgSource != ''" [src]="imgSource" class="image"/>-->
+<!--      <div class="image-preview-mask" *ngIf="!isNewDesign()">-->
+<!--        <div></div><div></div><div></div><div></div><div></div>-->
+<!--        <div class="cp" (click)="openQr('ru', vr)"></div>-->
+<!--        <div class="cp" (click)="openQr('zh', vr)"></div>-->
+<!--        <div class="cp" (click)="openQr('en', vr)"></div>-->
+<!--      </div>-->
+<!--      <div class="vr-preview-mask-60 pos-abs" *ngIf="isOpenedVr(60)">-->
+<!--        <div></div><div></div><div></div>-->
+<!--        <div class="cp" (click)="openLink('https://xn&#45;&#45;41a.tv/#/watch?video=60m250522&lang=ru')"></div>-->
+<!--      </div>-->
+<!--      <div class="vr-preview-mask-58 pos-abs" *ngIf="isOpenedVr(59)">-->
+<!--        <div></div><div></div><div></div>-->
+<!--        <div class="cp" (click)="openLink('https://xn&#45;&#45;41a.tv/#/watch?video=svt130522&lang=ru')"></div>-->
+<!--      </div>-->
+<!--      <div class="vr-preview-mask-58 pos-abs" *ngIf="isOpenedVr(58)">-->
+<!--        <div></div><div></div><div></div>-->
+<!--        <div class="cp" (click)="openLink('https://xn&#45;&#45;41a.tv/#/watch?video=rtk140522&lang=ru')"></div>-->
+<!--      </div>-->
+<!--      <div class="vr-preview-mask-58 pos-abs" *ngIf="isOpenedVr(58)">-->
+<!--        <div></div><div></div><div></div>-->
+<!--        <div class="cp" (click)="openLink('https://xn&#45;&#45;41a.tv/#/watch?video=rtk140522&lang=ru')"></div>-->
+<!--      </div>-->
+<!--      <div class="vr-preview-mask-52 pos-abs" *ngIf="isOpenedVr(52)">-->
+<!--        <div></div><div></div><div></div>-->
+<!--        <div class="cp" (click)="openLink('http://publication.pravo.gov.ru/Document/View/0001202204260002')"></div>-->
+<!--        <div></div><div></div><div></div>-->
+<!--        <div class="cp" (click)="openLink('https://xn&#45;&#45;41a.tv/#/watch?video=zkd220422&lang=ru')"></div>-->
+<!--        <div></div><div></div><div></div>-->
+<!--        <div class="cp" (click)="openLink('https://t.me/RKadyrov_95/1951')"></div>-->
+<!--      </div>-->
+<!--      <div class="vr-preview-mask-54 pos-abs" *ngIf="isOpenedVr(54)">-->
+<!--        <div></div><div></div><div></div>-->
+<!--        <div class="cp" (click)="openLink('https://xn&#45;&#45;41a.tv/#/watch?video=rusles010522&lang=ru')"></div>-->
+<!--      </div>-->
+<!--      <div class="vr-preview-mask-48 pos-abs" *ngIf="isOpenedVr(48)">-->
+<!--        <div></div><div></div><div></div>-->
+<!--        <div class="cp" (click)="openLink('https://я.tv/#/watch?video=vvsvs130322&lang=ru')"></div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<!--<div #askForNew class="modal fade bottom" tabindex="-1" role="dialog" aria-hidden="true" [config]="{backdrop: 'static'}">-->
+<!--  <div class="ask-modal">-->
+<!--    <div class="ask-for-mail-modal">-->
+<!--      <div class="modal-exit">-->
+<!--        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="askForNew.hide()">-->
+<!--          <span aria-hidden="true">&times;</span>-->
+<!--        </button>-->
+<!--      </div>-->
+<!--      <div class="ask-inputs">-->
+<!--        <div class="md-form cx">-->
+<!--          <input [(ngModel)]="alias" type="email" class="form-control" id="mailAlias" mdbInput>-->
+<!--          <label for="mailAlias">{{aliasLabel}}</label>-->
+<!--        </div>-->
+<!--        <div class="md-form cx">-->
+<!--          <input [(ngModel)]="url" type="email" class="form-control" id="mailUrl" mdbInput>-->
+<!--          <label for="mailUrl">{{aliasUrl}}</label>-->
+<!--        </div>-->
+<!--        <div class="cx">-->
+<!--          <div [class.disabled-button]="alias.trim() == '' || url.trim() == ''" (click)="addAlias(); askForNew.hide()" class="ask-for-mail-modal-button df c y cp text-white">OK</div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->

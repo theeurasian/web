@@ -6,10 +6,9 @@ import {DeviceDetectorService} from 'ngx-device-detector';
 import { get } from 'scriptjs';
 import {WSCmd} from '../../domain/websocket/structure/wscmd';
 import {WebSocketManagerService} from '../../domain/websocket/web-socket-manager.service';
-import {ModalDirective} from 'angular-bootstrap-md';
 import {Currency} from '../../domain/news/struct/currency';
-import {NgxGalleryImage, NgxGalleryOptions} from '@kolkov/ngx-gallery';
 import {LangService} from '../../domain/lang/lang.service';
+import {NgxGalleryImage, NgxGalleryOptions} from 'ngx-gallery-9';
 declare let L;
 
 @Component({
@@ -25,8 +24,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
   marker;
   ratio;
   date = '';
-  publishes = ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]).reverse();
+  publishes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].reverse();
   publishesKZ = ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, '11-kz', '12-kz', '13-kz', '14-kz']).reverse();
+  openingPublish = 0;
+  soundEnabled = false;
+  showSound = false;
+
 
   vrs = [52, 60, 61, 58, 48, 47, 46, 45, 44, 43, 26, 1];
   vrsKZ = [26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15];
@@ -165,6 +168,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   galleryOptionsMobile: NgxGalleryOptions[] = [];
   galleryImages: NgxGalleryImage[] = [];
   @ViewChild('gallery') gallery;
+  videoTime = 0;
   ngOnInit(): void {
     let aliases = localStorage.getItem('aliases');
     if (aliases != null){
@@ -517,15 +521,15 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
   weathers = this.news.weathers;
   currencies = this.news.currencies;
-  currencyLanguages = ['BTC', 'CNY', 'EUR', 'GBP', 'IDR', 'INR', 'IRR', 'KPW', 'KZT', 'MNT', 'PKR', 'QAR', 'RUB', 'VND'];
-  getQuote(currency: Currency, value: string) {
+  currencyCodes = ['BTC', 'CNY', 'EUR', 'GBP', 'IDR', 'INR', 'IRR', 'KPW', 'KZT', 'MNT', 'PKR', 'QAR', 'RUB', 'VND'];
+  getCurrencyQuote(currency: Currency, value: string) {
     return (currency.quotes['USD' + value])?.toString().slice(0, 8);
     //return Math.round(currency.quotes[currency.source + value] * 100) / 100;
   }
   round(input: number){
     return Math.round(input);
   }
-  getLangIcon(lang: string) {
+  getCurrencyIcon(lang: string) {
     switch (lang) {
       case 'BYN': return 'by';
       case 'CNY': return 'cn';
@@ -539,11 +543,11 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
   imgSource = '';
   vr = 0;
-  @ViewChild('imagePreview') imagePreview: ModalDirective;
+  // @ViewChild('imagePreview') imagePreview: ModalDirective;
   openVR(image: string, index: number) {
     this.vr = index;
     this.imgSource = image;
-    this.imagePreview.show();
+    // this.imagePreview.show();
   }
   vrStyle = {height: '0px', width: '0px', top: '100px', left: '100px', position: 'fixed', 'z-index': '10000'};
   isGalleryPreview() {
@@ -607,6 +611,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
   resetSelects() {
     this.selected = '';
+    this.resetSelectsNext();
+    this.resetSelectsNextNext();
   }
 
   isOpenedVr(value: number){
@@ -642,5 +648,80 @@ export class HomeComponent implements OnInit, AfterViewInit {
       }
     });
     return res;
+  }
+  openSMI() {
+    if (this.lang.language == 'ru'){
+      this.openLink('/assets/home/contacts/Свидетельство СМИ RU.pdf');
+    }
+    else if (this.lang.language == 'kz'){
+      this.openLink('/assets/home/contacts/Свидетельство СМИ KZ.pdf');
+    }
+    else{
+      this.openLink('/assets/home/contacts/Свидетельство СМИ RU-KZ.pdf');
+    }
+  }
+  getThumbMargin(i: number) {
+    if (!this.device.isMobile()){
+      return{
+        'margin-top': (~~(i / 8) * -100) + 'px'
+      }
+    }
+    else{
+      return{
+        'margin-top': (~~(i / 5) * -10) + 'px'
+      }
+    }
+  }
+  preOpenPublish(number: any){
+    this.openingPublish = number;
+    if (!this.device.isMobile()){
+      this.openPublish(number);
+    }
+    else{
+      setTimeout(() => {
+        this.openingPublish = 0;
+        this.openPublish(number);
+      }, 500);
+    }
+  }
+  openPublish(number: any) {
+    let lang = this.getPublishLang();
+    if (number == 15){
+      if (!this.device.isMobile()){
+        window.open('/pdf-view?pdf=' + `assets/publishes/${number}/ru-desktop.pdf`, '_blank');
+      }
+      else{
+        window.open('/pdf-view?pdf=' + `assets/publishes/${number}/ru-mobile.pdf`, '_blank');
+        //window.open(`assets/publishes/${number}/ru-mobile.pdf`, '_blank');
+      }
+    }
+    else if (number == 14){
+      window.open('https://eurasian.press/publishes/14/' + lang + '-' + 'desktop' + '.pdf');
+    }
+    else{
+      window.open('https://eurasian.press/#/read?issue=' + number + '&lang=' + lang, '_blank');
+    }
+  }
+
+  getPublishLang() {
+    let lang = 'ru';
+    if (this.lang.language == 'kz'){
+      lang = 'kz';
+    }
+    return lang;
+  }
+
+  onVideoLoad(event: Event, video: HTMLVideoElement) {
+    // @ts-ignore
+    // console.log(event.target.duration);
+    // @ts-ignore
+    this.videoTime = new Date().getTime() / 1000 % event.target.duration;
+    video.play();
+    try{
+      video.play();
+    }
+    catch (e: any){
+
+    }
   }
 }

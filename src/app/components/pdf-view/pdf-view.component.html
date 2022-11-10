@@ -1,0 +1,11 @@
+<ngx-extended-pdf-viewer
+  [showFindButton]="true"
+  [textLayer]="true"
+  [src]="pdfUrl"
+  [useBrowserLocale]="true"
+  [sidebarVisible]="!device.isMobile()"
+  [showOpenFileButton]="false"
+  [zoom]="'page-fit'"
+  [enablePinchOnMobile]="true"
+  class="pdf-view">
+</ngx-extended-pdf-viewer>

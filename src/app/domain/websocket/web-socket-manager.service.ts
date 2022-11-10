@@ -1,6 +1,4 @@
 import {EventEmitter, Injectable} from '@angular/core';
-// @ts-ignore
-import * as wsconfig from '../../../assets/wsconfig.json';
 import {WSCmd} from './structure/wscmd';
 import {Router} from '@angular/router';
 import {NewsManagerService} from '../news/news-manager.service';
@@ -27,7 +25,8 @@ export class WebSocketManagerService {
     return this.established;
   }
   private init(){
-    this.ws = new WebSocket(`wss://${wsconfig.host}:${wsconfig.port}`);
+    //this.ws = new WebSocket(`wss://${wsconfig.host}:${wsconfig.port}`);
+    this.ws = new WebSocket(`wss://евразийский.рф:4455`);
     this.retries += 1;
     if (this.retries > this.retriesLimit){
       if (!this.router.url.includes(this.noConnectionUrl)){

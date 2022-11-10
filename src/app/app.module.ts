@@ -2,12 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './components/app.component';
-import {MDBBootstrapModule} from 'angular-bootstrap-md';
 import { HomeComponent } from './components/home/home.component';
 import {RouterModule, Routes} from '@angular/router';
 import {CommonModule, DatePipe} from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {PdfViewerModule} from 'ng2-pdf-viewer';
 import {DeviceDetectorModule} from 'ngx-device-detector';
 import { FooterComponent } from './components/footer/footer.component';
 import {HttpClientModule} from '@angular/common/http';
@@ -16,14 +14,7 @@ import { AppearOnClickDirective } from './directives/appear-on-click.directive';
 import { RotateOnClickDirective } from './directives/rotate-on-click.directive';
 import { AppearOnHoverDirective } from './directives/appear-on-hover.directive';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatButtonModule} from '@angular/material/button';
-import {MatInputModule} from '@angular/material/input';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import {MatProgressBarModule} from '@angular/material/progress-bar';
-import {MatSnackBar} from '@angular/material/snack-bar';
 import {Overlay} from '@angular/cdk/overlay';
-import {AngularResizedEventModule} from 'angular-resize-event';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { PrivacyComponent } from './components/privacy/privacy.component';
 import { DownloadComponent } from './components/download/download.component';
@@ -35,8 +26,6 @@ import { NdchComponent } from './components/ndch/ndch.component';
 import { GEnComponent } from './components/g-en/g-en.component';
 import { GCnComponent } from './components/g-cn/g-cn.component';
 import {IndevNoredirectComponent} from './components/indev-noredirect/indev-noredirect.component';
-import {NgxGalleryModule} from '@kolkov/ngx-gallery';
-import {NgxImageZoomModule} from 'ngx-image-zoom';
 import {CertComponent} from './components/cert/cert.component';
 import { BcalledexamComponent } from './components/bcalledexam/bcalledexam.component';
 import { NmrighttoknowComponent } from './components/nmrighttoknow/nmrighttoknow.component';
@@ -54,6 +43,8 @@ import {Newreg210322Component} from './components/newreg210322/newreg210322.comp
 import {Pcf120422Component} from './components/pcf120422/pcf120422.component';
 import {RusknrrelComponent} from './components/rusknrrel/rusknrrel.component';
 import {Zrsr250322Component} from './components/zrsr250322/zrsr250322.component';
+import { PdfViewComponent } from './components/pdf-view/pdf-view.component';
+import {NgxExtendedPdfViewerModule} from 'ngx-extended-pdf-viewer';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent } ,
@@ -85,6 +76,7 @@ const appRoutes: Routes = [
   { path: 'pcf120422', component: Pcf120422Component },
   { path: 'rusknrrel', component: RusknrrelComponent },
   { path: 'zrsr250322', component: Zrsr250322Component },
+  { path: 'pdf-view', component: PdfViewComponent },
   { path: '**', redirectTo: '' },
 ];
 
@@ -122,40 +114,30 @@ const appRoutes: Routes = [
     MeetrfandkzComponent,
     Zrsr250322Component,
     RusknrrelComponent,
-    Newreg210322Component
+    Newreg210322Component,
+    PdfViewComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    MDBBootstrapModule.forRoot(),
-    RouterModule.forRoot(
-      appRoutes,
-      {useHash: true}
-    ),
-    BrowserModule,
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    PdfViewerModule,
-    DeviceDetectorModule.forRoot(),
-    HttpClientModule,
-    BrowserAnimationsModule,
-    MatFormFieldModule,
-    MatButtonModule,
-    MatInputModule,
-    MatProgressSpinnerModule,
-    MatProgressBarModule,
-    AngularResizedEventModule,
-    LazyLoadImageModule,
-    NgxGalleryModule,
-    NgxImageZoomModule,
-    NgxQRCodeModule,
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        RouterModule.forRoot(
+            appRoutes
+        ),
+        BrowserModule,
+        CommonModule,
+        FormsModule,
+        ReactiveFormsModule,
+        DeviceDetectorModule.forRoot(),
+        HttpClientModule,
+        BrowserAnimationsModule,
+        LazyLoadImageModule,
+        NgxQRCodeModule,
+        NgxExtendedPdfViewerModule,
+    ],
   providers: [
     AppearOnClickDirective,
     RotateOnClickDirective,
     AppearOnHoverDirective,
-    MatSnackBar,
     Overlay,
     DatePipe,
     { provide: LAZYLOAD_IMAGE_HOOKS, useClass: ScrollHooks }

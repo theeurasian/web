@@ -12,6 +12,9 @@
 .carousel-caption {
   font-size: 1.5em !important;
 }
+.text{
+  font-family: 'Book Antiqua', serif;
+}
 
 /*.pdfViewer .page{*/
 /*  transform: scale(0.7) translate(0, -20%);*/
@@ -19,6 +22,7 @@
 
 .text-center{
   font-family: 'Book Antiqua', serif;
+  text-align: center;
 }
 .carousel{
   margin-top: -5em;
@@ -32,10 +36,10 @@
 label{
   font-family: 'Book Antiqua', serif;
 }
-.page-footer{
-  min-width: 1300px;
-  width: 100%;
-}
+/*.page-footer{*/
+/*  min-width: 1300px;*/
+/*  width: 100%;*/
+/*}*/
 .navbar{
   /*height: 10em;*/
 }
@@ -66,3 +70,105 @@ pdf-viewer {
 
 }
 
+/* You can add global styles to this file, and also import other style files */
+.df{
+  display: flex;
+}
+.df.c{
+  justify-content: center;
+}
+.df.c.fw{
+  flex-wrap: wrap;
+}
+.df.c.y{
+  align-items: center;
+}
+.w100{
+  width: 100%;
+}
+.w60{
+  width: 60%;
+}
+.w800px{
+  width: 800px;
+}
+.w1000px{
+  width: 1000px;
+}
+.p15{
+  padding: 15px;
+}
+.h600px{
+  height: 600px;
+}
+.mt5px{
+  margin-top: 5px;
+}
+.mt20px{
+  margin-top: 20px;
+}
+.mt40px{
+  margin-top: 40px;
+}
+.mx10px{
+  margin: 0 10px 0 10px;
+}
+.m10px{
+  margin: 10px;
+}
+.ovf{
+  overflow: auto;
+}
+body{
+  margin: 0;
+  padding: 0;
+}
+:root{
+  --eurasian-color: #E21F2D;
+  --footer-color: #1A1D1D;
+}
+::-webkit-scrollbar-track
+{
+  background-color: gray;
+}
+::-webkit-scrollbar
+{
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-thumb
+{
+  background-color: var(--footer-color);
+  border-radius: 10px;
+}
+.text-bold{
+  font-weight: 600;
+}
+.text-small{
+  font-size: small;
+}
+.cp{
+  cursor: pointer;
+}
+.icon-plus16 {
+  background-image: url('/assets/menu/pg.png');
+  height: 46px;
+  width: 46px;
+}
+.mx-1{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.mx-2{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.pr-1{
+  padding-right: 5px;
+}
+.w80{
+  width: 80%;
+}
+.pr{
+  position: relative;
+}
