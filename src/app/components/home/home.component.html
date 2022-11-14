@@ -456,7 +456,34 @@
 
   <div class="df c mt20px" *ngIf="!device.isMobile()">
     <div class="page-width">
-      <div class="header-sub df c">
+      <div class="mb-10 df c">
+        <div class="lang-tile">
+          <div class="">
+            <img src="assets/flags/ru.svg" height="46">
+          </div>
+          <div class="df">
+            <div [class.select-language]="lang.language == 'ru'" class="lang-select">RU</div>
+            <div class="w100px df align-center">Русский</div>
+          </div>
+        </div>
+        <div class="lang-tile mx-20">
+          <div class="">
+            <img src="assets/flags/en.svg" height="46">
+          </div>
+          <div class="df">
+            <div [class.select-language]="lang.language == 'en'" class="lang-select">EN</div>
+            <div class="w100px df align-center">English</div>
+          </div>
+        </div>
+        <div class="lang-tile">
+          <div class="">
+            <img src="assets/flags/cn.svg" height="46">
+          </div>
+          <div class="df">
+            <div [class.select-language]="lang.language == 'cn'" class="lang-select">CN</div>
+            <div class="w100px df align-center">中文</div>
+          </div>
+        </div>
 <!--        <div class="promo df c y mx-2">-->
 <!--          <div class="cp" (click)="openPbp()">-->
 <!--            <div class="row">-->
@@ -471,11 +498,17 @@
 <!--            </div>-->
 <!--          </div>-->
 <!--        </div>-->
-        <div class="flags mx-2">
-          <div *ngFor="let language of getLanguages()">
-            <img class="flag cp" [src]="'assets/flags/' + language + '.svg'" height="40" (click)="setLang(language)"/>
-          </div>
-        </div>
+
+
+
+<!--        <div class="flags mx-2">-->
+<!--          <div *ngFor="let language of getLanguages()">-->
+<!--            <img class="flag cp" [src]="'assets/flags/' + language + '.svg'" height="40" (click)="setLang(language)"/>-->
+<!--          </div>-->
+<!--        </div>-->
+
+
+
 <!--        <div class="promo df c y mx-2">-->
 <!--          <div class="df c y" (mouseenter)="resetSelects()">-->
 <!--            <a class="mx-1" href="https://wap-drru.hispace.hicloud.com/uowap/index.html#/detailApp/C104131097?source=qrCodeShare" target="_blank">-->
@@ -700,36 +733,36 @@
 
   <div class="mt40px" *ngIf="!device.isMobile()">
     <div class="mt20px df c">
-      <div class="df c y mx10px shadow p15">
+      <div class="df c y mx10px br-8 shadow p15">
         <a href="https://www.aeroflot.ru/" target="_blank" class="mx-4 cy"><img src="assets/promo/aeroflot.png"></a>
       </div>
-      <div class="df c y mx10px shadow p15">
+      <div class="df c y mx10px br-8 shadow p15">
         <a href="https://www.rzd.ru/" target="_blank" class="mx-4 cy"><img src="assets/promo/rzd.png"></a>
       </div>
-      <div class="df c y mx10px shadow p15">
+      <div class="df c y mx10px br-8 shadow p15">
         <a href="https://belavia.by/" target="_blank" class="mx-4 cy"><img src="assets/promo/belavia.png"></a>
       </div>
-      <div class="df c y mx10px shadow p15">
+      <div class="df c y mx10px br-8 shadow p15">
         <a href="https://www.scat.kz/" target="_blank" class="mx-4 cy"><img src="assets/promo/scat.png"></a>
       </div>
     </div>
     <div class="mt20px df c">
-      <div class="df c y mx10px shadow p15">
+      <div class="df c y mx10px br-8 shadow p15">
         <a routerLink="arh" target="_blank" class="mx-4 cy"><img src="assets/home/logo.jpg" width="180"></a>
       </div>
-      <div class="df c y mx10px shadow p15">
+      <div class="df c y mx10px br-8 shadow p15">
         <a href="https://www.tvr.by/televidenie/belarus-24/" target="_blank" class="mx-4 cy"><img src="assets/promo/belarus24.png"></a>
       </div>
-      <div class="df c y mx10px shadow p15">
+      <div class="df c y mx10px br-8 shadow p15">
         <a href="https://www.inform.kz/" target="_blank" class="mx-4 cy"><img src="assets/promo/kazinform.png"></a>
       </div>
-      <div class="df c y mx10px shadow p15">
+      <div class="df c y mx10px br-8 shadow p15">
         <a href="https://kabar.kg/" target="_blank" class="mx-4 cy"><img src="assets/promo/kabar.png"></a>
       </div>
-      <div class="df c y mx10px shadow p15">
+      <div class="df c y mx10px br-8 shadow p15">
         <a href="https://russian.cgtn.com/home" target="_blank" class="mx-4 cy"><img src="assets/promo/cgtn.png"></a>
       </div>
-      <div class="df c y mx10px shadow p15">
+      <div class="df c y mx10px br-8 shadow p15">
         <a href="https://uza.uz/uz" target="_blank" class="mx-4 cy"><img src="assets/promo/uza.png"></a>
       </div>
     </div>

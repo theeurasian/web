@@ -89,6 +89,9 @@ pdf-viewer {
 .w60{
   width: 60%;
 }
+.w100px{
+  width: 100px;
+}
 .w800px{
   width: 800px;
 }
@@ -166,6 +169,10 @@ body{
   margin-left: 10px;
   margin-right: 10px;
 }
+.mx-20{
+  margin-left: 20px;
+  margin-right: 20px;
+}
 .pr-1{
   padding-right: 5px;
 }
@@ -175,6 +182,12 @@ body{
 .pr{
   position: relative;
 }
+.mb-10{
+  margin-bottom: 10px;
+}
 .ml-20{
   margin-left: 20px;
+}
+.br-8{
+  border-radius: 8px;
 }
