@@ -107,6 +107,9 @@ pdf-viewer {
 .mt15vh{
   margin-top: 15vh;
 }
+.mt-10{
+  margin-top: 10px;
+}
 .mt5px{
   margin-top: 5px;
 }
@@ -190,4 +193,12 @@ body{
 }
 .br-8{
   border-radius: 8px;
+}
+.align-center{
+  align-items: center;
+}
+.cxy{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

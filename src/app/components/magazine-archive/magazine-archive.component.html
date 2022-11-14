@@ -10,3 +10,10 @@
     </div>
   </div>
 </div>
+<div class="df c mt15vh" *ngIf="device.isMobile()">
+  <div class="thumbs m df c">
+    <div class="perspective" *ngFor="let publish of publishes; let i = index;" [ngStyle]="getThumbMargin(i)" (click)="preOpenPublish(publish)">
+      <img class="thumb-m" [class.thumb-hover]="openingPublish == publish" [src]="'/assets/publishes/thumbs/' + getPublishLang() + '/' + (publish).toString() + '.jpg'">
+    </div>
+  </div>
+</div>

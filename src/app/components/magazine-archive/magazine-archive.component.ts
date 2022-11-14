@@ -10,6 +10,7 @@ import {LangService} from "../../domain/lang/lang.service";
 export class MagazineArchiveComponent implements OnInit {
 
   publishes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].reverse();
+  openingPublish = 0;
 
 
   constructor(public device: DeviceDetectorService, public lang: LangService) { }
@@ -53,6 +54,18 @@ export class MagazineArchiveComponent implements OnInit {
       lang = 'kz';
     }
     return lang;
+  }
+  preOpenPublish(number: any){
+    this.openingPublish = number;
+    if (!this.device.isMobile()){
+      this.openPublish(number);
+    }
+    else{
+      setTimeout(() => {
+        this.openingPublish = 0;
+        this.openPublish(number);
+      }, 500);
+    }
   }
 
 }
