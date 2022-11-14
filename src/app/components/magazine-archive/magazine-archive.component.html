@@ -1,0 +1,12 @@
+<div class="menu-navi">
+  <div class="ml-20">
+    <a routerLink="''"><img src="assets/home/logo24-reverse.jpg" height="50"></a>
+  </div>
+</div>
+<div class="df c mt15vh" *ngIf="!device.isMobile()">
+  <div class="thumbs df c">
+    <div class="perspective" *ngFor="let publish of publishes; let i = index;" [ngStyle]="getThumbMargin(i)" (click)="openPublish(publish)">
+      <img class="thumb" [src]="'/assets/publishes/thumbs/' + getPublishLang() + '/' + (publish).toString() + '.jpg'">
+    </div>
+  </div>
+</div>

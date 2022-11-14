@@ -46,6 +46,7 @@ import {Zrsr250322Component} from './components/zrsr250322/zrsr250322.component'
 import { PdfViewComponent } from './components/pdf-view/pdf-view.component';
 import {NgxExtendedPdfViewerModule} from 'ngx-extended-pdf-viewer';
 import {VimeModule} from '@vime/angular';
+import { MagazineArchiveComponent } from './components/magazine-archive/magazine-archive.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent } ,
@@ -78,6 +79,7 @@ const appRoutes: Routes = [
   { path: 'rusknrrel', component: RusknrrelComponent },
   { path: 'zrsr250322', component: Zrsr250322Component },
   { path: 'pdf-view', component: PdfViewComponent },
+  { path: 'arh', component: MagazineArchiveComponent },
   { path: '**', redirectTo: '' },
 ];
 
@@ -116,7 +118,8 @@ const appRoutes: Routes = [
     Zrsr250322Component,
     RusknrrelComponent,
     Newreg210322Component,
-    PdfViewComponent
+    PdfViewComponent,
+    MagazineArchiveComponent
   ],
     imports: [
         BrowserModule,

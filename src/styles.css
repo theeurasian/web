@@ -101,6 +101,9 @@ pdf-viewer {
 .h600px{
   height: 600px;
 }
+.mt15vh{
+  margin-top: 15vh;
+}
 .mt5px{
   margin-top: 5px;
 }
@@ -171,4 +174,7 @@ body{
 }
 .pr{
   position: relative;
+}
+.ml-20{
+  margin-left: 20px;
 }

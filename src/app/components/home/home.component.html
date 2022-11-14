@@ -101,7 +101,7 @@
 
   <div *ngIf="device.isMobile()">
     <div class="df c pt-2vh">
-      <img class="d-block" width="250" height="100" src="../../../assets/home/logo.jpg">
+      <img class="d-block" width="250"  src="../../../assets/home/logo24.jpg">
     </div>
     <div class="df c pt-2vh">
       <img *ngIf="getPublishLang() == 'kz'" (click)="openPublish(15)" class="d-block mt-2" height="340" width="250" src="assets/publishes/thumbs/kz/15.jpg">
@@ -109,7 +109,7 @@
     </div>
 
     <div class="df c mt20px">
-      <img height="46" width="46" src="assets/menu/pg.png">
+      <img height="46" width="46" src="assets/menu/18-plus.png">
     </div>
     <div class="row">
       <div class="h4 df c y pt-3vh">
@@ -164,7 +164,9 @@
 
   <div class="df c mt20px" *ngIf="!device.isMobile()">
     <div class="df c">
-      <img (mouseenter)="resetSelects();" height="46" width="46"  class="pt-2vh" src="assets/menu/pg.png">
+      <div>
+        <img (mouseenter)="resetSelects();" width="46" class="pt-2vh cp mx-1" src="assets/menu/18-plus.png">
+      </div>
 
       <div>
         <img (mouseenter)="resetSelects(); selected = 'conference'" class="pt-2vh cp mx-1" src="assets/menu/conference.png">
@@ -260,10 +262,10 @@
       </div>
     </div>
 
-    <div class="mx-2">
+    <div class="mx-2 ">
       <div class="center-logo cp" (mouseenter)="resetSelects()" (click)="openLink('https://eurasian.press')">
-        <img *ngIf="!device.isMobile()" class="d-block" width="220" src="../../../assets/home/logo.jpg">
-        <img *ngIf="device.isMobile()" class="d-block" width="250" src="../../../assets/home/logo.jpg">
+        <img *ngIf="!device.isMobile()" class="d-block" width="220" src="../../../assets/home/logo24.jpg">
+        <img *ngIf="device.isMobile()" class="d-block" width="250" src="../../../assets/home/logo24.jpg">
       </div>
     </div>
 
@@ -668,13 +670,7 @@
     </div>
   </div>
 
-  <div class="df c mt40px" *ngIf="!device.isMobile()">
-    <div class="thumbs df c">
-      <div class="perspective" *ngFor="let publish of publishes; let i = index;" [ngStyle]="getThumbMargin(i)" (click)="openPublish(publish)">
-        <img class="thumb" [src]="'/assets/publishes/thumbs/' + getPublishLang() + '/' + (publish).toString() + '.jpg'">
-      </div>
-    </div>
-  </div>
+
 
   <div class="df c mt20px" *ngIf="device.isMobile()">
     <div class="df c fw page-width-m">
@@ -705,9 +701,6 @@
   <div class="mt40px" *ngIf="!device.isMobile()">
     <div class="mt20px df c">
       <div class="df c y mx10px shadow p15">
-        <a href="https://www.garant.ru/" target="_blank" class="mx-4 cy"><img src="assets/promo/garant.png"></a>
-      </div>
-      <div class="df c y mx10px shadow p15">
         <a href="https://www.aeroflot.ru/" target="_blank" class="mx-4 cy"><img src="assets/promo/aeroflot.png"></a>
       </div>
       <div class="df c y mx10px shadow p15">
@@ -721,6 +714,9 @@
       </div>
     </div>
     <div class="mt20px df c">
+      <div class="df c y mx10px shadow p15">
+        <a routerLink="arh" target="_blank" class="mx-4 cy"><img src="assets/home/logo.jpg" width="180"></a>
+      </div>
       <div class="df c y mx10px shadow p15">
         <a href="https://www.tvr.by/televidenie/belarus-24/" target="_blank" class="mx-4 cy"><img src="assets/promo/belarus24.png"></a>
       </div>
