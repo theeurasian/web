@@ -492,12 +492,50 @@
   </div>
 
   <div class="df c mt20px" *ngIf="!device.isMobile()">
-    <div class="pr" (mouseenter)="showSound = true" (mouseleave)="showSound = false">
-      <video (loadedmetadata)="onVideoLoad($event, video)" [currentTime]="videoTime" #video autoplay loop [muted]="true" class="tv-video" src="assets/news.mp4"></video>
-<!--      <div class="enable-sound cp" [class.sound-hidden]="!soundEnabled || !showSound" (click)="soundEnabled = false; videoDesktop.muted = true"><i class="pi pi-volume-off" style="font-size: 3rem"></i></div>-->
-      <div class="enable-sound cp" [class.sound-hidden]="soundEnabled" (click)="soundEnabled = true; video.muted = false"><i class="pi pi-volume-up" style="font-size: 3rem"></i></div>
-    </div>
+    <vm-player [autoplay]="true" [muted]="true" [currentTime]="videoTime" (vmReady)="vmReady($event)" #vmPlayer class="tv-video" theme="dark">
+      <vm-video>
+        <source data-src="assets/news.mp4" type="video/mp4"/>
+      </vm-video>
+<!--      <vm-default-ui>-->
+
+
+<!--      </vm-default-ui>-->
+
+      <vm-default-ui [noControls]="true">
+
+        <vm-scrim></vm-scrim>
+
+        <vm-controls pin="center">
+          <vm-playback-control
+            [hideTooltip]="true"
+            style="--vm-control-scale: 1.7; position: absolute; left: 50%; transform: translate(-50%, 0)"
+          ></vm-playback-control>
+        </vm-controls>
+
+        <vm-controls [fullWidth]="true" pin="topLeft">
+          <vm-control-spacer></vm-control-spacer>
+          <vm-mute-control></vm-mute-control>
+        </vm-controls>
+
+        <vm-controls [fullWidth]="true" pin="bottomLeft">
+<!--          <vm-time-progress></vm-time-progress>-->
+          <vm-control-spacer></vm-control-spacer>
+          <vm-volume-control></vm-volume-control>
+          <vm-pip-control></vm-pip-control>
+          <vm-fullscreen-control [tooltipDirection]="'left'"></vm-fullscreen-control>
+        </vm-controls>
+
+      </vm-default-ui>
+    </vm-player>
   </div>
+
+<!--  <div class="df c mt20px" *ngIf="!device.isMobile()">-->
+<!--    <div class="pr" (mouseenter)="showSound = true" (mouseleave)="showSound = false">-->
+<!--      <video (loadedmetadata)="onVideoLoad($event, video)" [currentTime]="videoTime" #video autoplay loop [muted]="true" class="tv-video" src="assets/news.mp4"></video>-->
+<!--&lt;!&ndash;      <div class="enable-sound cp" [class.sound-hidden]="!soundEnabled || !showSound" (click)="soundEnabled = false; videoDesktop.muted = true"><i class="pi pi-volume-off" style="font-size: 3rem"></i></div>&ndash;&gt;-->
+<!--      <div class="enable-sound cp" [class.sound-hidden]="soundEnabled" (click)="soundEnabled = true; video.muted = false"><i class="pi pi-volume-up" style="font-size: 3rem"></i></div>-->
+<!--    </div>-->
+<!--  </div>-->
   <div class="df c mt20px" *ngIf="device.isMobile()" (mouseenter)="showSound = true" (mouseleave)="showSound = false">
     <div class="pr" (mouseenter)="showSound = true" (mouseleave)="showSound = false">
       <video (click)="video.requestFullscreen()" playsinline (loadedmetadata)="onVideoLoad($event, video)" [currentTime]="videoTime" #video autoplay loop [muted]="true" class="tv-video-m" src="assets/news.mp4"></video>

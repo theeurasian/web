@@ -1,4 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@vime/core/themes/default.css'; /* You can add global styles to this file, and also import other style files */
 @font-face {
   font-family: 'Charter ITC';
   src: url('/assets/charter_itc.ttf') format('regular'),

@@ -45,6 +45,7 @@ import {RusknrrelComponent} from './components/rusknrrel/rusknrrel.component';
 import {Zrsr250322Component} from './components/zrsr250322/zrsr250322.component';
 import { PdfViewComponent } from './components/pdf-view/pdf-view.component';
 import {NgxExtendedPdfViewerModule} from 'ngx-extended-pdf-viewer';
+import {VimeModule} from '@vime/angular';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent } ,
@@ -133,6 +134,7 @@ const appRoutes: Routes = [
         LazyLoadImageModule,
         NgxQRCodeModule,
         NgxExtendedPdfViewerModule,
+        VimeModule
     ],
   providers: [
     AppearOnClickDirective,

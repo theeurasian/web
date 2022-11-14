@@ -711,7 +711,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
     return lang;
   }
 
-  onVideoLoad(event: Event, video: HTMLVideoElement) {
+  onVideoLoad(event: Event, video: any) {
+    console.log(video);
     // @ts-ignore
     // console.log(event.target.duration);
     // @ts-ignore
@@ -719,6 +720,16 @@ export class HomeComponent implements OnInit, AfterViewInit {
     video.play();
     try{
       video.play();
+    }
+    catch (e: any){
+
+    }
+  }
+
+  vmReady(event: any) {
+    this.videoTime = new Date().getTime() / 1000 % event.target.duration;
+    try{
+      //event.target.play();
     }
     catch (e: any){
 

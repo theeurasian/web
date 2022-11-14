@@ -21,6 +21,8 @@
     "@angular/platform-browser-dynamic": "^14.2.9",
     "@angular/router": "^14.2.9",
     "@techiediaries/ngx-qrcode": "^9.1.0",
+    "@vime/angular": "^5.4.0",
+    "@vime/core": "^5.4.0",
     "angular-resize-event": "^3.2.0",
     "animate.css": "^4.1.1",
     "chart.js": "^2.9.4",
